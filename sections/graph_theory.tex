@@ -1,9 +1,29 @@
 \subsection{Basic definitions: graphs, paths, degree distribution}
+Definire un grafo, i nodi, gli archi. Varie tipologie di grafi, degree distribution -- anticipare che spesso nei casi reali non è una gaussiana ma una power law
 \subsection{Adjacent and Laplacian matrix, spectral properties of graphs}
+Matrice di adiacenza, vedere come contare i cammini di lunghezza n.
+Matrice laplaciana, def e proprietà spettrali (gli autovalori della matrice laplaciana, uno è sempre zero, algebraic connectivity, molteplicità dello zero come numero di componenti connesse)
+- Sottolineare il legame tra gap spettrale e velocità di espansione del grafo
 \subsection{Measures of centrality}
-\subsection{Critical nodes in an electrical network}
-\subsection{Random graphs}
-\subsection{Small-world and scale-free networks}
+Degree centrality, betweenness centrality, eigenvector centrality (pagerank)
+\subsection{Physical examples: Resistor networks and rate flow in waterpipes}
+Associare ogni arco ad una resistenza, collegare Kirchooff alla matrice laplaciana.
+Fare qualche accenno alla teoria dei flussi su reti e alla teoria dei flussi massimi, minimi tagli, etc.
+Trovare i critical nodes, dove il voltaggio/flusso è massimo, 
+Fare accenno veloce al graph sparsification. (ridurre il numero di archi mantenendo intatte le proprietà spettrali --> gestire network enormi e fare accenno a applicazione per risolvere sistemi di equazioni lineari)
 \subsection{Clustering and community structure}
-\subsection{C. elegans connectome: clusters in neuroscience}
+Definire il coefficiente di clustering.
+Parlare di modulità, citare algoritmo di Louvain per trovare comunità in un grafo.
+\subsection{Random graphs, Small-world and scale-free networks}
+Reti casuali (Erdos-Renyi)
+Small-world (Watts-Strogatz) --> alta clusterizzazione e brevi distanze (tipico dei cervelli come si vedrà nel case study).
+Scale-free (Barabasi-Albert) --> Presenza di Hub, spiegare il meccanismo del preferential attachment.
+\subsection{Case study: Structural analysis and centralities of the C. elegans connectome}
+- Visualizzare il grafo del connettoma (con Gephi o NetworkX).
+- Analisi dei gradi --> ci sono pochi neuroni con tantissime connessioni (formano hubs).
+- Individuare i neuroni con betwenness altissima (neuroni di comando)
+- Analisi dei cluster nel connettoma --> vedere se ci sono dei distretti funzionali (es. zona cefalica vs motoria)
+--> assicurarsi che le mappe di calore della centralità siano chiare (eventualemente usare un algoritmo di spaziatura adeguato --> ForceAtlas2 in Gephi)
+
+
 

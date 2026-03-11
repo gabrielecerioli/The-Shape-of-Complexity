@@ -25,8 +25,76 @@
 \date{March 2026}
 
 \begin{document}
-\maketitle
+% MODIFICARE PER CAMBIARE I MARGINI
+\newgeometry{top=2cm, bottom=1.8cm, left=2cm, right=2cm}
 
+%\fontfamily{pbk}\selectfont
+
+\thispagestyle{empty} 
+
+\begin{center}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=5.44cm]{img/Sigillo_Scritta_HR.png}
+\end{figure}
+
+
+\hrule
+
+\vspace{1cm}
+
+\LARGE{\textbf{Dipartimento di Fisica}}
+
+\vspace{0.5cm}
+
+\LARGE{\textbf{CORSO DI LAUREA IN FISICA}}
+
+\vspace{0.5cm}
+
+\LARGE{\textbf{TESI DI LAUREA}}
+
+\vspace{.5cm}
+
+\vspace{1.0cm}
+\huge{\textbf{La forma della complessità: topologia, cammini aleatori e metodi statistici sui networks}}
+
+\end{center}
+
+\vfill
+
+\begin{minipage}[t]{0.43\textwidth}
+\begin{flushleft}
+
+
+\large{\emph{Laureando:}}
+
+\Large{\textbf {Gabriele Cerioli}} 
+
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushright}
+\large{\emph{Relatore:}}
+
+\Large{\textbf {Prof. Vito D. P. Servedio}} 
+
+\vspace{.5cm}
+
+\end{flushright}
+\end{minipage}
+
+\vspace{2cm}
+
+\begin{center}
+    \emph{\textbf{ANNO ACCADEMICO 2025-2026}}
+\end{center}
+
+\restoregeometry
+
+\newpage
+\tableofcontents
+\newpage
 \section{Introduction}
 \input{sections/introduction.tex}
 \section{Graph Theory}
@@ -35,4 +103,8 @@
 \input{sections/random_walks.tex}
 \section{Stochastic processes on graphs}
 \input{sections/stochastic_processes.tex}
+
+\appendix
+\section{Algorithms used}
+\input{algorithms.tex}
 \end{document}
