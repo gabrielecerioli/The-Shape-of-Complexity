@@ -7,7 +7,8 @@
 
 \usepackage{enumitem}
 \setlist{nosep}
-
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
 \usepackage[font=small,skip=4pt]{caption}
 
 \setlength{\parskip}{0pt}
@@ -19,7 +20,78 @@
 
 \setlength{\abovedisplayskip}{6pt}
 \setlength{\belowdisplayskip}{6pt}
+
+%Box colorate
+\usepackage{tcolorbox}
+%\tcbuselibrary{theorems}
+%\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
+\definecolor{eyellow}{HTML}{ffd500}
+\definecolor{darkeryellow}{HTML}{ffbb00}
+\definecolor{oblue}{HTML}{00c0ff}
+\definecolor{norange}{HTML}{ff7000}
+\definecolor{lmagenta}{HTML}{c778ff}
+\definecolor{ugreen}{HTML}{33ab00}
+\definecolor{darkerred}{HTML}{b00000}
+\definecolor{palered}{HTML}{ff7f7f}
+\newtcolorbox{boxe}[2][]{
+                lower separated=false,
+                colback=white,
+                colframe=eyellow,fonttitle=\bfseries,
+                colbacktitle=eyellow,
+                coltitle=black,
+                enhanced,
+                attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
+                boxed title style={boxrule=0pt,colframe=white,},
+                title={#2},
+                #1}
+\newtcolorbox{boxo}[2][]{
+                lower separated=false,
+                colback=white,
+                colframe=oblue,fonttitle=\bfseries,
+                colbacktitle=oblue,
+                coltitle=black,
+                enhanced,
+                attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
+                boxed title style={boxrule=0pt,colframe=white,},
+                title={#2},
+                #1}
+                
+%Link cliccabili
+\usepackage[hidelinks]{hyperref}
+
+\DeclareDocumentCommand{\vnabla}{}{\nabla}
+\DeclareDocumentCommand{\dotproduct}{}{\cdot}
+\DeclareDocumentCommand{\crossproduct}{}{\times}
+\newcommand*{\tR}{{t_{\text{R}}}}
+
+%Matematica e fisica
+\usepackage{amsmath, mathtools, amssymb, amsthm, mathrsfs} 
+\usepackage{siunitx}
+\usepackage{physics}
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\ExplSyntaxOn
+\msg_redirect_name:nnn {siunitx}{physics-pkg}{none}
+\ExplSyntaxOff
+\usepackage[cal=dutchcal]{mathalpha} %Alfabeto corsivo
+\usepackage{esint} %Integrale doppio su superficie chiusa
+
+%Altro
+\usepackage[T1]{fontenc}
+\usepackage{float} %Per figure floating
+\usepackage{xcolor}
+\usepackage{fancyhdr} %Header
+\usepackage{enumitem}
+\usepackage{wrapfig} %Per figure floating laterali
+\usepackage{subcaption}
+\usepackage[normalem]{ulem} %Sottolineature (senza normalem rovina la bibliografia)
+\usepackage[toc]{appendix}
+\usepackage{tkz-euclide} %Disegni
+
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption} % Fondamentale per le sotto-figure
+
 \title{Bozza della tesi}
 \author{Gabriele Cerioli}
 \date{March 2026}
@@ -107,4 +179,6 @@
 \appendix
 \section{Algorithms used}
 \input{algorithms.tex}
+
+\printbibliography
 \end{document}

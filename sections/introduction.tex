@@ -1,16 +1,80 @@
 \subsection{"More is different"}
-Fare riferimento all'articolo di Philip Anderson del 1972, parlare delle proprietà emergenti.
-Limite del riduzionismo: le leggi che descrivono il comportamento di un singolo elemento non sono sufficienti a descrivere il comportamento collettivo di un sistema complesso.
-Aggiungere una citazione di Anderson o Barabasi
-Concetto di emergenza: apparizione di proprietà collettive in un sistema che non sono presenti nei singoli componenti
+L'idea che in un sistema possano esistere proprietà emergenti, non prevedibili a partire dalle proprietà dei singoli componenti, ha radici storiche profonde.
+Già nel \textbf{IV secolo a.C.}, Aristotele osservava che \textit{"il tutto è più della somma delle parti"}, distinguendo la materia (Hyle) dalla sua forma (Morphé), che è il principio organizzatore. Aristotele si chiese perché una sillaba non sia semplicemente la somma delle sue lettere. La rispostà è che c'è qualcosa in più, la struttura, l'ordine, il modo on cui gli elementi si relazionano.
+E' dunque la geometria delle interazioni nel sistema che conferisce proprietà emergenti, che non possono essere dedotte semplicemente analizzando le parti singolarmente. \\
+
+Durante il \textbf{XVII e XVIII secolo}, l'idea dominante era il riduzionismo, secondo cui conoscendo le leggi universali e le condizioni iniziali, si poteva predire tutto. In questo contesto rientra il celebre demone di Laplace (1814): un intelletto che conosca posizione e velocità di tutte le particelle dell'universo potrebbe calcolare ogni evento futuro e passato.
+La meccanica celeste, l'ottica, l'elettromagnetismo, tutto sembrava confermare che scomporre un sistema nelle sue parti fondamentali fosse la strategia corretta.\\
+
+Tuttavia già nel \textbf{XIX secolo}, Boltzman costruì un ponte tra l'entropia introdotta da Clausius e il mondo microscopico. Questa è la prima volta in cui una proprietà macroscopica trovò una spiegazione collettiva.\\
+\textbf{Negli inizi del '900}, Van der Waals e poi Ising mostrarono qualcosa di ancora più radicale: sistemi semplici, con interazioni locali, possono esibire comportamenti collettivi complessi, come il ferromagnetismo e le transizioni di fase.\\
+
+Nel \textbf{1972} P. W. Anderson pubblicò l'articolo "More is different", in cui argomentava contro il riduzionismo, introducendo il concetto di "gerarchia di livelli di descrizione". Ogni livello di complessità ha leggi emergenti che non possono essere dedotte dalle leggi fondamentali.\\
+Ad esempio, l'atomo di cambonio ha proprietà che non si deducono semplicemente dalle leggi che descrivono quak e gluoni. Allo stesso modo la chimica organica ha regole proprie, che non si deducono  risolvendo l'equazione di Schdinger, e così via fino a salire alla biologia, alla neurosciienza e alla psicologia.\\
+
+Infine, alla fine degli \textbf{anni '90}, due lavori indipendenti fondano la scienza dei network. Nel 1998 Watts e Strogatz scoprirono la struttura \textit{small-world} in reti reali, ovvero sistemi in cui nodi lontani sono connessi da un numero sorprendentemente piccolo di passi.
+L'anno seguente, Barabasi e Albert identificarono le reti \textit{scale-free}, caratterizzate da una distribuzione di gradi a legge di potenza.\\
+\textbf{Questi lavori dimostrarono che l'emergenza ha una geometria misurabile, e che la forma è fondamentale per capire il comportamento di un sistema.}\\
 
 
-\subsection{Complex systems and networks}
+\subsection{Sistemi complessi}
+Maggiore è la quantità di elementi, e il numero delle loro interazioni in un sistema, maggiore è la sua complessità. Sistemi di questo tipo spesso producono \textbf{comportamenti emergenti}, ovvero comportamenti complessi non prevedibili dalla semplice sommatoria degli elementi che compongono il sistema. \\
 
-Caratteristiche dei sistemi complessi: molti componenti, interazioni non lineari, feedback, assenza di controllo centrale
+Spesso i sistemi complessi presentano ulteriori caratteristiche:\
+\begin{itemize}
+    \item \textbf{Caoticità e non linearità}: piccoli cambiamenti nelle condizioni iniziali possono portare a risultati completamente diversi.
+    \item \textbf{Dinamica di biforcazione}: l'evoluzione di un sistema complesso è spesso caraterizzata da un cambiamento discontinuo ed imprevisto. Ad esempio, il clima terrestre può subire un cambiamento improvviso da uno stato di equilibrio a un altro, come durante le glaciazioni.
+    \item \textbf{Assenza di controllo centrale}: non esiste un'entità che governa il comportamento del sistema. Ad esempio, in uno stormo di uccelli, ogni uccello segue regole locali, ma il comportamento collettivo emerge senza un leader.
+    \item \textbf{Adattività}: i Sistemi Adattivi Complessi (CAS) sono in grado di imparare dall'esperienza e di modificare il loro comportmaento per sopravvivere meglio in un ambiente dinamico, come ad esempio il sistema immunitario o il mercato azionario.
+\end{itemize}
 
-Reti come linguaggio matematico della complessità.
+Esempi di sistemi complessi sono il clima terrestre, il connettoma di un organismo, uno stormo di uccelli, o Internet (Figura \ref{fig:griglia_4}).\\
 
-Universalità: sistemi diversissimi (neuroni, reti elettriche, internet, relazioni sociali) mostrano le stesse strutture matematiche.
+\begin{figure}[H]
+     \centering
+     % --- PRIMA RIGA ---
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/500px-SurfaceTemperature.jpg}
+         \caption{Il sistema climatico della Terra  è costituito da numerosi elementi che interagiscono tra di loro}
+         \label{fig:alto_sx}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/connettoma}
+         \caption{Il connettoma di un organismo, dove i nodi sono i neuroni e le connessioni le sinapsi}
+         \label{fig:alto_dx}
+     \end{subfigure}
 
-L'obiettivo di questa tesi: studiare la forma (il grafo) per capire la funzione.
+     \vspace{0.2cm} % Aggiunge un po' di spazio verticale tra le due righe
+
+     % --- SECONDA RIGA ---
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/stormo.jpeg}
+         \caption{Comportamento emergente in uno stormo di uccelli}
+         \label{fig:basso_sx}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.48\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/internet.png}
+         \caption{La struttura a rete di Internet}
+         \label{fig:basso_dx}
+     \end{subfigure}
+     
+     \caption{Esempi di sistemi complessi}
+     \label{fig:griglia_4}
+\end{figure}
+
+\subsection{Teoria delle reti} 
+Siccome il comportamento dei sistemi complessi è strettamente legato alla topologia delle interazioni tra i suoi elementi, la teoria delle reti è diventata lo strumento matematico fondamentale per studiare la complessità.\\
+Uno dei vantaggi principali della teoria delle reti è la sua \textbf{universalità}, lo stesso formalismo matematico è in grado di descrivere per esempio il collasso di una rete elettrica, la diffusione di una fake news su una reta sociale o l'estinzione di una specie in un ecosistema.\\
+
+\begin{boxo}{}
+Questa tesi si propone di esplorare la struttura e le proprietà dei sistemi complessi attravero il linguaggio della teoria delle reti.\\
+L'approccio è triplice. Il primo livello è \textbf{topologico}, analizzando le proprietà strutturali dei grafi, distribuzione dei gradi, centralità, struttura comunitaria, e altri strumenti utili per capire come è organizzato un sistema complesso. \\
+Il secondo livello è \textbf{dinamico}: i cammini aleatori sul grafo permettono di studiare come l'informazione si propaghi attraverso la rete. \\
+Il terzo livello è \textbf{statistico}: processi stocastici come la percolazione e il modello di ising rivelano com fenomeni collettivi emergano dalla struttura della rete.
+\end{boxo}
