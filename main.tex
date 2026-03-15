@@ -30,10 +30,13 @@
 \definecolor{darkeryellow}{HTML}{ffbb00}
 \definecolor{oblue}{HTML}{00c0ff}
 \definecolor{norange}{HTML}{ff7000}
+
 \definecolor{lmagenta}{HTML}{c778ff}
 \definecolor{ugreen}{HTML}{33ab00}
 \definecolor{darkerred}{HTML}{b00000}
 \definecolor{palered}{HTML}{ff7f7f}
+\definecolor{bourdeaux}{HTML}{800000}
+\definecolor{lblue}{HTML}{00C4D6}
 \newtcolorbox{boxe}[2][]{
                 lower separated=false,
                 colback=white,
@@ -56,10 +59,31 @@
                 boxed title style={boxrule=0pt,colframe=white,},
                 title={#2},
                 #1}
-                
+\newtcolorbox{boxb}[2][]{
+                lower separated=false,
+                colback=white,
+                colframe=bourdeaux,fonttitle=\bfseries,
+                colbacktitle=bourdeaux,
+                coltitle=white,
+                enhanced,
+                attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
+                boxed title style={boxrule=0pt,colframe=white,},
+                title={#2},
+                #1}
+\newtcolorbox{boxl}[2][]{
+                lower separated=false,
+                colback=white,
+                colframe=lblue,fonttitle=\bfseries,
+                colbacktitle=lblue,
+                coltitle=black,
+                enhanced,
+                attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
+                boxed title style={boxrule=0pt,colframe=white,},
+                title={#2},
+                #1}
 %Link cliccabili
 \usepackage[hidelinks]{hyperref}
-
+\usepackage{wrapfig}
 \DeclareDocumentCommand{\vnabla}{}{\nabla}
 \DeclareDocumentCommand{\dotproduct}{}{\cdot}
 \DeclareDocumentCommand{\crossproduct}{}{\times}

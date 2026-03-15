@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  15 MAR 2026 10:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  15 MAR 2026 20:36
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -641,6 +641,13 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip74
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen279
+\WF@size=\dimen280
+\c@WF@wrappedlines=\count453
+\WF@box=\box75
+\WF@everypar=\toks35
+Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip75
@@ -650,89 +657,89 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks35
-\ex@=\dimen279
+\@emptytoks=\toks36
+\ex@=\dimen281
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen280
+\pmbraise@=\dimen282
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count453
+\inf@bad=\count454
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count454
-\leftroot@=\count455
+\uproot@=\count455
+\leftroot@=\count456
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count456
-\DOTSCASE@=\count457
+\classnum@=\count457
+\DOTSCASE@=\count458
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box75
-\strutbox@=\box76
+\Mathstrutbox@=\box76
+\strutbox@=\box77
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen281
+\big@size=\dimen283
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count458
+\macc@depth=\count459
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count459
+\c@MaxMatrixCols=\count460
 \dotsspace@=\muskip22
-\c@parentequation=\count460
-\dspbrk@lvl=\count461
-\tag@help=\toks36
-\row@=\count462
-\column@=\count463
-\maxfields@=\count464
-\andhelp@=\toks37
-\eqnshift@=\dimen282
-\alignsep@=\dimen283
-\tagshift@=\dimen284
-\tagwidth@=\dimen285
-\totwidth@=\dimen286
-\lineht@=\dimen287
-\@envbody=\toks38
+\c@parentequation=\count461
+\dspbrk@lvl=\count462
+\tag@help=\toks37
+\row@=\count463
+\column@=\count464
+\maxfields@=\count465
+\andhelp@=\toks38
+\eqnshift@=\dimen284
+\alignsep@=\dimen285
+\tagshift@=\dimen286
+\tagwidth@=\dimen287
+\totwidth@=\dimen288
+\lineht@=\dimen289
+\@envbody=\toks39
 \multlinegap=\skip76
 \multlinetaggap=\skip77
-\mathdisplay@stack=\toks39
+\mathdisplay@stack=\toks40
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count465
-\calc@Bcount=\count466
-\calc@Adimen=\dimen288
-\calc@Bdimen=\dimen289
+\calc@Acount=\count466
+\calc@Bcount=\count467
+\calc@Adimen=\dimen290
+\calc@Bdimen=\dimen291
 \calc@Askip=\skip78
 \calc@Bskip=\skip79
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count467
+\calc@Ccount=\count468
 \calc@Cskip=\skip80
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count468
-\l_MT_multwidth_dim=\dimen290
+\g_MT_multlinerow_int=\count469
+\l_MT_multwidth_dim=\dimen292
 \origjot=\skip81
-\l_MT_shortvdotswithinadjustabove_dim=\dimen291
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen292
-\l_MT_above_intertext_sep=\dimen293
-\l_MT_below_intertext_sep=\dimen294
-\l_MT_above_shortintertext_sep=\dimen295
-\l_MT_below_shortintertext_sep=\dimen296
-\xmathstrut@box=\box77
-\xmathstrut@dim=\dimen297
+\l_MT_shortvdotswithinadjustabove_dim=\dimen293
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen294
+\l_MT_above_intertext_sep=\dimen295
+\l_MT_below_intertext_sep=\dimen296
+\l_MT_above_shortintertext_sep=\dimen297
+\l_MT_below_shortintertext_sep=\dimen298
+\xmathstrut@box=\box78
+\xmathstrut@dim=\dimen299
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -744,59 +751,59 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks40
-\thm@bodyfont=\toks41
-\thm@headfont=\toks42
-\thm@notefont=\toks43
-\thm@headpunct=\toks44
+\thm@style=\toks41
+\thm@bodyfont=\toks42
+\thm@headfont=\toks43
+\thm@notefont=\toks44
+\thm@headpunct=\toks45
 \thm@preskip=\skip82
 \thm@postskip=\skip83
 \thm@headsep=\skip84
-\dth@everypar=\toks45
+\dth@everypar=\toks46
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count469
-\l__siunitx_number_exponent_fixed_int=\count470
-\l__siunitx_number_min_decimal_int=\count471
-\l__siunitx_number_min_integer_int=\count472
-\l__siunitx_number_round_precision_int=\count473
-\l__siunitx_number_lower_threshold_int=\count474
-\l__siunitx_number_upper_threshold_int=\count475
-\l__siunitx_number_group_first_int=\count476
-\l__siunitx_number_group_size_int=\count477
-\l__siunitx_number_group_minimum_int=\count478
-\l__siunitx_angle_tmp_dim=\dimen298
-\l__siunitx_angle_marker_box=\box78
-\l__siunitx_angle_unit_box=\box79
-\l__siunitx_compound_count_int=\count479
+\l__siunitx_number_uncert_offset_int=\count470
+\l__siunitx_number_exponent_fixed_int=\count471
+\l__siunitx_number_min_decimal_int=\count472
+\l__siunitx_number_min_integer_int=\count473
+\l__siunitx_number_round_precision_int=\count474
+\l__siunitx_number_lower_threshold_int=\count475
+\l__siunitx_number_upper_threshold_int=\count476
+\l__siunitx_number_group_first_int=\count477
+\l__siunitx_number_group_size_int=\count478
+\l__siunitx_number_group_minimum_int=\count479
+\l__siunitx_angle_tmp_dim=\dimen300
+\l__siunitx_angle_marker_box=\box79
+\l__siunitx_angle_unit_box=\box80
+\l__siunitx_compound_count_int=\count480
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
-\l__siunitx_table_tmp_box=\box80
-\l__siunitx_table_tmp_dim=\dimen299
-\l__siunitx_table_column_width_dim=\dimen300
-\l__siunitx_table_integer_box=\box81
-\l__siunitx_table_decimal_box=\box82
-\l__siunitx_table_uncert_box=\box83
-\l__siunitx_table_before_box=\box84
-\l__siunitx_table_after_box=\box85
-\l__siunitx_table_before_dim=\dimen301
-\l__siunitx_table_carry_dim=\dimen302
-\l__siunitx_unit_tmp_int=\count480
-\l__siunitx_unit_position_int=\count481
-\l__siunitx_unit_total_int=\count482
+\l__siunitx_table_tmp_box=\box81
+\l__siunitx_table_tmp_dim=\dimen301
+\l__siunitx_table_column_width_dim=\dimen302
+\l__siunitx_table_integer_box=\box82
+\l__siunitx_table_decimal_box=\box83
+\l__siunitx_table_uncert_box=\box84
+\l__siunitx_table_before_box=\box85
+\l__siunitx_table_after_box=\box86
+\l__siunitx_table_before_dim=\dimen303
+\l__siunitx_table_carry_dim=\dimen304
+\l__siunitx_unit_tmp_int=\count481
+\l__siunitx_unit_position_int=\count482
+\l__siunitx_unit_total_int=\count483
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen303
-\ar@mcellbox=\box86
-\extrarowheight=\dimen304
-\NC@list=\toks46
+\col@sep=\dimen305
+\ar@mcellbox=\box87
+\extrarowheight=\dimen306
+\NC@list=\toks47
 \extratabsurround=\skip85
 \backup@length=\skip86
-\ar@cellbox=\box87
+\ar@cellbox=\box88
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/mathalpha/mathalpha.sty
@@ -804,11 +811,11 @@ Package: mathalpha 2025/01/17 - 1.145mathalpha (License LPPL) Michael Sharpe
  `mathalpha' v1.145, 2025/01/17, a renaming of mathalfa (msharpe) (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks47
-\XKV@tempa@toks=\toks48
-\XKV@tempb@toks=\toks49
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
+\XKV@tempb@toks=\toks50
 )
-\XKV@depth=\count483
+\XKV@depth=\count484
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 590.
@@ -821,11 +828,11 @@ Package: esint
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count484
-\float@exts=\toks50
-\float@box=\box88
-\@float@everytoks=\toks51
-\@floatcapt=\box89
+\c@float@type=\count485
+\float@exts=\toks51
+\float@box=\box89
+\@float@everytoks=\toks52
+\@floatcapt=\box90
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip87
@@ -842,14 +849,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip98
 \f@nch@widthC=\skip99
 \f@nch@widthR=\skip100
-\@temptokenb=\toks52
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen305
-\WF@size=\dimen306
-\c@WF@wrappedlines=\count485
-\WF@box=\box90
-\WF@everypar=\toks53
-Package: wrapfig 2003/01/31  v 3.6
+\@temptokenb=\toks53
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
@@ -1028,28 +1028,35 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 
 \@quotelevel=\count496
 \@quotereset=\count497
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 99.
-(./main.aux)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 123.
+(./main.aux
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1098,8 +1105,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 99.
-Package biblatex Info: Reference segment=0 on input line 99.
+Package biblatex Info: Reference section=0 on input line 123.
+Package biblatex Info: Reference segment=0 on input line 123.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1130,7 +1137,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 99.
+Package hyperref Info: Link coloring OFF on input line 123.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1138,7 +1145,7 @@ Package hyperref Info: Link coloring OFF on input line 99.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 99.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 123.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1174,7 +1181,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 <img/Sigillo_Scritta_HR.png, id=99, 813.0375pt x 1053.9375pt>
 File: img/Sigillo_Scritta_HR.png Graphic file (type png)
 <use img/Sigillo_Scritta_HR.png>
-Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 111.
+Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 135.
 (pdftex.def)             Requested size: 119.39473pt x 154.78305pt.
  [1
 
@@ -1261,30 +1268,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
-) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]) (./sections/random_walks.tex [5]) (./sections/stochastic_processes.tex) (./algorithms.tex) [6] (./main.aux)
+) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
+<img/undirected_graph_cropped.pdf, id=162, 576.91132pt x 584.98549pt>
+File: img/undirected_graph_cropped.pdf Graphic file (type pdf)
+<use img/undirected_graph_cropped.pdf>
+Package pdftex.def Info: img/undirected_graph_cropped.pdf  used on input line 10.
+(pdftex.def)             Requested size: 169.29684pt x 171.65875pt.
+<img/directed_graph.pdf, id=163, 581.60886pt x 576.52388pt>
+File: img/directed_graph.pdf Graphic file (type pdf)
+<use img/directed_graph.pdf>
+Package pdftex.def Info: img/directed_graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 169.29684pt x 167.81223pt.
+<img/Zachary_graph_formatted.pdf, id=164, 579.6516pt x 547.52553pt>
+File: img/Zachary_graph_formatted.pdf Graphic file (type pdf)
+<use img/Zachary_graph_formatted.pdf>
+Package pdftex.def Info: img/Zachary_graph_formatted.pdf  used on input line 23.
+(pdftex.def)             Requested size: 169.29684pt x 159.91455pt.
+
+Underfull \hbox (badness 5756) in paragraph at lines 48--51
+\T1/cmr/m/n/10 Gli el-e-menti della di-ag-o-nale sono sem-pre nulli, tranne nel
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 48--51
+\T1/cmr/m/n/10 caso in cui es-iste un arco che col-lega un nodo con se
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 48--51
+\T1/cmr/m/n/10 stesso, in questo caso l'arco viene chiam-ato \T1/cmr/bx/n/10 cap-pio \T1/cmr/m/n/10 (in quel
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 48--51
+\T1/cmr/m/n/10 caso l'elemento cor-rispon-dente sulla di-ag-o-nale è uguale a 2
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 78--80
+\T1/cmr/m/n/10 Dove $\OML/cmm/m/it/10 w[]$ \T1/cmr/m/n/10 è il peso as-so-ci-ato all'arco che col-lega i nodi $\OML/cmm/m/it/10 i$ \T1/cmr/m/n/10 e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
+[5 <./img/undirected_graph_cropped.pdf> <./img/directed_graph.pdf> <./img/Zachary_graph_formatted.pdf>]) (./sections/random_walks.tex) [6] (./sections/stochastic_processes.tex) (./algorithms.tex) [7] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 16753CCBA8EAC84AC4723F767A26AEC3;6207.
+(rerunfilecheck)             Checksum: 17E5611EB31DEB2A40EB0CDCAE15F6DB;6137.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44873 strings out of 467538
- 961926 string characters out of 5419552
- 1763222 words of memory out of 5000000
- 72997 multiletter control sequences out of 15000+600000
- 641874 words of font info for 71 fonts, out of 8000000 for 9000
+ 44951 strings out of 467538
+ 963715 string characters out of 5419552
+ 1774476 words of memory out of 5000000
+ 73066 multiletter control sequences out of 15000+600000
+ 643408 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,8n,121p,1205b,1247s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (6 pages, 3194107 bytes).
+ 116i,9n,121p,1205b,1309s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (7 pages, 3264886 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

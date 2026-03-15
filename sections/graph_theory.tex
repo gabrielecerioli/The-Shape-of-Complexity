@@ -1,6 +1,82 @@
-\subsection{Basic definitions: graphs, paths, degree distribution}
+\subsection{Definizioni di base: grafi, nodi, archi}
+Nelle sezioni seguenti introdurremo i concetti fondamentali della teoria dei grafi. 
+Cominceremo definendo cosa è un grafo, i suoi elementi costitutivi e le varie tipologie di grafi che si possono incontrare.
+\begin{boxb}{Definizione di grafo}
+Un grafo è un insieme di \textbf{nodi} (o vertici) legati da \textbf{archi} (o spigoli). 
+\end{boxb}
+\begin{wrapfigure}[40]{r}{0.35\textwidth}
+  \centering
+  \begin{subfigure}{\linewidth}
+    \includegraphics[width=\linewidth]{img/undirected_graph_cropped.pdf}
+    \caption{Esempio di grafo non orientato con 6 nodi e 7 archi}
+    \label{fig:a}
+  \end{subfigure}
 
-Definire un grafo, i nodi, gli archi. Varie tipologie di grafi, degree distribution -- anticipare che spesso nei casi reali non è una gaussiana ma una power law
+  \vspace{0.3cm}
+
+  \begin{subfigure}{\linewidth}
+    \includegraphics[width=\linewidth]{img/directed_graph.pdf}
+    \caption{Esempio di grafo orientato con 6 nodi e 7 archi}
+    \label{fig:b}
+  \end{subfigure}
+  \begin{subfigure}{\linewidth}
+    \includegraphics[width=\linewidth]{img/Zachary_graph_formatted.pdf}
+    \caption{Zachary's Karate Club, un grafo pesato che rappresenta le interazioni sociali tra i membri di un club universitario di karate.}
+    \label{fig:b}  
+  \end{subfigure}
+
+  \caption{Esempi di grafi}
+  \label{fig:entrambe}
+\end{wrapfigure}
+Un modo per rappresentare i grafi è attraverso la matrice di adiacenza $A$:
+\begin{equation}
+A_{ij} = \begin{cases}
+1 & \text{se esiste un arco tra i nodi } i \text{ e } j \\
+0 & \text{altrimenti}
+\end{cases}
+\end{equation}
+Ad esempio nel caso del grafo in Figura \ref{fig:a}, la matrice di adiacenza è:
+\begin{equation}
+A = \begin{pmatrix}
+0 & 0 & 1 & 0 & 0 & 1 \\
+0 & 0 & 1 & 1 & 0 & 1 \\
+1 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 1 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 1 \\
+1 & 1 & 0 & 0 & 1 & 0
+\end{pmatrix}
+\end{equation}
+Notiamo che la matrice di adiacenza è simmetrica, come previsto. Se il nodo $i$ è connesso al nodo $j$, allora anche il nodo $j$ è connesso al nodo $i$.\\
+Gli elementi della diagonale sono sempre nulli, tranne nel caso in cui esiste un arco che collega un nodo con se stesso, in questo caso l'arco viene chiamato \textbf{cappio} (in quel caso l'elemento corrispondente sulla diagonale è uguale a 2 ).\\
+
+Gli archi possono essere orientati, in questo caso si parla di \textbf{grafo orientato} o \textbf{digrafo}. In un grafo orientato, la matrice di adiacenza è definita come:
+\begin{equation}
+A_{ij} = \begin{cases}
+1 & \text{se esiste un arco orientato che va dal nodo } i \text{ al nodo } j \\
+0 & \text{altrimenti}
+\end{cases} 
+\end{equation}
+Nel caso del grafo orientato in Figura \ref{fig:b}, la matrice di adiacenza è:
+\begin{equation}
+A = \begin{pmatrix}
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 & 0 \\
+0 & 1 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\end{equation}
+Notiamo che in questo caso la matrice di adiacenza può non essere simmetrica, come previsto.
+
+E' possibile anche che un grafo abbia archi con pesi associati, in questo caso si parla di \textbf{grafo pesato}. La matrice di adiacenza di un grafo pesato è definita come:
+\begin{equation}
+A_{ij} = \begin{cases}
+w_{ij} & \text{se esiste un arco tra i nodi } i \text{ e } j \\
+0 & \text{altrimenti}
+\end{cases}
+\end{equation}
+Dove $w_{ij}$ è il peso associato all'arco che collega i nodi $i$ e $j$.\\
 \subsection{Adjacent and Laplacian matrix, spectral properties of graphs}
 Matrice di adiacenza, vedere come contare i cammini di lunghezza n.
 Matrice laplaciana, def e proprietà spettrali (gli autovalori della matrice laplaciana, uno è sempre zero, algebraic connectivity, molteplicità dello zero come numero di componenti connesse)
