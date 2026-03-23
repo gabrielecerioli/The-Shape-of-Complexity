@@ -1,17 +1,18 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1773603389.62534 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1774306170.51164 -1
   "bibliography.bib" 1773482109.28318 319 f63c04899f56acc2a5d9881374c579cc ""
-  "main.bcf" 1773603389.47772 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
+  "main.bcf" 1774306170.36717 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1773603387.51081 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1773603389.62574 0
-  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1773599048.86134 5297 86fd8482b8cb63db64d8ad6204c4ced8 ""
+["pdflatex"] 1774306168.37722 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1774306170.51197 0
+  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1774306165.9866 5365 5e00ccdb0ad62d700fc1d38fcd8a7a99 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm" 1136768653 3072 e6fe53b666f9cbd66cb135c6fdea66d3 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm" 1136768653 3072 ccae1a240ab272417e4399fe942df546 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -46,6 +47,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb" 1215737283 193571 dce9a978093738902238b3e227edef6c ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb" 1215737283 205875 5958bf9326f04501f7006947acfbcae1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb" 1215737283 145408 43d44302ca7d82d487f511f83e309505 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1215737283 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1215737283 135942 859a90cad7494a1e79c94baf546d7de5 ""
@@ -303,16 +305,16 @@
   "img/internet.png" 1773532043.09879 1678210 2ebb9afc3107dc17313594e49eed18ea ""
   "img/stormo.jpeg" 1773531655.26665 8193 6dca9f26708562502118ecabd8293cdf ""
   "img/undirected_graph_cropped.pdf" 1773599903.09024 17904 570428ebd9976767d42f5e820f7f21bc ""
-  "main.aux" 1773603389.47172 5892 dd117f4ea046f4d1e16a02a72aa68d6e "pdflatex"
+  "main.aux" 1774306170.36217 5798 630bde10401f140acf9a867e6648fa3e "pdflatex"
   "main.bbl" 1773482301.66108 1932 0d4bb6980e9ec379bfc2e4e651b514f9 "biber main"
-  "main.out" 1773603389.47372 6137 17e5611eb31deb2a40eb0cdcae15f6db "pdflatex"
-  "main.run.xml" 1773603389.47975 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "main.tex" 1773599048.86134 5297 86fd8482b8cb63db64d8ad6204c4ced8 ""
-  "main.toc" 1773603389.47975 2381 5feab39f4b265541dabddc8bf4d5bf4b "pdflatex"
-  "sections/graph_theory.tex" 1773603385.16465 5440 b8821b29450bdc691d11ef7ec8ed90d3 ""
-  "sections/introduction.tex" 1773598507.45095 7134 6d744cb60918744a1a4957925a579a4c ""
-  "sections/random_walks.tex" 1773192159.96272 2152 4f90baafdfb3ee4a559d005f2eb40504 ""
-  "sections/stochastic_processes.tex" 1773192159.96272 2591 8454bef038fc35f61f211ce44a78bd3b ""
+  "main.out" 1774306170.36317 5532 0b9207759e0ae012464969148c769f8d "pdflatex"
+  "main.run.xml" 1774306170.36905 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.tex" 1774306165.9866 5365 5e00ccdb0ad62d700fc1d38fcd8a7a99 ""
+  "main.toc" 1774306170.36905 2284 c82981f1e90c287b1912dfc5583997dc "pdflatex"
+  "sections/graph_theory.tex" 1774305709.4723 5343 e5d267c71adf7f09b04f7c389e1df658 ""
+  "sections/introduction.tex" 1774305496.19859 7116 61a8cea187f46fd03a68aa0650051d10 ""
+  "sections/random_walks.tex" 1774305793.08397 2137 51628552635ebcfc09e372293db66a40 ""
+  "sections/stochastic_processes.tex" 1774305859.34794 2567 5ef955137c26e7b1b71a769e0a4628fb ""
   (generated)
   "main.aux"
   "main.bcf"

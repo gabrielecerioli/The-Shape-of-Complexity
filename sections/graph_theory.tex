@@ -77,25 +77,25 @@ w_{ij} & \text{se esiste un arco tra i nodi } i \text{ e } j \\
 \end{cases}
 \end{equation}
 Dove $w_{ij}$ è il peso associato all'arco che collega i nodi $i$ e $j$.\\
-\subsection{Adjacent and Laplacian matrix, spectral properties of graphs}
+\subsection{Proprietà spettrali di un grafo}
 Matrice di adiacenza, vedere come contare i cammini di lunghezza n.
 Matrice laplaciana, def e proprietà spettrali (gli autovalori della matrice laplaciana, uno è sempre zero, algebraic connectivity, molteplicità dello zero come numero di componenti connesse)
 - Sottolineare il legame tra gap spettrale e velocità di espansione del grafo
-\subsection{Measures of centrality}
+\subsection{Misure di centralità}
 Degree centrality, betweenness centrality, eigenvector centrality (pagerank)
-\subsection{Physical examples: Resistor networks and rate flow in waterpipes}
+
 Associare ogni arco ad una resistenza, collegare Kirchooff alla matrice laplaciana.
 Fare qualche accenno alla teoria dei flussi su reti e alla teoria dei flussi massimi, minimi tagli, etc.
 Trovare i critical nodes, dove il voltaggio/flusso è massimo, 
 Fare accenno veloce al graph sparsification. (ridurre il numero di archi mantenendo intatte le proprietà spettrali --> gestire network enormi e fare accenno a applicazione per risolvere sistemi di equazioni lineari)
-\subsection{Clustering and community structure}
+\subsection{Coefficiente di clustering e modularità}
 Definire il coefficiente di clustering.
 Parlare di modulità, citare algoritmo di Louvain per trovare comunità in un grafo.
-\subsection{Random graphs, Small-world and scale-free networks}
+\subsection{Grafi randomici, grafi Small-world e scale-free}
 Reti casuali (Erdos-Renyi)
 Small-world (Watts-Strogatz) --> alta clusterizzazione e brevi distanze (tipico dei cervelli come si vedrà nel case study).
 Scale-free (Barabasi-Albert) --> Presenza di Hub, spiegare il meccanismo del preferential attachment.
-\subsection{Case study: Structural analysis and centralities of the C. elegans connectome}
+\subsection{Case study: Analisi strutturale e centralità del connettoma di \textit{C. elegans}}
 - Visualizzare il grafo del connettoma (con Gephi o NetworkX).
 - Analisi dei gradi --> ci sono pochi neuroni con tantissime connessioni (formano hubs).
 - Individuare i neuroni con betwenness altissima (neuroni di comando)
