@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {2.5}Matrice laplaciana e proprietà spettrali di un grafo}{8}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Misure di centralità}{8}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Coefficiente di clustering e modularità}{8}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Grafi randomici, grafi Small-world e scale-free}{8}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Case study: Analisi strutturale e centralità del connettoma di \textit {C. elegans}}{8}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.8}Grafi randomici, grafi Small-world e scale-free}{9}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Case study: Analisi strutturale e centralità del connettoma di \textit {C. elegans}}{9}{subsection.2.9}%
 \contentsline {section}{\numberline {3}Sistemi dinamici su grafi}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Cammini stocastici e moto di una particella su un grafo}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Diffusione su grafi}{9}{subsection.3.2}%
@@ -19,8 +19,8 @@
 \contentsline {section}{\numberline {4}Stochastic processes on graphs}{9}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{9}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{10}{subsection.4.4}%
 \contentsline {section}{\numberline {A}Algoritmi}{10}{appendix.A}%
 \contentsline {section}{\numberline {B}Esempi fisici: reti elettriche e flussi su reti}{10}{appendix.B}%
 \contentsline {section}{\numberline {C}Case study: Rete ferroviaria austriaca}{10}{appendix.C}%

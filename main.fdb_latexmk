@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1775128474.95175 -1
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1775130266.34322 -1
   "bibliography.bib" 1773482109.28318 319 f63c04899f56acc2a5d9881374c579cc ""
-  "main.bcf" 1775128474.72476 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
+  "main.bcf" 1775130265.93076 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1775128471.53106 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1775128474.95227 0
+["pdflatex"] 1775130259.57161 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1775130266.34421 2
   "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1774306165.9866 5365 5e00ccdb0ad62d700fc1d38fcd8a7a99 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -311,13 +311,12 @@
   "img/internet.png" 1773532043.09879 1678210 2ebb9afc3107dc17313594e49eed18ea ""
   "img/stormo.jpeg" 1773531655.26665 8193 6dca9f26708562502118ecabd8293cdf ""
   "img/undirected_graph_cropped.pdf" 1773599903.09024 17904 570428ebd9976767d42f5e820f7f21bc ""
-  "main.aux" 1775128474.71976 6423 e6620f8fc2df73f848822036d29c9cc7 "pdflatex"
+  "main.aux" 1775130265.92076 6422 62b73f7baff24e9b4bc9177d65327d11 "pdflatex"
   "main.bbl" 1773482301.66108 1932 0d4bb6980e9ec379bfc2e4e651b514f9 "biber main"
-  "main.out" 1775128474.72076 6134 3b242f179dd0a6533418e6681545eca4 "pdflatex"
-  "main.run.xml" 1775128474.72631 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.out" 1775130265.92276 6134 3b242f179dd0a6533418e6681545eca4 "pdflatex"
   "main.tex" 1774306165.9866 5365 5e00ccdb0ad62d700fc1d38fcd8a7a99 ""
-  "main.toc" 1775128474.72631 2565 d7e4de5a5862826585bb01601a07db20 "pdflatex"
-  "sections/graph_theory.tex" 1775128471.28269 11679 3b71df5a5a53101646dd8ccef109c2b0 ""
+  "main.toc" 1775130265.93376 2567 e321be7c0fe707644982861a376b8cea "pdflatex"
+  "sections/graph_theory.tex" 1775130251.65839 11934 3a64d536f89d2254f1de4be08df60e7b ""
   "sections/introduction.tex" 1774305496.19859 7116 61a8cea187f46fd03a68aa0650051d10 ""
   "sections/random_walks.tex" 1774305793.08397 2137 51628552635ebcfc09e372293db66a40 ""
   "sections/stochastic_processes.tex" 1774305859.34794 2567 5ef955137c26e7b1b71a769e0a4628fb ""
