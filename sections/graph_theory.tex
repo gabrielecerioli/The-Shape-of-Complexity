@@ -77,7 +77,136 @@ w_{ij} & \text{se esiste un arco tra i nodi } i \text{ e } j \\
 \end{cases}
 \end{equation}
 Dove $w_{ij}$ è il peso associato all'arco che collega i nodi $i$ e $j$.\\
-\subsection{Proprietà spettrali di un grafo}
+I nodi e gli archi in un grafo non devono essere necessariamente dello stesso tipo. Ad esempio in un grafo che rappresenta le reti di trasporto in una regione, i nodi possono rappresentare areoporti, stazioni ferroviarie, ecc..., mentre gli archi possono rappresentare strade, tratte aeree, ... 
+Strutture di questo tipo possono essere facilmente rappresentare da un grafo multistrato, ovvero un insieme di grafi singoli, in cui possono essere presenti archi inter-strato tra i diversi grafi.
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{img/grafo_multistrato.png} 
+    \caption{Didascalia della figura}
+    \label{fig:immagine1}
+\end{figure}
+Il grafo multistrato è utile anche a rappresentare i grafi dinamici, ovvero i grafi in cui la struttura (gli archi) cambiano nel tempo, in questo caso ogni strato rappresenta una step temporale della dinamica.
+
+\subsection{Grado di un nodo}
+\begin{boxb}{Grado di un nodo}
+Il grado di un nodo in un grafo indiretto è il numero di archi collegato ad esso.
+\end{boxb}
+Esso è legato alla matrice di adiacenza:
+\begin{equation}
+  k_i=\sum_{j=1}^{n}A_{ij}
+\end{equation}
+Se in un grafo ci sono $m$ archi, vi sono $2m$ estremità di archi e dunque deve valere:
+\begin{equation}
+  2m=\sum_{i=1}^{n}k_i=\sum_{ij}^{}A_{ij}
+\end{equation}
+Possiamo inoltre calcolare il grado medio $c$ di un grafo indiretto:
+\begin{equation}
+  c=\frac{1}{n}\sum_{i=1}^{n}k_i
+\end{equation}
+Dall'equazione (FARE RIFERIMENTO) si ottiene l'utile relazione:
+\begin{equation}
+  c=\frac{2m}{n}
+\end{equation}
+Un grafo in cui tutti i nodi hanno lo stesso grado $k$ viene chiamato grafo $k$-regolare. Ad esempio un reticolo quadrato infinito è un grafo 4-regolare.\\
+
+Il numero massimo di archi in un grafo è $\binom{n}{2}=\frac{1}{2}n(n-1)$
+\begin{boxb}{Densità di un grafo}
+  La densità di un grafo è la frazione degli archi effettivamente presenti e vale $\rho=\frac{m}{\binom{n}{2}}=\frac{2m}{n(n-1)}=\frac{c}{n-1}$
+\end{boxb}
+E' evidente che $\rho\in\left[ 0,1 \right]$, e può essere vista come la probabilità che scegliendo casualmente in modo uniforme una coppia di nodi, questa sia legata da un arco.
+\begin{boxb}{Grafo denso}
+Un grafo con $n$ nodi si dice denso, se e solo se $\lim_{n \to +\infty} \rho\neq 0$
+\end{boxb}
+In un grafo denso la frazione di elementi non nulli della matrice di adiacenza non tende a zero nel limite $n \to \infty$. Un grafo non denso è anche detto sparso.
+Dalla relazione (FARE RIFERIMENTO) possiamo osservare che in un grafo denso il grado medio cresce linearmente con $n$, mentre in un grafo sparso cresce sublinearmente.\\
+Nel caso in cui il grado medio di un grado rimane costante al crescere di $n$, il grafo viene detto estremamente sparso.\\
+
+Nel caso di grafi diretti, per ogni nodo si può definire un grado in entrata ed uno in uscita.
+
+\subsection{Cammini sui grafi}
+\begin{boxb}{Cammino}
+Un cammino su un grafo è una qualunque sequenza di nodi tali che ogni coppia consecutiva è connessa da un arco
+\end{boxb}
+Nel caso di grafi diretti, il cammino deve seguire la direzione dell'arco.\\
+
+\begin{boxb}{Cammino semplice}
+Un cammino si dice semplice se è non auto-intersecante, ovvero se non passa due volte per lo stesso nodo.
+\end{boxb}
+\begin{boxb}{Lunghezza di un cammino}
+La lunghezza di un cammino è definita come il numero di archi attraversati
+\end{boxb}
+Nel caso di grafi semplici (anche se ciò che segue è facilmente generalizzabile ad altri casi), siccome $A_{ij}=1$ significa che esiste un arco che connette il nodo $j$ al nodo $i$, allora $A_{ik}A_{kj}=1$ se e solo se esiste un cammino di lunghezza 2 da $j$ a $i$ che passa per $k$.\\
+
+Allora il numero totale di cammini di lunghezza 2 che connette $j$ a $i$ vale:
+\begin{equation}
+  N^{(2)}_{ij}=\sum_{k=1}^{n}A_{ik}A_{kj}=\left[ A^2 \right]_{ij}
+\end{equation}
+
+Generalizzando a cammini di lunghezza arbitraria $r$:
+\begin{equation}
+  N^{(r)}_{ij}=\left[ A^r \right]_{ij}
+\end{equation}
+
+\begin{boxb}{Ciclo}
+Un cammino che inizia e finisce nello stesso nodo prende il nome di ciclo, e il numero di cicli di lunghezza $r$ per il nodo $i$ vale $\left[ A^r \right]_{ii}$
+\end{boxb}
+Per quanto ricavato finora, il numero totale di cicli di lunghezza $r$ in un grafo vale:
+\begin{equation}
+  L_r=\sum_{i=1}^{n}\left[ A^r \right]_{ii}=Tr A^r
+\end{equation}
+
+\begin{boxb}{Cammino geodetico}
+  Il cammino geodetico tra un paio di nodi, è il cammino di lunghezza minima
+\end{boxb}
+I cammini geodetici sono cammini semplici, siccome se il cammino si auto-intersecasse, conterrebbe un ciclo che potrebbe essere rimosso.\\
+Inoltre i cammini geodetici non sono unici.\\
+
+\begin{boxb}{Distanza geodetica}
+La distanza geodetica tra due nodi, $d(i,j)$, è definita come la lunghezza minima tra i cammini che connettono i due nodi
+\end{boxb}
+
+Valgono tutte le proprietà di una metrica:
+\begin{itemize}
+  \item $d(i,j) \ge 0$
+  \item $d(i,j)=d(j,i)$   (solo se il grafo è non direzionato)
+  \item $d(i,j) \le d(i,k)+d(k,j)$
+\end{itemize}
+
+\begin{boxb}{Diametro di un grafo}
+  Il diametro di un grafo è la lunghezza del cammino geodetico più lungo tra tutte le coppie dei suoi nodi
+\end{boxb}
+Possiamo inoltre define la lunghezza di cammino media di un grafo:
+\begin{equation}
+  \left\langle d \right\rangle=\frac{1}{n(n-1)}\sum_{i\not=j}^{}d(i,j)
+\end{equation}
+\subsection{Componenti e connettività}
+Dato un grafo $V$ è possibile definire:
+\begin{boxb}{Componente connessa}
+  Un sottoinsieme $C\subseteq V$ è una componente connessa se:
+  \begin{itemize}
+   \item Ogni coppia di nodi in $C$ è connessa da un cammino
+   \item $C$ è massimale, ovvero non è possibile aggiungere nessun altro nodo mantenendo la proprietà
+  \end{itemize}
+\end{boxb}
+\begin{boxb}{Grafo connesso}
+Un grafo si dice connesso se contiene una sola componente connessa, ovvero ogni sua coppia di nodi è connessa da un cammino.
+\end{boxb}
+
+Per grafi diretti la connettività è più complessa da trattare, e possiamo distinguere componenti debolmente connesse (WCC) e fortemente connesse (SCC):
+\begin{itemize}
+  \item Componente debolmente connessa: si applica la definizione di connettività ignorando la direzione degli archi
+  \item Componente fortemente connessa: se $\forall (i,j)\in C$ essite almeno un cammino in direzione $i \to j$ e almeno uno $j \to i$
+\end{itemize}\\
+
+Possiamo inoltre definire delle misure di connettività nel grafo:
+\begin{boxb}{Connettività per nodi}
+  La connettività per nodi p il numero minimo di nodi da rimuovere per disconnettere il grafo:
+  \begin{equation}
+    
+  \end{equation}
+\end{boxb}
+\subsection{Matrice laplaciana e proprietà spettrali di un grafo}
 Matrice di adiacenza, vedere come contare i cammini di lunghezza n.
 Matrice laplaciana, def e proprietà spettrali (gli autovalori della matrice laplaciana, uno è sempre zero, algebraic connectivity, molteplicità dello zero come numero di componenti connesse)
 - Sottolineare il legame tra gap spettrale e velocità di espansione del grafo
