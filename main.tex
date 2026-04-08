@@ -36,7 +36,9 @@
 \definecolor{darkerred}{HTML}{b00000}
 \definecolor{palered}{HTML}{ff7f7f}
 \definecolor{bourdeaux}{HTML}{800000}
-\definecolor{lblue}{HTML}{00C4D6}
+\definecolor{bourd_back}{HTML}{dec9c1}
+\definecolor{lblue}{HTML}{01686e}
+\definecolor{blue_back}{HTML}{d3e2e3}
 \newtcolorbox{boxe}[2][]{
                 lower separated=false,
                 colback=white,
@@ -61,7 +63,7 @@
                 #1}
 \newtcolorbox{boxb}[2][]{
                 lower separated=false,
-                colback=white,
+                colback=bourd_back,
                 colframe=bourdeaux,fonttitle=\bfseries,
                 colbacktitle=bourdeaux,
                 coltitle=white,
@@ -72,10 +74,10 @@
                 #1}
 \newtcolorbox{boxl}[2][]{
                 lower separated=false,
-                colback=white,
+                colback=blue_back,
                 colframe=lblue,fonttitle=\bfseries,
                 colbacktitle=lblue,
-                coltitle=black,
+                coltitle=white,
                 enhanced,
                 attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
                 boxed title style={boxrule=0pt,colframe=white,},

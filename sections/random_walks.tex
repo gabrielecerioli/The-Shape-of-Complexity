@@ -113,9 +113,38 @@ Usando il tempo medio di primo passaggio, possiamo definire una misura di distan
 \end{boxb}
 
 Ci si potrebbe chiedere quanto velocemente il cammino stocastico converga alla distribuzione stazionaria.\\
+Per fare ciò è necessario prima definire una distanza tra le distribuzioni di probabilità:
+\begin{boxb}{Distanza di variazione totale}
+    Definiamo la distanza di variazione totale tra le distribuzioni $\mathbf{p^{t}}$ e $\mathbf{\tilde{p}}$ come:
+    \begin{equation}
+            d_{TV}(t)= \max_{i \in V}\left\lVert \mathbf{p}^{t}(i,\cdot)-\mathbf{\tilde{p}} \right\rVert_{TV}=\max_{i \in V}\frac{1}{2}\sum_{j \in V}^{}\left\lvert \mathbf{p}^t(i,j)-\tilde{p}_j\right\rvert 
+    \end{equation}
+    dove $p^{t}(i,j)$ è la probabilità di trovarsi in $j$ al tempo $t$ partendo da $i$.
+\end{boxb}
 
+Definiamo il mixing time con parametro di errore $\epsilon$:
+\begin{boxb}{Mixing time}
+    \begin{equation}
+            t_{\text{mix}}(\epsilon)=\min\{ t : d_{TV}(t) \le \epsilon \} 
+    \end{equation}
+\end{boxb}
+Fissando $\epsilon$, $t_{\text{mix}}(\epsilon)$ ci fornisce una misura del tempo di convergenza alla distribuzione stazionaria $\mathbf{\tilde{p}}$\\
+Convenzionalmente si assume $\epsilon=\frac{1}{4}$ poiche per $t > t_{\text{mix}}(1/4)$ la distanza decade esponenzialmente.\\
 
+Notiamo che generalmente $\mathbf{M}=\mathbf{W}^t=\mathbf{D}^{-1}\mathbf{A}$ non è simmetrica, ma è simile ad una matrice simmetrica $\mathbf{S}$:
+\begin{equation}
+    \mathbf{S}=\mathbf{D}^{1/2}\mathbf{M}\mathbf{D}^{-1/2}=\mathbf{D}^{-1/2}\mathbf{A}\mathbf{D}^{-1/2}
+\end{equation}
+Dal teorema spettrale, sappiamo che siccome $\mathbf{S}$ è reale e simmetrica, possiede $n$ autovalori reali $\lambda_1, ..., \lambda_n$, e un set ortonormale di autovettori $\{ v_k\}$.\\
+Inoltre essendo $S$ e $M$ simili, condividono gli stessi autovalori.\\
 
+Come già visto per la matrice laplaciana, il fatto che la somma delle righe o delle colonne di $S$ sia pari a 1 significa che $\lambda_1=1$ è l'autovalore massimo.\\
+Sappiamo inoltre che l'autovettore destro di $M$ associato a $\lambda_1$ è la distribuzione stazionaria $\mathbf{\tilde{p}}$.\\
+
+\begin{boxl}{Teorema}
+Siano $\{ \lambda_k\} $ gli autovalori della matrice $S$.\\
+Se il grafo è connesso e non bipartito allora $| \lambda_k\vert < 1 \ \ \forall k > 1$
+\end{boxl}
 
 \begin{comment}
 

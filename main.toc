@@ -14,16 +14,16 @@
 \contentsline {subsection}{\numberline {2.9}Case study: Analisi strutturale e centralità del connettoma di \textit {C. elegans}}{9}{subsection.2.9}%
 \contentsline {section}{\numberline {3}Sistemi dinamici su grafi}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Cammini stocastici e moto di una particella su un grafo}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Diffusione su grafi}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{11}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Stochastic processes on graphs}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{11}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{11}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{11}{subsection.4.4}%
-\contentsline {section}{\numberline {A}Algoritmi}{11}{appendix.A}%
-\contentsline {section}{\numberline {B}Dimostrazioni}{11}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{11}{subsection.B.1}%
+\contentsline {subsection}{\numberline {3.2}Diffusione su grafi}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{12}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Stochastic processes on graphs}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{12}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{12}{subsection.4.4}%
+\contentsline {section}{\numberline {A}Algoritmi}{12}{appendix.A}%
+\contentsline {section}{\numberline {B}Dimostrazioni}{12}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{12}{subsection.B.1}%
 \contentsline {subsection}{\numberline {B.2}Teorema di Kac e teoria ergodica}{12}{subsection.B.2}%
 \contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{12}{appendix.C}%
 \contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{12}{appendix.D}%
