@@ -1,20 +1,29 @@
 \subsection{Informazione ed entropia topologica}
+\begin{comment}
+
 . Definire l'entropia di Shannon applicata alle reti. --> misura di incertezza nel muoversi nella rete.
-- Topological entropy --> entropia associata alla matrice di adiacenza, citare il legamento con l'autovalore massimo (TEOREMA DI PERRON FROBENIUS) --> rete connessa e regolare ha entropia diversa da una rete eterogenea
+- Topomente) con una combinazione di tasti, senza bisogno di verbatim o altri pacchetti.logical entropy --> entropia associata alla matrice di adiacenza, citare il legamento con l'autovalore massimo (TEOREMA DI PERRON FROBENIUS) --> rete connessa e regolare ha entropia diversa da una rete eterogenea
 - Vedere l'entropia come efficienza del grafo nel codificare informazioni
+\end{comment}
+
 \subsection{Percolazione, transizione di fase e robustezza delle reti}
+\begin{comment}
 - Definire il processo di percolazione --> rimozione di nodi --> definire la soglia di percolazione (punto critico in cui la rete smette di avere un giant component e si frantuma in pezzi isolati)
 - Transizione di fase --> far vedere che la percolazione è una transizione di fase del secondo ordine (geometrica)
 - Robustezza delle reti --> come la topologia del grafo influenza la soglia di percolazione.
 - Confronto con il random failure e targeted attack 
 - Distinguere bene la percolazione sui nodi e la percolazione sugli archi (per il connettoma è più realistico considerare la percolazione sugli archi, ma è più semplice da simulare quella sui nodi)
-
+\end{comment}
 \subsection{Monte Carlo su grafi e modelli di Ising}
+\begin{comment}
 STARE ATTENTI A NON ENTRARE TROPPO NEL DETTAGLIO -> MANTENERLO NUMERICO --> obiettivo è mostrare come varia la temperatura critica con la topologia.
 - Modello di Ising su un grafo --> far vedere l'hamiltoniana --> le interazioni avvengono solo sui nodi connessi da edges
 - Metropolis --> Flip di un spin casuale --> Calcolo della variazione di energia --> accettazione basata sul peso di Boltzmann --> Far notare che metropolis è un random walk sullo spezio delle configurazioni di spin
+\end{comment}
 \subsection{Case study: Percolazione e modello di Ising sul connettoma di \textit{C. elegans}}
+\begin{comment}
 - Simulazione di percolazione (far vedere come varia la dimensione del giant component rimuovendo i neuroni hub o rimuovendo neuroni casuali)
 - Far girare il modello di Ising sul connettoma via via più frammentato --> far vedere che quando la rete percola --> il sistema perde la capacità di sostenenere il comportamento collettivo --> Gli hub del connettoma non servono solo a connettere i neuroni ma a mantenere l'ordine fisico-biologico di tutto il sistema.
 - Grafico Temperetura critica vs soglia di percolazione --> vedere se c'è una correlazione tra la capacità di sostenere l'ordine collettivo e la robustezza della rete alla frammentazione.
 - Percolation sui nodi --> rimozione di neuroni ; percolation sugli archi --> sinapsi danneggiate.
+\end{comment}

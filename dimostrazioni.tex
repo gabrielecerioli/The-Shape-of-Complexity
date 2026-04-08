@@ -1,0 +1,36 @@
+\subsection{Unicità della distribuzione stazionaria di un cammino stocastico}
+
+\begin{boxl}{Teorema}
+Sia $G$ un grafo non direzionato connesso e non bipartito e sia $\textbf{p}$ il vettore di probabilità tale che $\textbf{Wp}=\textbf{p}$\\
+Allora $\mathbf{p}=\mathbf{\mathbf{\tilde{p}}}$
+\end{boxl}
+
+\begin{proof}
+    
+Sia $u$ un qualunque vertice che massimizzi
+\begin{equation}
+    \frac{\textbf{p}(u)}{k_u}
+\end{equation}
+Dall'ipotesi che $\textbf{Wp}=\textbf{p}$ si ottiene:
+\begin{equation}
+    \mathbf{p}(u)=\sum_{v:(v,u)\in E}^{}\frac{\mathbf{p}(v)}{k_v} \le \sum_{v:(v,u)\in E}^{}\frac{\mathbf{p}(u)}{k_u}=\mathbf{p}(u)
+\end{equation}
+
+Dunque deve valere che $\forall (v,u)$ connessi da un arco:
+\begin{equation}
+    \frac{\mathbf{p}(u)}{k_u}=\frac{\mathbf{p}(v)}{k_v}
+    \label{eq_uniq_s_s_dis}
+\end{equation}
+Propaghiamo ora questa uguaglianza a tutto il grafo:\\
+
+sia $S$ l'insieme dei vertici per cui vale \ref{eq_uniq_s_s_dis}. Supponiamo per assurdo che esista un vertice $w \notin S$.\\
+Siccome il grafo è connesso, esiste un cammino da $u$ a $w$, dunque deve esserci un qualche arco $(y,z)$ tale per cui $y \in S$ e $z \notin S$.\\
+Se ripetiamo la dimostrazione con il nodo $y$ al posto di $u$, otteniamo 
+\begin{equation}
+    \frac{\mathbf{p}(y)}{k_y}=\frac{\mathbf{p}(z)}{k_z}
+\end{equation}
+che è una contraddizione all'ipotesi che $y \in S$ e $z \notin S$.
+\end{proof}
+
+\subsection{Teorema di Kac e teoria ergodica}
+

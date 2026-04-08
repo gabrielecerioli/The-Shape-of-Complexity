@@ -176,10 +176,19 @@ Valgono tutte le proprietà di una metrica:
 \begin{boxb}{Diametro di un grafo}
   Il diametro di un grafo è la lunghezza del cammino geodetico più lungo tra tutte le coppie dei suoi nodi
 \end{boxb}
-Possiamo inoltre define la lunghezza di cammino media di un grafo:
+Possiamo inoltre define la lunghezza di cammino minimo medio di un grafo:
 \begin{equation}
   \left\langle d \right\rangle=\frac{1}{n(n-1)}\sum_{i\not=j}^{}d(i,j)
 \end{equation}
+questo valore ci fornisce una misura di quanto "largo" sia il grafo.\\
+
+E' interessante anche definire una misura di quanto "veloce" l'informazione possa viaggiare sulla rete:
+\begin{boxb}{Efficienza globale}
+  \begin{equation}
+        E_{\text{glob}}=\frac{1}{n(n-1)}\sum_{i\not=j}^{}\frac{1}{d(i,j)}
+  \end{equation}
+\end{boxb}
+Spesso questo valore viene normalizzato rispetto ad il grafo completo $K_N$, dove ogni nodo è collegato a tutti gli altri e quindi con $E_{\text{glob}}=1$
 \subsection{Componenti e connettività}
 Dato un grafo $V$ è possibile definire:
 \begin{boxb}{Componente connessa}
@@ -197,39 +206,83 @@ Per grafi diretti la connettività è più complessa da trattare, e possiamo dis
 \begin{itemize}
   \item Componente debolmente connessa: si applica la definizione di connettività ignorando la direzione degli archi
   \item Componente fortemente connessa: se $\forall (i,j)\in C$ essite almeno un cammino in direzione $i \to j$ e almeno uno $j \to i$
-\end{itemize}\\
+\end{itemize}
 
 Possiamo inoltre definire delle misure di connettività nel grafo:
 \begin{boxb}{Connettività per nodi}
-  La connettività per nodi p il numero minimo di nodi da rimuovere per disconnettere il grafo:
-  \begin{equation}
-    
-  \end{equation}
+  La connettività per nodi $\mathcal{k}(G)$ è il numero minimo di nodi da rimuovere per disconnettere il grafo
 \end{boxb}
+Una definizione analoga si può dare per la connettività per archi $\lambda(G)$.
+
 \subsection{Matrice laplaciana e proprietà spettrali di un grafo}
-Matrice di adiacenza, vedere come contare i cammini di lunghezza n.
-Matrice laplaciana, def e proprietà spettrali (gli autovalori della matrice laplaciana, uno è sempre zero, algebraic connectivity, molteplicità dello zero come numero di componenti connesse)
-- Sottolineare il legame tra gap spettrale e velocità di espansione del grafo
+Nel caso di grafi indiretti si può definire la seguente matrice:
+\begin{boxb}{Matrice laplaciana}
+\begin{equation}
+  L_{ij}=\left\{ \begin{array}{cl}
+k_i & :  \ i =j \\
+-1 & :  \ i \not=j \ \text{and c'è un arco tra} \ i \ \text{e}\ j \\
+k_i & :  \ \text{altrimenti}
+\end{array} \right.
+\end{equation}
+dove $k_i$ è il grado del nodo $i$
+\end{boxb}
+
+Possiamo scrivere la matrice laplaciana in modo più compatto come:
+\begin{equation}
+  L=D-A
+\end{equation}
+con $D$ la matrice diagonale con $D_{ii}=k_i$.
+
+Analizziamo alcune proprietà spettrali della matrice laplaciana di un grafo:
+\begin{itemize}
+  \item La somma di ogni righa (e colonna) è nulla:
+  \begin{equation}
+    \sum_{j}^{}L_{ij}=\sum_{j}^{}(k_i\delta_{ij}-A_{ij})=k_i-k_i=0
+  \end{equation}
+questo significa che il vettore unità $(1,1,...)$ è sempre autovettore di $L$ con autovalore nullo, dunque ha sempre almeno un autovalore nullo.
+  \item Siccome $L$ è una matrice reale simmetrica, necessariamente i suoi autovalori sono reali 
+  \item Gli autovalori di $L$ sono tutti non-negativi
+  \item Siccome la somma di ogni riga è nulla il vettore unità $(1,1,...)$ è sempre autovettore di $L$ con autovalore nullo, dunque la matrice laplaciana ha sempre almeno un autovalore nullo, e questo è l'autovalore minimo
+  \item Siccome ha sempre l'autovalore nullo, $det(L)=0$ e non ammette dunque inversa
+\end{itemize}
+
+Si può dimostrare (FARE RIFERIMENTO pag. 152 Newman) che un grafo è connesso se e solo se il secondo più piccolo autovalore $\lambda_2$ è non nullo, questo autovalore viene anche chiamato connettività algebrica del grafo.\\
+
+Si può inoltre dimostrare (FARE RIFERIMENTO) che $lambda_2$ è una stima "prudente" della robustezza strutturale del grafo:
+\begin{equation}
+  \lambda_2(G) \le \mathcal{k}(G) \le \lambda (G)
+\end{equation}
+
+Anche gli alti autovalori della matrice laplaciana $0=\lambda_1 \le \lambda_2 \le ... \le \lambda_n$ hanno significati importanti:
+
 \subsection{Misure di centralità}
+\begin{comment}
 Degree centrality, betweenness centrality, eigenvector centrality (pagerank)
 
 Associare ogni arco ad una resistenza, collegare Kirchooff alla matrice laplaciana.
 Fare qualche accenno alla teoria dei flussi su reti e alla teoria dei flussi massimi, minimi tagli, etc.
 Trovare i critical nodes, dove il voltaggio/flusso è massimo, 
 Fare accenno veloce al graph sparsification. (ridurre il numero di archi mantenendo intatte le proprietà spettrali --> gestire network enormi e fare accenno a applicazione per risolvere sistemi di equazioni lineari)
+\end{comment}
 \subsection{Coefficiente di clustering e modularità}
+\begin{comment}
 Definire il coefficiente di clustering.
 Parlare di modulità, citare algoritmo di Louvain per trovare comunità in un grafo.
+\end{comment}
 \subsection{Grafi randomici, grafi Small-world e scale-free}
+\begin{comment}
 Reti casuali (Erdos-Renyi)
 Small-world (Watts-Strogatz) --> alta clusterizzazione e brevi distanze (tipico dei cervelli come si vedrà nel case study).
 Scale-free (Barabasi-Albert) --> Presenza di Hub, spiegare il meccanismo del preferential attachment.
+\end{comment}
 \subsection{Case study: Analisi strutturale e centralità del connettoma di \textit{C. elegans}}
+\begin{comment}
 - Visualizzare il grafo del connettoma (con Gephi o NetworkX).
 - Analisi dei gradi --> ci sono pochi neuroni con tantissime connessioni (formano hubs).
 - Individuare i neuroni con betwenness altissima (neuroni di comando)
 - Analisi dei cluster nel connettoma --> vedere se ci sono dei distretti funzionali (es. zona cefalica vs motoria)
 --> assicurarsi che le mappe di calore della centralità siano chiare (eventualemente usare un algoritmo di spaziatura adeguato --> ForceAtlas2 in Gephi)
+\end{comment}
 
 
 

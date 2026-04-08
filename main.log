@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  2 APR 2026 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  8 APR 2026 10:20
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1029,7 +1029,14 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 \@quotelevel=\count496
 \@quotereset=\count497
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 123.
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `fig:b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:b' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
@@ -1131,6 +1138,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 123.
+ (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -1170,7 +1178,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/Sigillo_Scritta_HR.png, id=7, 813.0375pt x 1053.9375pt>
+<img/Sigillo_Scritta_HR.png, id=123, 813.0375pt x 1053.9375pt>
 File: img/Sigillo_Scritta_HR.png Graphic file (type png)
 <use img/Sigillo_Scritta_HR.png>
 Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 135.
@@ -1178,12 +1186,27 @@ Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 135.
  [1
 
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./img/Sigillo_Scritta_HR.png>]
-No file main.toc.
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./img/Sigillo_Scritta_HR.png>] (./main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+esint on input line 2.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-[2
+ [2
 
 ] (./sections/introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--5
@@ -1216,29 +1239,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 
-LaTeX Warning: Reference `fig:griglia_4' on page 3 undefined on input line 31.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-<img/500px-SurfaceTemperature.jpg, id=25, 501.875pt x 250.9375pt>
+<img/500px-SurfaceTemperature.jpg, id=173, 501.875pt x 250.9375pt>
 File: img/500px-SurfaceTemperature.jpg Graphic file (type jpg)
 <use img/500px-SurfaceTemperature.jpg>
 Package pdftex.def Info: img/500px-SurfaceTemperature.jpg  used on input line 38.
 (pdftex.def)             Requested size: 232.17242pt x 116.0874pt.
-<img/connettoma.jpg, id=26, 803.0pt x 658.46pt>
+<img/connettoma.jpg, id=174, 803.0pt x 658.46pt>
 File: img/connettoma.jpg Graphic file (type jpg)
 <use img/connettoma.jpg>
 Package pdftex.def Info: img/connettoma.jpg  used on input line 45.
 (pdftex.def)             Requested size: 232.17242pt x 190.37581pt.
-<img/stormo.jpeg, id=27, 276.03125pt x 183.68625pt>
+<img/stormo.jpeg, id=175, 276.03125pt x 183.68625pt>
 File: img/stormo.jpeg Graphic file (type jpg)
 <use img/stormo.jpeg>
 Package pdftex.def Info: img/stormo.jpeg  used on input line 55.
 (pdftex.def)             Requested size: 232.17242pt x 154.50839pt.
-<img/internet.png, id=28, 1013.7875pt x 930.47626pt>
+<img/internet.png, id=176, 1013.7875pt x 930.47626pt>
 File: img/internet.png Graphic file (type png)
 <use img/internet.png>
 Package pdftex.def Info: img/internet.png  used on input line 62.
@@ -1249,40 +1269,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
  []
 
 ) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
-<img/undirected_graph_cropped.pdf, id=50, 576.91132pt x 584.98549pt>
+<img/undirected_graph_cropped.pdf, id=193, 576.91132pt x 584.98549pt>
 File: img/undirected_graph_cropped.pdf Graphic file (type pdf)
 <use img/undirected_graph_cropped.pdf>
 Package pdftex.def Info: img/undirected_graph_cropped.pdf  used on input line 10.
 (pdftex.def)             Requested size: 169.29684pt x 171.65875pt.
-<img/directed_graph.pdf, id=51, 581.60886pt x 576.52388pt>
+<img/directed_graph.pdf, id=194, 581.60886pt x 576.52388pt>
 File: img/directed_graph.pdf Graphic file (type pdf)
 <use img/directed_graph.pdf>
 Package pdftex.def Info: img/directed_graph.pdf  used on input line 18.
 (pdftex.def)             Requested size: 169.29684pt x 167.81223pt.
-<img/Zachary_graph_formatted.pdf, id=52, 579.6516pt x 547.52553pt>
+<img/Zachary_graph_formatted.pdf, id=195, 579.6516pt x 547.52553pt>
 File: img/Zachary_graph_formatted.pdf Graphic file (type pdf)
 <use img/Zachary_graph_formatted.pdf>
 Package pdftex.def Info: img/Zachary_graph_formatted.pdf  used on input line 23.
 (pdftex.def)             Requested size: 169.29684pt x 159.91455pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+esint on input line 31.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/esint/uesint.fd
-File: uesint.fd 
-)
-
-LaTeX Warning: Reference `fig:a' on page 5 undefined on input line 38.
-
 
 Underfull \hbox (badness 5756) in paragraph at lines 48--51
 \T1/cmr/m/n/10 Gli el-e-menti della di-ag-o-nale sono sem-pre nulli, tranne nel
@@ -1308,11 +1309,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
 
-
-LaTeX Warning: Reference `fig:b' on page 5 undefined on input line 59.
-
 [5 <./img/undirected_graph_cropped.pdf> <./img/directed_graph.pdf> <./img/Zachary_graph_formatted.pdf>]
-<img/grafo_multistrato.png, id=97, 1180.41pt x 904.37875pt>
+<img/grafo_multistrato.png, id=240, 1180.41pt x 904.37875pt>
 File: img/grafo_multistrato.png Graphic file (type png)
 <use img/grafo_multistrato.png>
 Package pdftex.def Info: img/grafo_multistrato.png  used on input line 85.
@@ -1343,119 +1341,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
  []
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
 
-./sections/graph_theory.tex:201: LaTeX Error: There's no line here to end.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.201 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 10.0pt on input line 213.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 7.0pt on input line 213.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 5.0pt on input line 213.
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
-./sections/graph_theory.tex:206: Missing $ inserted.
-<inserted text> 
-                $
-l.206 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
-./sections/graph_theory.tex:206: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.206 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+) (./sections/random_walks.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
 
 
-./sections/graph_theory.tex:207: LaTeX Error: Bad math environment delimiter.
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.207   \end{equation}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
-./sections/graph_theory.tex:207: You can't use `\eqno' in internal vertical mode.
-\veqno ->\@kernel@eqno 
-                       \aftergroup \ignorespaces 
-l.207   \end{equation}
-                      
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
 
-./sections/graph_theory.tex:207: Missing $ inserted.
-<inserted text> 
-                $
-l.207   \end{equation}
-                      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
-./sections/graph_theory.tex:207: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.207   \end{equation}
-                      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+ []
 
-[8]) (./sections/random_walks.tex) (./sections/stochastic_processes.tex [9]) (./algorithms.tex) [10] (./main.aux)
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+) (./sections/stochastic_processes.tex) (./algorithms.tex) (./dimostrazioni.tex [11]
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+)
+
+LaTeX Warning: Empty bibliography on input line 211.
+
+[12] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3B242F179DD0A6533418E6681545ECA4;6134.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 7ADF5ADFCCC8BB1E16B0F13C9A2A9B56;6881.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44975 strings out of 467538
- 964184 string characters out of 5419552
- 1778992 words of memory out of 5000000
- 73079 multiletter control sequences out of 15000+600000
- 644107 words of font info for 74 fonts, out of 8000000 for 9000
+ 44871 strings out of 467538
+ 961319 string characters out of 5419552
+ 1781671 words of memory out of 5000000
+ 72936 multiletter control sequences out of 15000+600000
+ 647612 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,9n,121p,1205b,1309s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (10 pages, 3391014 bytes).
+ 116i,12n,121p,1205b,1309s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (12 pages, 3453003 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 447 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 

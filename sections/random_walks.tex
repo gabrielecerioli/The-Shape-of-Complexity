@@ -1,5 +1,124 @@
 \section{Sistemi dinamici su grafi}
 \subsection{Cammini stocastici e moto di una particella su un grafo}
+\begin{boxb}{Cammino stocastico su un grafo}
+Un cammino stocastico (random walk) su un grafo è un cammino ottenuto ripetendo passi casuali.
+\end{boxb}
+Trattiamo inizialmente il caso più semplice dei grafi non direzionati.
+Partendo da un nodo iniziale, il cammino stocastico si muove ad uno dei nodi legati scegliendo l'arco casualmente con distribuzione uniforme.\\
+
+Indicando con $p_i(t)$ la probabilità che il cammino stocastico si trovi nel nodo $i$ al tempo t, si ottiene:
+\begin{equation}
+    \boxed{p_i(t)=\sum_{j}^{}\frac{A_{ij}}{k_j}p_j(t-1)}
+\end{equation}
+o in forma matriciale:
+\begin{equation}
+    p(t)=AD^{-1}p(t-1)
+\end{equation}
+\begin{boxb}{Matrice di cammino}
+Chiamiamo $\textbf{W}=\textbf{AD}^{-1}$ matrice di cammino.\\
+\end{boxb}
+Siccome siamo particolarmente interessati alla distribuzione di probabiità a $t \to \infty$, chiamando $\lim_{t \to \infty} p(t)=\mathbf{\tilde{p}}$, si ottiene:
+\begin{equation}
+    \pi=\textbf{W}\pi
+\end{equation}
+Riscrivendo otteniamo:
+\begin{equation}
+    (\mathbb{I}-AD^{-1})\mathbf{\tilde{p}}=(D-A)D^{-1}\mathbf{\tilde{p}}=LD^{-1}\mathbf{\tilde{p}}=0
+\end{equation}
+quindi $D^{-1}\mathbf{\tilde{p}}$ deve essere un autovettore di $L$ con autovalore nullo.\\
+
+Come si è già visto in (FARE RIFERIMENTO), in un grafo connesso soltanto il vettore unità $\mathcal{1}=(1,1,1,...)$ è un autovettore di $L$ con autovalore $0$.\\
+Dunque vale $D^{-1}\tilde{\mathbf{p}}=a\mathcal{1}$ con $a$ costante, e si ottiene: $\tilde{p}_i=aK_i$.
+Normalizzando le probabilità, per un grafo connesso si ottiene:
+\begin{equation}
+    \boxed{\tilde{p}_i=\frac{k_i}{\sum_{j}^{}k_j}=\frac{k_i}{2m}}
+\label{eq_stat_dis}
+\end{equation}
+avendo fatto uso dell'equazione (FARE RIFERIMENTO), con $m$ numero di archi.\\
+
+Concludiamo dunque che per un grafo connesso la probabilità che un cammino stocastico si trovi al nodo $i$ al limite $t \to \infty$ è proporzionale al grado del nodo.\\
+
+Si può dimostrare che per un grafo indiretto connesso la distribuzione stazionaria $\mathbf{\tilde{p}}$ è unica. (FARE RIFERIMENTO IN APPENDICE)
+\begin{boxl}{Unicità della distribuzione stazionaria}
+Sia $G$ un grafo non direzionato connesso e non bipartito e sia $\textbf{p}$ il vettore di probabilità tale che $\textbf{Wp}=\textbf{p}$\\
+Allora $\mathbf{p}=\mathbf{\mathbf{\tilde{p}}}$
+\end{boxl}
+
+
+Una possibile misura di convergenza potrebbe essere la norma del vettore $\mathbf{p}_t-\tilde{p}$.
+Ci si può convincere che nel caso di un grafo bipartito, la distribuzione di probabilità non sia mai stazionaria ma oscilli sempre tra i due gruppi in cui è diviso il grafo.\\
+
+Per ovviare a questo problema, si definisce spesso il \textbf{cammino stocastico pigro}, che ha una probabilità di $\frac{1}{2}$ di rimanere fermo nel nodo.\\
+
+Per questo tipo di cammino stocastico, la matrice di transizione è:
+\begin{equation}
+    \tilde{\mathbf{W}}=\frac{1}{2}(\mathbf{I}+\mathbf{W})=\frac{1}{2}(\mathbf{I}+\mathbf{D}^{-1}\mathbf{A})
+\end{equation}
+
+
+Se denotiamo con $(X_t)_{t \in \mathbb{N}}$ il cammino stocastico su un grafo connesso $G=(V,E)$, possiamo scrivere la probabilità di transizione dal nodo $i$ al nodo $j$ facendo uso della matrice di cammino:
+\begin{equation}
+    P(X_{t+1}=j \mid X_t=i)=\frac{A_{ij}}{k_i}=(\mathbf{W}^t)_{ij}\equiv M_{ij}
+\end{equation}
+Da notare la necessità di trasporre la matrice di cammino.\\
+
+Procediamo a definire alcune quantità utili all'analisi di cammini stocastici sui grafi:
+\begin{boxb}{Tempo di primo passaggio}
+Il tempo di primo passaggio da $i$ a $j$, $T_{ij}$, è la variabile stocastica definite come il primo istante temporale positivo in cui il cammino raggiunge $j$ partendo da $i$
+\end{boxb}
+Il valore atteso del tempo di primo passaggio prende il nome di \textbf{"Mean First Passage Time"}  (MFPT):
+\begin{equation}
+    \mathbb{E}[T_{ij}]=H(i,j)
+\end{equation}
+
+Definiamo delle equazioni ricorsive per calcolare $H(i,j)$:\\
+
+Se il cammino si muove da $i$ ad un suo vicino $k$:
+\begin{itemize}
+    \item Se $k=j$ (con probabilità $M_{ij}$), allora il tempo impiegato è $1$
+    \item Se $k \not= j$, allora il tempo totale sarà $1+H(k,j)$
+\end{itemize}
+
+Si ottiene dunque la relazione fondamentale:
+\begin{equation}
+    H(i,j)=M_{ij}+\sum_{k \not = j}^{}M_{ik}(1+H(k,j))=1+\sum_{k \not = j}^{}\frac{A_{ik}}{k_i}H(k,j)
+\end{equation}
+che rappresenta un sistema di $n-1$ equazioni lineari per ogni nodo target $j$.\\
+
+Si noti che il termine $H(j,j)$ non compare nella sommatoria della definizione del tempo medio di \textbf{primo} passaggio.
+
+\begin{boxb}{Tempo medio di ritorno}
+Il tempo medio di ritorno al nodo $j$, $H(j,j)$ è il tempo medio che il cammino stocastico impiega a tornare nel nodo di partenza
+\end{boxb}
+Per calcolare questo valore, è utile un lemma della teoria ergodica (per una dimostrazione vedere in appendice FARE RIFERIMENTO):
+\begin{boxl}{Lemma di Kac}
+Sia $G(V,E)$ un grafo connesso e non bipartito. Per un cammino stocastico vale:
+\begin{equation}
+    H(j,j)=\frac{1}{\tilde{p}_j}
+\end{equation}
+ovvero l'inverso della sua probabilità stazionaria.
+\end{boxl}
+Usando il risultato \ref{eq_stat_dis} si ottiene:
+\begin{equation}
+    \boxed{H(j,j)=\frac{2m}{k_j}}
+\end{equation}
+Questo risultato ci mostra come i nodi "hub" (con grado elevato) non sono solo i nodi in cui il cammino trascorre più tempo nel limite $t \to \infty$, ma sono anche quelli visitati più frequentemente, avendo i tempi medi di ritorno più brevi.\\
+
+Usando il tempo medio di primo passaggio, possiamo definire una misura di distanza dinamica alternativa alla distanza geodetica:
+\begin{boxb}{Commute time}
+    Definiamo il \textbf{commute time} come il tempo medio di andata e ritorno tra due nodi $i$ e $j$
+\begin{equation}
+    C_{ij}=H(i,j)+H(j,i)
+\end{equation}
+\end{boxb}
+
+Ci si potrebbe chiedere quanto velocemente il cammino stocastico converga alla distribuzione stazionaria.\\
+
+
+
+
+\begin{comment}
+
 - Definire il random walk come processo stocastico discreto sul grafo.
 - Definire l'equazione di master --> governa l'evoluzione della probabilità di trovare la particella in un certo nodo al tempo t.
 - Far vedere che (in grafi non orientati e connessi) la probabilità stazionaria è proporzionale al grado del nodo.
@@ -10,11 +129,16 @@
 - Mean recurrence time: tempo medio necessario per tornare la punto di partenza. Citare teorema di Kac  --> più un nodo è centrale , più velocemente ci si ritorna
 - Mixing time --> tempo necessario per raggiungere la distribuzione stazionaria  --> per capire la velocità di reazione del sistema nervoso nel C. elegans
 - Applicazioni --> usare questi trumenti per misurare l'efficenza della rete nel trasmettere segnali
+\end{comment}
+
 \subsection{Diffusione su grafi}
 \subsection{Case study: Diffusione di un segnale nel connettoma di \textit{C. elegans}}
+\begin{comment}
+
 - Simulazione di un imissione di un segnale (random walk) in un neurone sensoriale
 - Mostrare come il segnale di diffonde, il segnale rimarrà intrappolato nei cluster funzionali, prima di passare altrove?
 
 Mi aspetto di ottenere --> neuroni hub (alta betweeneess) agiscono come stazioni di smistamento --> minimizzando il tempo di percorrenza globale.
 Connectoma ottimizzato per avere un FPT molto basso tra input sensoriale e output motorio --> small world ??
 - Fare confronto del tempo di percorrenza con un grafo casuale (Erdos-Renyi) con lo stesso numero di nodi. Usare per il confronto anche un null Model (grafo che mantenga la stessa distribuzione dei gradi --> per capire se le proprietà del verme dipendono dai neuroni hubb o dalla struttura specifica dei cluster)
+\end{comment}
