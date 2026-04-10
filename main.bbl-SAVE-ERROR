@@ -16,41 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{anderson1972more}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=bf322f2c147f2a392cf33adc8cea0199}{%
-           family={Anderson},
-           familyi={A\bibinitperiod},
-           given={Philip\bibnamedelima W},
-           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Association for the Advancement of Science}%
-      }
-      \strng{namehash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{fullhash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{fullhashraw}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{bibnamehash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{authorbibnamehash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{authornamehash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{authorfullhash}{bf322f2c147f2a392cf33adc8cea0199}
-      \strng{authorfullhashraw}{bf322f2c147f2a392cf33adc8cea0199}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Science}
-      \field{number}{4047}
-      \field{title}{More is different: broken symmetry and the nature of the hierarchical structure of science.}
-      \field{volume}{177}
-      \field{year}{1972}
-      \field{pages}{393\bibrangedash 396}
-      \range{pages}{4}
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

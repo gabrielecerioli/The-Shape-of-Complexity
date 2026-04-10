@@ -1,5 +1,5 @@
 \section{Sistemi dinamici su grafi}
-\subsection{Cammini stocastici e moto di una particella su un grafo}
+\subsection{Cammini stocastici e moto di una particella su un grafo non direzionato}
 \begin{boxb}{Cammino stocastico su un grafo}
 Un cammino stocastico (random walk) su un grafo è un cammino ottenuto ripetendo passi casuali.
 \end{boxb}
@@ -58,7 +58,7 @@ Per questo tipo di cammino stocastico, la matrice di transizione è:
 
 Se denotiamo con $(X_t)_{t \in \mathbb{N}}$ il cammino stocastico su un grafo connesso $G=(V,E)$, possiamo scrivere la probabilità di transizione dal nodo $i$ al nodo $j$ facendo uso della matrice di cammino:
 \begin{equation}
-    P(X_{t+1}=j \mid X_t=i)=\frac{A_{ij}}{k_i}=(\mathbf{W}^t)_{ij}\equiv M_{ij}
+    P(X_{t+1}=j \mid X_t=i)=\frac{A_{ij}}{k_i}=(\mathbf{W}^T)_{ij}\equiv M_{ij}
 \end{equation}
 Da notare la necessità di trasporre la matrice di cammino.\\
 
@@ -90,7 +90,7 @@ Si noti che il termine $H(j,j)$ non compare nella sommatoria della definizione d
 \begin{boxb}{Tempo medio di ritorno}
 Il tempo medio di ritorno al nodo $j$, $H(j,j)$ è il tempo medio che il cammino stocastico impiega a tornare nel nodo di partenza
 \end{boxb}
-Per calcolare questo valore, è utile un lemma della teoria ergodica (per una dimostrazione vedere in appendice FARE RIFERIMENTO):
+Per calcolare questo valore, è utile un lemma della teoria ergodica:
 \begin{boxl}{Lemma di Kac}
 Sia $G(V,E)$ un grafo connesso e non bipartito. Per un cammino stocastico vale:
 \begin{equation}
@@ -117,7 +117,7 @@ Per fare ciò è necessario prima definire una distanza tra le distribuzioni di 
 \begin{boxb}{Distanza di variazione totale}
     Definiamo la distanza di variazione totale tra le distribuzioni $\mathbf{p^{t}}$ e $\mathbf{\tilde{p}}$ come:
     \begin{equation}
-            d_{TV}(t)= \max_{i \in V}\left\lVert \mathbf{p}^{t}(i,\cdot)-\mathbf{\tilde{p}} \right\rVert_{TV}=\max_{i \in V}\frac{1}{2}\sum_{j \in V}^{}\left\lvert \mathbf{p}^t(i,j)-\tilde{p}_j\right\rvert 
+            d_{TV}(t)= \max_{i \in V}\left\lVert \mathbf{p}^{t}(i,\cdot)-\mathbf{\tilde{p}} \right\rVert_{TV}=\max_{i \in V}\frac{1}{2}\sum_{j \in V}^{}\left\lvert \mathbf{p}^T(i,j)-\tilde{p}_j\right\rvert 
     \end{equation}
     dove $p^{t}(i,j)$ è la probabilità di trovarsi in $j$ al tempo $t$ partendo da $i$.
 \end{boxb}
@@ -131,7 +131,7 @@ Definiamo il mixing time con parametro di errore $\epsilon$:
 Fissando $\epsilon$, $t_{\text{mix}}(\epsilon)$ ci fornisce una misura del tempo di convergenza alla distribuzione stazionaria $\mathbf{\tilde{p}}$\\
 Convenzionalmente si assume $\epsilon=\frac{1}{4}$ poiche per $t > t_{\text{mix}}(1/4)$ la distanza decade esponenzialmente.\\
 
-Notiamo che generalmente $\mathbf{M}=\mathbf{W}^t=\mathbf{D}^{-1}\mathbf{A}$ non è simmetrica, ma è simile ad una matrice simmetrica $\mathbf{S}$:
+Notiamo che generalmente $\mathbf{M}=\mathbf{W}^T=\mathbf{D}^{-1}\mathbf{A}$ non è simmetrica, ma è simile ad una matrice simmetrica $\mathbf{S}$:
 \begin{equation}
     \mathbf{S}=\mathbf{D}^{1/2}\mathbf{M}\mathbf{D}^{-1/2}=\mathbf{D}^{-1/2}\mathbf{A}\mathbf{D}^{-1/2}
 \end{equation}
@@ -141,10 +141,58 @@ Inoltre essendo $S$ e $M$ simili, condividono gli stessi autovalori.\\
 Come già visto per la matrice laplaciana, il fatto che la somma delle righe o delle colonne di $S$ sia pari a 1 significa che $\lambda_1=1$ è l'autovalore massimo.\\
 Sappiamo inoltre che l'autovettore destro di $M$ associato a $\lambda_1$ è la distribuzione stazionaria $\mathbf{\tilde{p}}$.\\
 
+
 \begin{boxl}{Teorema}
 Siano $\{ \lambda_k\} $ gli autovalori della matrice $S$.\\
 Se il grafo è connesso e non bipartito allora $| \lambda_k\vert < 1 \ \ \forall k > 1$
 \end{boxl}
+Per una dimostrazione di questo risultato guardare l'appendice (FARE RIFERIMENTO).\\
+
+Supponiamo ora che $\mathbf{p}(0)$ sia la distribuzione all'istante iniziale. L'evoluzione temporale come già sappiamo è data da $\mathbf{p}(t)=\mathbf{W}^t\mathbf{p}(0)=(\mathbf{M}^T)^t\mathbf{p}(0)$\\
+
+Definendo $\mathbf{u}(t)= \mathbf{D}^{-1/2}\mathbf{p}(t)$, si ha:
+\begin{equation}
+    \mathbf{u}(t)=(\mathbf{S}^T)^t\mathbf{u}(0)
+\end{equation}
+Esprimendo $\mathbf{u}(0)$ come combinazione lineare degli autovettori ortonormali di $\mathbf{S}$:
+\begin{equation}
+    \mathbf{u}(0)=\sum_{k=1}^{n}c_k\mathbf{v}_k
+\end{equation}
+
+\begin{equation}
+    \mathbf{u}(t)=(\mathbf{S}^T)^t\left(\sum_{k=1}^{n}c_k\mathbf{v}_k\right) = \sum_{k=1}^{n}c_k\lambda_k^t\mathbf{v}_k=c_1\mathbf{v}_1+\sum_{k=2}^{n}c_k\lambda^t_{k}\mathbf{v}_k
+\end{equation}
+
+Calcolandone il limite, siccome $\left\lvert \lambda_k\right\rvert < 1$  $\forall k >1$:
+\begin{equation}
+    \lim_{t \to \infty}\mathbf{u}(t)=c_1\mathbf{v}_1=\mathbf{u}(\infty) 
+\end{equation} 
+
+Calcolando la norma della differenza con $\mathbf{u}(t)$ e applicando la disuguaglianza triangolare:
+\begin{equation}
+    \left\lVert \mathbf{u}(t)-\mathbf{u}(\infty)\right\rVert =\left\lVert \sum_{k=2}^{n}c_k\lambda_k^t\mathbf{v}_k\right\rVert \le \sum_{k=2}^{n}\left\lVert c_k\lambda_k^t\mathbf{v}_k\right\rVert=\sum_{k=2}^{n}\left\lvert c_k\right\rvert \left\lvert \lambda_k\right\rvert ^t
+\end{equation}
+
+Sappiamo che gli autovalori sono ordinati in modo decrescente: $1=\lambda_1 > \left\lvert \lambda_2\right\rvert \ge \left\lvert \lambda_3\right\rvert \ge ... \ge \left\lvert \lambda_n\right\rvert  $:
+\begin{equation}
+    \sum_{k=2}^{n}\left\lvert c_k\right\rvert \left\lvert \lambda_k\right\rvert^t \le \sum_{k=2}^{n}\left\lvert c_k\right\rvert \left\lvert \lambda_2\right\rvert^t 
+\end{equation}
+Raccogliendo la costante $C=\sum_{k=2}^{n}\left\lvert c_k\right\rvert $:
+\begin{equation}
+    \left\lVert \mathbf{u}(t)-\mathbf{u}(\infty)\right\rVert \le C \left\lvert \lambda_2\right\rvert ^t 
+\end{equation}
+Dunque il cammino stocastico converge esponenzialmente verso la distribuzione stazionaria, e la velocità di convergenza è data dal secondo autovalore $\lambda_2$ della matrice $M$:
+
+\begin{boxb}{Gap spettrale}
+Definiamo come gap spettrale il valore:
+\begin{equation}
+    \gamma=1-\lambda_2
+\end{equation}
+\end{boxb}
+\begin{itemize}
+    \item Se $\left\lvert \lambda_2\right\rvert \approx 1$ e quindi $\gamma \ll 1$, la potenza $ \left\lvert \lambda_2\right\rvert ^t$ decadrà molto lentamente
+    \item Se $\left\lvert \lambda_2\right\rvert \ll 1$ e quindi $\gamma \approx 0$, la potenza $ \left\lvert \lambda_2\right\rvert ^t$ decadrà molto velocemente
+\end{itemize}
 
 \begin{comment}
 

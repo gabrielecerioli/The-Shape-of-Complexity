@@ -248,14 +248,124 @@ questo significa che il vettore unità $(1,1,...)$ è sempre autovettore di $L$ 
 
 Si può dimostrare (FARE RIFERIMENTO pag. 152 Newman) che un grafo è connesso se e solo se il secondo più piccolo autovalore $\lambda_2$ è non nullo, questo autovalore viene anche chiamato connettività algebrica del grafo.\\
 
-Si può inoltre dimostrare (FARE RIFERIMENTO) che $lambda_2$ è una stima "prudente" della robustezza strutturale del grafo:
+Si può inoltre dimostrare (FARE RIFERIMENTO) che $\lambda_2$ è una stima "prudente" della robustezza strutturale del grafo:
 \begin{equation}
   \lambda_2(G) \le \mathcal{k}(G) \le \lambda (G)
 \end{equation}
 
-Anche gli alti autovalori della matrice laplaciana $0=\lambda_1 \le \lambda_2 \le ... \le \lambda_n$ hanno significati importanti:
+Vediamo ora altre informazioni legate a $\lambda_2$:
+
+\begin{boxb}
+
+\end{boxb}
+Anche gli alti autovalori della matrice laplaciana $0=\lambda_1 \le \lambda_2 \le ... \le \lambda_n$ hanno significati importanti:\\
+
+Ad esempio l'autovalore massimo $\lambda_n$ rappresenta un limite superiore al grado massimo dei nodi e alla densità del grafo:
+\begin{boxl}{Teorema}
+  Sia $G=(V,E)$ un grafo semplice e sia $k_{\text{max}}$ il grado massimo tra i suoi nodi. Allora vale la seguente disuguaglianza:
+  \begin{equation}
+    \lambda_n(G) \le 2 k_{\text{max}}
+  \end{equation}
+\end{boxl}
+Fare riferimento all'appendice (FARE RIFERIMENTO) per una dimostrazione di questa uguaglianza tramite il teorema dei dischi di Gerschgorin.\\
+
+Così come $\lambda_2$ è legato alla migliore suddivisione del grafo in due componenti, gli autovalori successivi $\lambda_3,...,\lambda_k$ forniscono informazioni sulla decomposizione del grafo in $k$ cluster.
 
 \subsection{Misure di centralità}
+In teoria dei grafi, un problema molto importante è definire delle misure di centralità dei nodi, ovvero trovare quali nodi sono i più importanti in una rete.\\
+Chiaramente possiamo definire l'importanza dei nodi in modo differente.\\
+
+\begin{boxb}{Centralità di grado (Degree centrality)}
+La più semplice misure di centralità di un nodo in un grafo è il suo grado: 
+\begin{equation}
+  x_d(i)=k_i
+\end{equation}
+\end{boxb}
+La centralità di grado valuta la centralità dei nodi basandosi solamente sul numero dei vicini del nodo, ma non tutti i vicini sono ugualmente "importanti" nella rete.\\
+Possiamo considerare anche la centralità dei vicini del nodo:
+\begin{boxb}{Centralità di autovettore (Eigenvector centrality)}
+\begin{equation}
+    x_e(i)=\frac{1}{a}\sum_{j : (j,i)\in E}^{}x_e(j)
+\end{equation}
+dove $\frac{1}{a}$ è una costante di proporzionalità che definiremo in seguito.
+\end{boxb}
+Riscrivendo la definizione:
+\begin{equation}
+      x_e(i)=\frac{1}{a}\sum_{j=1}^{n}A_{ij}x_j
+\end{equation}
+In notazione matriciale:
+\begin{equation}
+  \mathbf{A}\mathbf{x}=a \mathbf{x}
+\end{equation}
+dove $\mathbf{x}$ è il vettore i cui elementi sono le centralità dei nodi.\\
+Dunque $\mathbf{x}$ deve essere un autovettore della matrice di adiacenza. Ci sono però $n$ autovettori, essendo $A$ una matrice $n \crossproduct n$.\\
+
+Per il teorema di Perron-Frobenius, soltanto un autovettore di $A$ ha tutti gli elementi positivi, e sceglieremo questo siccome vogliamo che le centralità siano positive:
+
+\begin{boxl}{Teorema di Perron-Frobenius}
+Sia $\mathbf{A}$ una matrice con tutti gli elementi non negativi, primitiva e irriducibile, allora:
+\begin{itemize}
+  \item L'autovalore di modulo massimo $\lambda$ è reale e positivo
+  \item L'autovettore corrispondente è l'unico ad avere tutte le componenti positive
+\end{itemize}
+\end{boxl}
+In questo modo è fissato anche il valore della costante $a$, che è l'autovalore di modulo massimo.
+Questa definizione funziona bene per grafi indiretti, per il caso diretto invece possono sorgere dei problemi:
+
+La matrice di adiacenza di un grafo diretto non è di norma simmetrica, e dunque possiede due insiemi di autovettori, quelli di destra e quelli di sinistra. Si hanno dunque due autovettori associati agli autovalori di modulo massimo. Solitamente si sceglie l'autovettore di destra, siccome si preferisce definire la centralità sul numero di archi entranti nel nodo. 
+Tuttavia questa definizione non risolve i problemi con i grafi diretti:
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.3\textwidth]{img/grafo_centralità_autovalore.png} 
+    \caption{}
+    \label{fig:eigen_centr}
+\end{figure}
+
+Il nodo A siccome ha solo archi uscenti, ha centralità di autovettore nulla. Il nodo B ha un arco in ingresso, ma questo origina dal nodo A che ha centralità nulla, questo comporta che anche B ha centralità nulla. Questo problema potrebbe inoltre propagarsi ad altri nodi nella rete.\\
+
+Siccome non vogliamo che nodi con archi in ingresso abbiano centralità nulla, è necessario trovare una definizione alternativa:
+
+\begin{boxb}{Centralità di Katz}
+  \begin{equation}
+      x_k(i)=\alpha \sum_{j}^{}A_{ij}x_k(j)+\beta
+  \end{equation}
+  dove $\alpha$ e $\beta$ sono costanti positive
+\end{boxb}
+
+E' identica alla centralità di autovettore, con l'aggiuntà di un valore $\beta$ di fondo a tutti i nodi, indipendentemente dal loro ruolo nella rete. \\
+Il parametro $\alpha$ governa l'equilibrio tra i due contributi alla centralità, per la scelta del suo valore non c'è molta teoria che ci possa guidare.
+
+La centralità di Katz ha un ulteriore risultato indesiderato: se un nodo con un alta centralità è collegato a molti altri nodi, questi ereditano un'alta centralità, per evitare possiamo definire una variante della centralità di Katz:
+\begin{boxb}{Pagerank}
+\begin{equation}
+  x_p(i)=\alpha \sum_{j}^{}A_{ij} \frac{x_p(j)}{k_j^{\text{out}}}+ \beta
+\end{equation}
+  dove $\alpha$ e $\beta$ sono costanti positive
+\end{boxb}
+E' equivalente alla centralità di Katz, dove però la centralità che i nodi ereditano dai loro vicini è normalizzata sulla base del grado in uscita di quest'ultimi.\\
+Nel caso in cui $k_j^{\text{out}}=0$, anche $A_{ij}=0$, e si fissa $k_j^{\text{out}}=1$ per rendere nullo il contributo alla centralità data dal nodo $j$.\\
+
+
+Il Pagerank è stato definito dalla \textbf{Google web search corporation}, ed è un componente fondamentale nel processo di classificazione delle pagine web nel motore di ricerca di Google.\\
+
+Possiamo definire una misura di centralità basata sulla distanza geodetica tra due nodi $d(i,j)$, già definita in FARE RIFERIMENTO.\\
+Definendo la distanza media del nodo $i$ da tutti gli altri nodi del grafo:
+\begin{equation}
+  l_i=\frac{1}{n}\sum_{j}^{}d(i,j)
+\end{equation}
+\begin{boxb}{Centralità di vicinanza}
+  \begin{equation}
+      C_i=\frac{1}{l_i}=\frac{n}{\sum_{j}^{}d(i,j)}
+  \end{equation}
+\end{boxb}
+Possiamo infine definire una misura di centralità su quanto un nodo si ritrova nel cammini tra gli altri nodi:
+\begin{boxb}{Centralità di interposizione (Betweenness centrality)}
+\begin{equation}
+  x_b(i)=\sum_{jk}^{}\frac{n^i_{jk}}{g_{jk}}
+\end{equation}
+dove la somma è su tutte le coppie di nodi $(j,k)$, e $n^i_{jk}=1$ se il nodo $i$ si trova nel cammino geodetico che collega $j$ a $k$, altrimenti è nullo. $g_{jk}$ è il numero totale dei cammini geodetici da $j$ a $k$.
+\end{boxb}
+Nella somma vengono conteggiati entrambi i cammini $(j,k)$ e $(k,j)$, in un grafo indiretto si può compensare dividendo per 2.
 \begin{comment}
 Degree centrality, betweenness centrality, eigenvector centrality (pagerank)
 

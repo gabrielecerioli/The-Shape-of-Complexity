@@ -34,3 +34,31 @@ che è una contraddizione all'ipotesi che $y \in S$ e $z \notin S$.
 
 \subsection{Teorema di Kac e teoria ergodica}
 
+\subsection{Disuguaglianza dell' autovalore massimo della matrice laplaciana}
+\begin{boxl}{Teorema}
+  Sia $G=(V,E)$ un grafo semplice e sia $k_{\text{max}}$ il grado massimo tra i suoi nodi. Allora vale la seguente disuguaglianza:
+  \begin{equation}
+    \lambda_n(G) \le 2 k_{\text{max}}
+  \end{equation}
+\end{boxl}
+\begin{proof}
+Cominciamo con l'applicare il teorema di Gerschgorin alla matrice $\mathbf{L}=\mathbf{D}-\mathbf{A}$:
+
+    \begin{boxl}{Teorema di Gerschgorin}
+    Per una matrice quadrata $M$, ogni autovalore $\lambda$ giace in almeno uno dei dischi nel piano complesso centrati nei valori della diagonale $M_{ii}$ con raggio $R_i=\sum_{j \not = i}^{}\left\lvert M_ij\right\rvert $, ovvero la somma dei valori assoluti degli altri elementi nella riga.
+    \end{boxl}
+
+Dalla definizione di $\mathbf{L}$ si ottiene:
+\begin{equation}
+    R_i=\sum_{j \not = i}^{}\left\lvert L_{ij}\right\rvert = k_i
+\end{equation}
+
+Per il teorema di Gerschgorin ogni autovalore deve soddisfare:
+\begin{equation}
+    \left\lvert \lambda -k_i\right\rvert \le k_i \Leftrightarrow  0 \le \lambda \le 2k_i
+\end{equation}
+Siccome questo vale per ogni autovalore, compreso il massimo $\lambda_n$ e dato che $k_i \le k_{\text{max}}$ $ \forall i$:
+\begin{equation}
+    \lambda_n \le 2 k_{\text{max}}
+\end{equation}
+\end{proof}
