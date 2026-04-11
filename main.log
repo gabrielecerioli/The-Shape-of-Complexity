@@ -1278,4 +1278,115 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 <img/500px-SurfaceTemperature.jpg, id=178, 501.875pt x 250.9375pt>
 File: img/500px-SurfaceTemperature.jpg Graphic file (type jpg)
 <use img/500px-SurfaceTemperature.jpg>
-Package pd
+Package pdftex.def Info: img/500px-SurfaceTemperature.jpg  used on input line 38.
+(pdftex.def)             Requested size: 232.17242pt x 116.0874pt.
+<img/connettoma.jpg, id=179, 803.0pt x 658.46pt>
+File: img/connettoma.jpg Graphic file (type jpg)
+<use img/connettoma.jpg>
+Package pdftex.def Info: img/connettoma.jpg  used on input line 45.
+(pdftex.def)             Requested size: 232.17242pt x 190.37581pt.
+<img/stormo.jpeg, id=180, 276.03125pt x 183.68625pt>
+File: img/stormo.jpeg Graphic file (type jpg)
+<use img/stormo.jpeg>
+Package pdftex.def Info: img/stormo.jpeg  used on input line 55.
+(pdftex.def)             Requested size: 232.17242pt x 154.50839pt.
+<img/internet.png, id=181, 1013.7875pt x 930.47626pt>
+File: img/internet.png Graphic file (type png)
+<use img/internet.png>
+Package pdftex.def Info: img/internet.png  used on input line 62.
+(pdftex.def)             Requested size: 232.17242pt x 213.08217pt.
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+
+ []
+
+) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
+<img/undirected_graph_cropped.pdf, id=198, 576.91132pt x 584.98549pt>
+File: img/undirected_graph_cropped.pdf Graphic file (type pdf)
+<use img/undirected_graph_cropped.pdf>
+Package pdftex.def Info: img/undirected_graph_cropped.pdf  used on input line 10.
+(pdftex.def)             Requested size: 169.29684pt x 171.65875pt.
+<img/directed_graph.pdf, id=199, 581.60886pt x 576.52388pt>
+File: img/directed_graph.pdf Graphic file (type pdf)
+<use img/directed_graph.pdf>
+Package pdftex.def Info: img/directed_graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 169.29684pt x 167.81223pt.
+<img/Zachary_graph_formatted.pdf, id=200, 579.6516pt x 547.52553pt>
+File: img/Zachary_graph_formatted.pdf Graphic file (type pdf)
+<use img/Zachary_graph_formatted.pdf>
+Package pdftex.def Info: img/Zachary_graph_formatted.pdf  used on input line 23.
+(pdftex.def)             Requested size: 169.29684pt x 159.91455pt.
+
+Underfull \hbox (badness 5756) in paragraph at lines 48--51
+\T1/cmr/m/n/10 Gli el-e-menti della di-ag-o-nale sono sem-pre nulli, tranne nel
+ []
+
+
+Underfull \hbox (badness 7081) in paragraph at lines 48--51
+\T1/cmr/m/n/10 caso in cui es-iste un arco che col-lega un nodo con se
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 48--51
+\T1/cmr/m/n/10 stesso, in questo caso l'arco viene chiam-ato \T1/cmr/bx/n/10 cap-pio \T1/cmr/m/n/10 (in quel
+ []
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 48--51
+\T1/cmr/m/n/10 caso l'elemento cor-rispon-dente sulla di-ag-o-nale è uguale a 2
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--51
+
+ []
+
+[5 <./img/undirected_graph_cropped.pdf> <./img/directed_graph.pdf> <./img/Zachary_graph_formatted.pdf>]
+<img/grafo_multistrato.png, id=245, 1180.41pt x 904.37875pt>
+File: img/grafo_multistrato.png Graphic file (type png)
+<use img/grafo_multistrato.png>
+Package pdftex.def Info: img/grafo_multistrato.png  used on input line 85.
+(pdftex.def)             Requested size: 241.84843pt x 185.28845pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--124
+
+ []
+
+[6 <./img/grafo_multistrato.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 10.0pt on input line 213.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 7.0pt on input line 213.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 5.0pt on input line 213.
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+Underfull \hbox (badness 10000) i
