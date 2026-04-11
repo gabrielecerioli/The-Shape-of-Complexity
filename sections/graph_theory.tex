@@ -375,11 +375,70 @@ Trovare i critical nodes, dove il voltaggio/flusso è massimo,
 Fare accenno veloce al graph sparsification. (ridurre il numero di archi mantenendo intatte le proprietà spettrali --> gestire network enormi e fare accenno a applicazione per risolvere sistemi di equazioni lineari)
 \end{comment}
 \subsection{Coefficiente di clustering e modularità}
+E' necessario innazitutto definire alcune strutture che si possono trovare all'interno di un grafo $G(V,E)$:
+
+\begin{boxb}{Cricca}
+Una cricca è nsieme $V$ di nodi in un grafo $G$ non orientato, tale per cui per ogni coppia di nodi in $V$ esiste un arco che li connette.
+\end{boxb}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.3\textwidth]{img/4-cricca.png} 
+    \caption{Un esempio di 4-cricca}
+    \label{fig:4-cricca}
+\end{figure}
+Si può introdurre una definizione meno restringente della cricca:
+\begin{boxb}{K-core}
+Un k-core è un insieme $V$ di nodi per il quale ogni nodo in $V$ è connesso ad almeno altri $k$ nodi in $V$
+\end{boxb}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.3\textwidth]{img/k_core.png} 
+    \caption{Esempi di k-core}
+    \label{fig:k-core}
+\end{figure}
+
+\begin{boxb}{k-componenti}
+Una k-componente è un insieme $V$ di nodi per cui ogni nodo in $V$ è raggiungibile da qualunquale altro nodo in $V$ da almeno $k$ cammini indipendi per nodi (che condividono soltanto il nodo iniziale e quello finale)
+\end{boxb}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.3\textwidth]{img/k_components.png} 
+    \caption{Esempi di k-componenti in un grafo}
+    \label{fig:k-components}
+\end{figure}
+
+\begin{boxb}{Tripletta aperta}
+Una tripletta aperta centrata nel nodo $i$ è un insieme di 3 nodi in cui il nodo al centro è connesso agli altri due $k$ - $i$ - $j$, ma i nodi estremi non sono connessi tra di loro.
+\end{boxb}
+\begin{boxb}{Tripletta chiusa}
+Una tripletta chiusa centrata nel nodo $i$ è un insieme di 3 nodi completamente connesso.
+\end{boxb}
+Un triangolo di nodi contiene 3 triplette chiuse, ognuna centrata su uno dei 3 nodi.
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.3\textwidth]{img/triplette.png} 
+    \caption{1-2-3 è una tripletta chiusa mentre  2-3-5 , 2-3-4, 1-3-4 sono 3 triplette aperte centrate sul nodo 3 }
+    \label{fig:tripletta aperta}
+\end{figure}
+
 \begin{comment}
 Definire il coefficiente di clustering.
 Parlare di modulità, citare algoritmo di Louvain per trovare comunità in un grafo.
 \end{comment}
-\subsection{Grafi randomici, grafi Small-world e scale-free}
+\subsection{Grafi randomici, distribuzione dei gradi, grafi Small-world e scale-free}
+
+L'obiettivo dei grafi randomici è di creare dei modelli matematici per riprodurre le proprietà tipiche dei grafi reali. \\
+I grafi randomici vengono creati mantenendo fissate alcune proprietà, e generando casualmente altre, ve ne sono diverse tipologie:
+
+\begin{boxb} {Modello $G(N,L$)}
+$G(N,L)$ è un grafo randomico generato tenendo fissati il numero di nodi $N$ e il numero di link $L$.\\
+Gli archi sono associati alle coppie di nodi casualmente con una distribuzione uniforme.
+\end{boxb}
+
+
+
+
 \begin{comment}
 Reti casuali (Erdos-Renyi)
 Small-world (Watts-Strogatz) --> alta clusterizzazione e brevi distanze (tipico dei cervelli come si vedrà nel case study).

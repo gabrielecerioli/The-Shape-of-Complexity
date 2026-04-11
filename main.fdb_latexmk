@@ -1,12 +1,13 @@
 # Fdb version 4
-["biber main"] 1775816851.39767 "main.bcf" "main.bbl" "main" 1775817134.1244 0
-  "main.bcf" 1775817133.96913 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
+["biber main"] 0 "main.bcf" "main.bbl" "main" 1775951023.04835 -1
+  "bibliography.bib" 1773482109.28318 319 f63c04899f56acc2a5d9881374c579cc ""
+  "main.bcf" 1775951022.87964 108553 367f9587eda5666319fb09c8ea80b732 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1775817130.59016 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1775817134.12467 0
-  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1775817126.70246 5615 1e63a6ebee9c2fc893da804b3e0cbcd7 ""
+["pdflatex"] 1775951017.48917 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "main.pdf" "main" 1775951023.04866 0
+  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1775817306.47658 5615 1e63a6ebee9c2fc893da804b3e0cbcd7 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -329,6 +330,7 @@
   "/usr/local/texlive/2025/texmf.cnf" 1764679162.94018 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "algorithms.tex" 1775595084.63269 113 5d85c751a2a466af95ca023e6913ada2 ""
   "dimostrazioni.tex" 1775745051.04884 2755 e92f7f6d643986c2d4b41a89b1745547 ""
+  "img/4-cricca.png" 1775946888.99637 244054 29fb1fbd5e1215cb7c77843384d12c3c ""
   "img/500px-SurfaceTemperature.jpg" 1773531488.44142 42867 c5f0e6e4aecc7fb4e7c16414cdf8bd96 ""
   "img/Sigillo_Scritta_HR.png" 1756891530 1104284 60291020af4d794ab941a7b00493cb0d ""
   "img/Zachary_graph_formatted.pdf" 1773603280.60404 5975 b29fcf530d0a9c73f2ada0002d4abd54 ""
@@ -337,15 +339,18 @@
   "img/grafo_centralità_autovalore.png" 1775774552.61833 70220 1501dc82e18744a80b3c11c769f098ea ""
   "img/grafo_multistrato.png" 1775059083.6489 78941 83199114018940a854ca625c6ed51bf6 ""
   "img/internet.png" 1773532043.09879 1678210 2ebb9afc3107dc17313594e49eed18ea ""
+  "img/k_components.png" 1775946888.97242 586159 3f687bc78810432822884fab4edede75 ""
+  "img/k_core.png" 1775947219.34388 763695 6ecd2e89a3469c5c78c27c2e244a7617 ""
   "img/stormo.jpeg" 1773531655.26665 8193 6dca9f26708562502118ecabd8293cdf ""
+  "img/triplette.png" 1775950848.5524 102404 cb44ded46a66880ffca5066fa2ec0248 ""
   "img/undirected_graph_cropped.pdf" 1773599903.09024 17904 570428ebd9976767d42f5e820f7f21bc ""
-  "main.aux" 1775817133.96513 7398 dacd6211faa0e24b8f3ea9d496350211 "pdflatex"
+  "main.aux" 1775951022.87564 8482 7fac162e1b03d3161b116a9f1f2d7235 "pdflatex"
   "main.bbl" 1775816852.36394 466 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.out" 1775817133.96613 7364 808eba391235a4f990e7c53020c1b103 "pdflatex"
-  "main.run.xml" 1775817133.97127 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "main.tex" 1775817126.70246 5615 1e63a6ebee9c2fc893da804b3e0cbcd7 ""
-  "main.toc" 1775817133.97127 3026 74eaa447b4ab23970f2a33245359cf9b "pdflatex"
-  "sections/graph_theory.tex" 1775812846.9423 20604 2628ae4d7676e73e435c76a2103763aa ""
+  "main.out" 1775951022.87664 7498 825492561e350dd629f25fdddbd6fd01 "pdflatex"
+  "main.run.xml" 1775951022.88664 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.tex" 1775817306.47658 5615 1e63a6ebee9c2fc893da804b3e0cbcd7 ""
+  "main.toc" 1775951022.88664 3051 50ca0400e4869477f1d7b7595748de60 "pdflatex"
+  "sections/graph_theory.tex" 1775951017.3026 23111 3df0de0f664b1dbe68666de707089db8 ""
   "sections/introduction.tex" 1774305496.19859 7116 61a8cea187f46fd03a68aa0650051d10 ""
   "sections/random_walks.tex" 1775744213.06261 12866 a0ab946e34ba3ab152283ccf2d11bbba ""
   "sections/stochastic_processes.tex" 1775595059.14892 2770 3ab49e35eac8c6c2ecfa6602b6919de6 ""
