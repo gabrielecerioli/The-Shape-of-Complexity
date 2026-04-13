@@ -209,9 +209,157 @@ Definiamo come gap spettrale il valore:
 \end{comment}
 
 \subsection{Diffusione su grafi}
+La diffusione è uno dei fenomeni fisici più universali: descrive per esempio trasporto di calore, di informazione o la diffusione di particelle in un fluido.\\
+A livello microscopico, ogni elemento del sistema tende ad equilibrarsi con i suoi vicini.\\
+In un grafo, la geometria della rete influenza profondamente la dinamica di questi processi.
+
+Ricordiamo l'equazione di diffusione nel continuo:
+\begin{boxl}{Seconda legge di Fick}
+Dato un campo scalare $u(\mathbf{x},t)$ in un dominio $\Omega \subset \mathbb{R}^d$, la seconda legge di Fick afferma che la variazione temporale di $u$ è proporzionale al laplaciano spaziale:
+\begin{equation}
+    \frac{du}{dt} = D \nabla^2u
+\end{equation}
+con $D >0$ coefficiente di diffusione.
+\end{boxl}
+Informalmente, l'operatore $\nabla^2=\sum_{i}^{}\frac{\partial^2}{\partial x_i^2}$ misura localmente quanto $u$ si discosta dalla media dei valori circostanti: se $u(\mathbf{x}) > \langle  u \rangle_{vicini}$ allora $\nabla^2 u < 0$ e $u$ decresce, tendendo all'equilibrio locale.\\
+
+Per studiare un processo di diffusione su un grafo (spazio costituito da connessioni discrete) è necessario dunque definire un'analogo discreto dell'operatore laplaciano.\\
+
+Nel caso continuo il laplaciano è definito come:
+\begin{equation}
+    \nabla^2\mathbf{f}=\text{div}(\nabla \mathbf{f})
+\end{equation}
+per estenderlo al caso discreto, definiamo:
+\begin{itemize}
+    \item Gradiente discreto: è semplicemente la differenza del valore tra i due nodi: $\nabla \mathbf{f}_{ij}=(f_j-f_i)$
+    \item Divergenza discreta: è la somma dei flussi in entrata e in uscita da un nodo.
+\end{itemize}
+dunque il laplaciano discreto al nodo $i$ vale:
+\begin{boxb}{Laplaciano discreto al nodo $i$}
+\begin{equation}
+    \nabla^2(f)_i=\sum_{j \in \partial(i)}^{}(f_j-f_i)
+\end{equation}
+dove $\partial(i)$ indica l'insieme dei nodi vicini a $i$
+\end{boxb}
+Dimostriamo che per un processo di diffusione su un grafo la matrice laplaciana $\mathbf{L}$ svolge il ruolo di $-\nabla^2$:
+\begin{boxb}{Equazione del calore sul grafo}
+Sia $G(V,E)$ un grafo connesso e sia $\mathbf{f} : V \to \mathbb{R}$ un segnale sui nodi. L'equazione del calore discreta è:
+\begin{equation}
+    \frac{d\mathbf{f}}{dt}=-\mathbf{L}\mathbf{f}
+    \label{diffusion_graph}
+\end{equation}
+con $\mathbf{f} \in \mathbb{R}^n$ il vettore dei valori del segnale al tempo t e $\mathbf{L}$ la matrice laplaciana.
+\end{boxb}
+\begin{proof}
+Consideriamo la componente $i$-esima di $-\mathbf{L}\mathbf{f}$:
+\begin{equation}
+    -(\mathbf{L}\mathbf{f})_i=-\sum_{j}^{}L_{ij}f_j=-k_if_i +\sum_{j \in \partial{i}}^{}f_j=\sum_{j \in \partial{i}}^{}(f_j-f_i)
+\end{equation}
+Dunque la matrice laplaciana $L$ non è altro che l'analogo discreto dell'operatore laplaciano applicato ai nodi del grafo.
+\end{proof}
+In regime stazionario ($\frac{d\mathbf{f}}{dt}=0$) si ha $\mathbf{Lf}=0$, ovvero $\mathbf{f} \in \ker(\mathbf{L})$ con soluzione $\mathbf{L}=\text{cost}$, cioè temperatura uniforme su tutt il grafo connesso.\\
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/diffusion_heatmap.pdf} 
+    \caption{Simulazione di diffusiona di calore in una griglia quadrata regolare}
+    \label{fig:diffusion_heatmap}
+\end{figure}
+La struttura lineare dell'equazione \ref{diffusion_graph} permette una soluzione esplicita in funzione degli autovettori di $\mathbf{L}$:
+\begin{boxb}{Soluzione spettrale dell'equazione del calore}
+Sia $\mathbf{L}=\sum_{k=1}^{n}\lambda_k\mathbf{v}_k\mathbf{v}^T$ la decomposizione spettrale della matrice laplaciana con $0=\lambda_1 \le \lambda_2 \le ... \le \lambda_n$ e ${v_k}$ base ortonormale di $\mathbb{R}^n$.\\
+La soluzione dell'equazione del calore \ref{diffusion_graph} con condizione iniziale $\mathbf{f}(0)=\mathbf{f}_0$ è:
+\begin{equation}
+    \mathbf{f}(t)=e^{-\mathbf{L}t}\mathbf{f}_0=\sum_{k=1}^{n}e^{-\lambda_kt}\langle \mathbf{v}_k,\mathbf{f}_0\rangle\mathbf{v}_k 
+\end{equation}
+dove $e^{-\mathbf{L}t}=\sum_{j=0}^{\infty}\frac{(-\mathbf{L}t)^k}{k!}$
+\end{boxb}
+Spesso la matrice $\mathbf{H}_t=e^{-\mathbf{l}t}$ prende il nome di \textbf{Kernel di calore}.
+\begin{proof}
+    Poiche $\mathbf{L}$ è simmetrica reale, per il teorema spettrale è diagonalizzabile con autovettori ortonormali.\\
+    Scriviamo $\mathbf{f}(t)=\sum_{k}^{}c_k(t)\mathbf{v}_k$. Sostituendo nell'eq (\ref{diffusion_graph}):
+    \begin{equation}
+        \sum_{k}^{}\dot{c}_k(t)\mathbf{v}_k=-\mathbf{L}\sum_{k}^{}c_k(t)\mathbf{v}_k=-\sum_{k}^{}\lambda_kc_k(t)\mathbf{v}_k
+    \end{equation}
+    Per l'ortogonalità della base ${\mathbf{v}_k}$, deve valere $\forall k$:
+    \begin{equation}
+        \dot{c}_k(t)=-\lambda_kc_k(t) \implies c_k(t)=c_k(0)e^{-\lambda_kt}
+    \end{equation}
+    con $c_k(0)=\langle \mathbf{v}_k,\mathbf{f}_0\rangle$. Dunque concludendo si ottiene:
+    \begin{equation}
+        \mathbf{f}(t)=\sum_{k=1}^{n}c_k(0)e^{-\lambda_kt}\mathbf{v}_k=\sum_{k=1}^{n}e^{-\lambda_kt}\langle \mathbf{v}_k,\mathbf{f}_0\rangle \mathbf{v}_k
+    \end{equation}
+\end{proof}
+Dunque la soluzione della diffusione su un grafo è la somma di diversi modi, ognuno associato ad un autovalore $\lambda_k$:
+\begin{itemize}
+    \item \textbf{Modo stazionario} ($k=1$,$\lambda_1=0$): il termine $e^{-\lambda_1t=1}$ non decade mai, dunque l'autovettore $\mathbf{v}_1=\frac{\mathbf{1}}{\sqrt{n}}$ corrisponde al segnale costante (temperatura uniforme).
+    \item \textbf{Modo lento} ($\lambda_2$ piccolo): la connettività algebrica del grafo ($\lambda_2$) identifica il modo che decade più lentamente. Se $\lambda_2$ è piccolo, il sistema impiega $\tau \sim \frac{1}{\lambda_2}$ per avvicinarsi all'equilibrio.
+    \item \textbf{Modi veloci} ($\lambda_n$ grandi): i modi con $\lambda_k$ decadono rapidamente.
+\end{itemize}
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/decay_modes.pdf} 
+    \caption{Decadimento dei modi di diffusione per un E-R con N=50  e p=0.08}
+    \label{fig:decay_modes}
+\end{figure}
+
+
+Vediamo ora come studiare la convergenza alla distribuzione stazionaria:
+\begin{boxl}{Teorema: Convergenza all'equilibrio}
+Per un grafo connesso $G(V,E)$, la soluzione dell'equazione del calore converge all'equilibrio:
+\begin{equation}
+    \lim_{t \to \infty}\mathbf{f}(t)=f_{\infty}\mathbf{1}, \ \ \ \ \ \ \ \ \ \ \ f_{\infty}=\frac{1}{n}\sum_{i\in V}^{} f_i(0)=\frac{\mathbf{1}^T\mathbf{f}_0}{n}
+\end{equation}
+e la convergenza è esponenziale, con tasso governato da $\lambda_2$:
+\begin{equation}
+    \left\lVert \mathbf{f}(t)-f_{\infty}\mathbf{1}\right\rVert \le  \left\lVert \mathbf{f}_0-f_{\infty}\mathbf{1}\right\rVert e^{-\lambda_2t}
+\end{equation}
+\end{boxl}
+Per la dimostrazione fare riferimento in appendice (FARE RIFERIMENTO).
+
+Il tempo caratteristico di diffusione del grafo è dunque $\frac{1}{\lambda_2}$ come per il cammino aleatorio.\\
+
+
+Il legame tra la diffusione e i cammini aleatori è più profondo di una semplice analogia formale:
+\begin{boxl}{Teorema: Dualità diffusione-cammino aleatorio}
+Sia $p^(t)_{ij}$ la probabilità di transizione in $t$ passi del cammino aleatorio da $i$ a $j$, e sia $(H_t)_{ij}$ il kernel di calore. Allora:
+\begin{equation}
+    (H_t)_{ij}=\sum_{s=0}^{\infty}\frac{(t\lambda)^se^{-t\lambda}}{s!}p^{(s)}_{ij}
+\end{equation}
+ovvero il kernel di calore è la media di Poisson della distribuzione del random walk discreto.
+\end{boxl}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{img/diffusion_bottleneck_2x2.pdf} 
+    \caption{Abbiamo già visto il legame tra il numero di Cheeger e la connettività algebrica: $\frac{\lambda_2}{2} \le h_G \le \sqrt{2\lambda_2}$, nel caso della diffusione se $h_G$ è grande, il grafo è ben connesso e la diffusione è rapida, mentre se $h_G$ è piccolo, esiste un collo di bottiglia come nel caso della simulazione in figura, e il segnale rimane intrappolato per molto tempo in una delle due comunità. \textbf{Questa proprietà è alla base del metodo di clustering spettrale}.}
+    \label{fig:decay_modes}
+\end{figure}
+
+Un modo elegante di definire la diffusione su un grafo è tramite l'\textbf{energia di Dirichlet}:
+\begin{boxb}{Energia di Dirichlet su un grafo}
+    L'energia di Dirichlet di un segnale è:
+    \begin{equation}
+        \mathcal{E}(\mathbf{f})=\frac{1}{2}\mathbf{f}^T \mathbf{L} \mathbf{f}=\frac{1}{2}\sum_{(i,j) \in E}^{}(f_i-f_j)^2
+    \end{equation}
+\end{boxb}
+Calcolando il gradiente di $\mathcal{E}(\mathbf{f})$ rispetto a $\mathbf{f}$ si ottiene:
+\begin{boxl}{Diffusione come discesa del gradiente dell'energia di Dirichlet}
+L'equazione del calore è equivalente al flusso di gradiente del funzionale $\mathcal{E}$:
+\begin{equation}
+    \frac{d\mathbf{f}}{dt}=-\nabla_{\mathbf{f}}\mathcal{E}(\mathbf{f})=-\frac{1}{2}(\mathbf{L}+\mathbf{L}^T)\mathbf{f}=-\mathbf{L}\mathbf{f}
+\end{equation}
+\end{boxl}
+
+
+
+
+
+
 \subsection{Case study: Diffusione di un segnale nel connettoma di \textit{C. elegans}}
 \begin{comment}
-
 - Simulazione di un imissione di un segnale (random walk) in un neurone sensoriale
 - Mostrare come il segnale di diffonde, il segnale rimarrà intrappolato nei cluster funzionali, prima di passare altrove?
 

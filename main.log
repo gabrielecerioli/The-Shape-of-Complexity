@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  12 APR 2026 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  14 APR 2026 00:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1068,6 +1068,9 @@ LaTeX Warning: Label `fig:b' multiply defined.
 
 LaTeX Warning: Label `sub@fig:b' multiply defined.
 
+
+LaTeX Warning: Label `fig:decay_modes' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1210,7 +1213,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/Sigillo_Scritta_HR.png, id=127, 813.0375pt x 1053.9375pt>
+<img/Sigillo_Scritta_HR.png, id=123, 813.0375pt x 1053.9375pt>
 File: img/Sigillo_Scritta_HR.png Graphic file (type png)
 <use img/Sigillo_Scritta_HR.png>
 Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 141.
@@ -1275,22 +1278,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-<img/500px-SurfaceTemperature.jpg, id=178, 501.875pt x 250.9375pt>
+<img/500px-SurfaceTemperature.jpg, id=173, 501.875pt x 250.9375pt>
 File: img/500px-SurfaceTemperature.jpg Graphic file (type jpg)
 <use img/500px-SurfaceTemperature.jpg>
 Package pdftex.def Info: img/500px-SurfaceTemperature.jpg  used on input line 38.
 (pdftex.def)             Requested size: 232.17242pt x 116.0874pt.
-<img/connettoma.jpg, id=179, 803.0pt x 658.46pt>
+<img/connettoma.jpg, id=174, 803.0pt x 658.46pt>
 File: img/connettoma.jpg Graphic file (type jpg)
 <use img/connettoma.jpg>
 Package pdftex.def Info: img/connettoma.jpg  used on input line 45.
 (pdftex.def)             Requested size: 232.17242pt x 190.37581pt.
-<img/stormo.jpeg, id=180, 276.03125pt x 183.68625pt>
+<img/stormo.jpeg, id=175, 276.03125pt x 183.68625pt>
 File: img/stormo.jpeg Graphic file (type jpg)
 <use img/stormo.jpeg>
 Package pdftex.def Info: img/stormo.jpeg  used on input line 55.
 (pdftex.def)             Requested size: 232.17242pt x 154.50839pt.
-<img/internet.png, id=181, 1013.7875pt x 930.47626pt>
+<img/internet.png, id=176, 1013.7875pt x 930.47626pt>
 File: img/internet.png Graphic file (type png)
 <use img/internet.png>
 Package pdftex.def Info: img/internet.png  used on input line 62.
@@ -1301,17 +1304,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
  []
 
 ) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
-<img/undirected_graph_cropped.pdf, id=198, 576.91132pt x 584.98549pt>
+<img/undirected_graph_cropped.pdf, id=193, 576.91132pt x 584.98549pt>
 File: img/undirected_graph_cropped.pdf Graphic file (type pdf)
 <use img/undirected_graph_cropped.pdf>
 Package pdftex.def Info: img/undirected_graph_cropped.pdf  used on input line 10.
 (pdftex.def)             Requested size: 169.29684pt x 171.65875pt.
-<img/directed_graph.pdf, id=199, 581.60886pt x 576.52388pt>
+<img/directed_graph.pdf, id=194, 581.60886pt x 576.52388pt>
 File: img/directed_graph.pdf Graphic file (type pdf)
 <use img/directed_graph.pdf>
 Package pdftex.def Info: img/directed_graph.pdf  used on input line 18.
 (pdftex.def)             Requested size: 169.29684pt x 167.81223pt.
-<img/Zachary_graph_formatted.pdf, id=200, 579.6516pt x 547.52553pt>
+<img/Zachary_graph_formatted.pdf, id=195, 579.6516pt x 547.52553pt>
 File: img/Zachary_graph_formatted.pdf Graphic file (type pdf)
 <use img/Zachary_graph_formatted.pdf>
 Package pdftex.def Info: img/Zachary_graph_formatted.pdf  used on input line 23.
@@ -1342,7 +1345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
  []
 
 [5 <./img/undirected_graph_cropped.pdf> <./img/directed_graph.pdf> <./img/Zachary_graph_formatted.pdf>]
-<img/grafo_multistrato.png, id=245, 1180.41pt x 904.37875pt>
+<img/grafo_multistrato.png, id=240, 1180.41pt x 904.37875pt>
 File: img/grafo_multistrato.png Graphic file (type png)
 <use img/grafo_multistrato.png>
 Package pdftex.def Info: img/grafo_multistrato.png  used on input line 85.
@@ -1408,7 +1411,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--302
 
  []
 
-<img/grafo_centralità_autovalore.png, id=288, 1194.4625pt x 947.54pt>
+<img/grafo_centralità_autovalore.png, id=283, 1194.4625pt x 947.54pt>
 File: img/grafo_centralità_autovalore.png Graphic file (type png)
 <use img/grafo_centralità_autovalore.png>
 Package pdftex.def Info: img/grafo_centralità_autovalore.png  used on input line 319.
@@ -1428,23 +1431,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-<img/4-cricca.png, id=300, 963.6pt x 1107.13625pt>
+<img/4-cricca.png, id=295, 963.6pt x 1107.13625pt>
 File: img/4-cricca.png Graphic file (type png)
 <use img/4-cricca.png>
 Package pdftex.def Info: img/4-cricca.png  used on input line 385.
 (pdftex.def)             Requested size: 145.11053pt x 166.7221pt.
 [11]
-<img/k_core.png, id=309, 1354.05875pt x 786.94pt>
+<img/k_core.png, id=304, 1354.05875pt x 786.94pt>
 File: img/k_core.png Graphic file (type png)
 <use img/k_core.png>
 Package pdftex.def Info: img/k_core.png  used on input line 395.
 (pdftex.def)             Requested size: 145.11053pt x 84.33023pt.
-<img/k_components.png, id=310, 1491.5725pt x 706.64pt>
+<img/k_components.png, id=305, 1491.5725pt x 706.64pt>
 File: img/k_components.png Graphic file (type png)
 <use img/k_components.png>
 Package pdftex.def Info: img/k_components.png  used on input line 406.
 (pdftex.def)             Requested size: 145.11053pt x 68.73808pt.
-<img/triplette.png, id=311, 1927.2pt x 970.62625pt>
+<img/triplette.png, id=306, 1927.2pt x 970.62625pt>
 File: img/triplette.png Graphic file (type png)
 <use img/triplette.png>
 Package pdftex.def Info: img/triplette.png  used on input line 420.
@@ -1529,16 +1532,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[15]) (./sections/stochastic_processes.tex) (./algorithms.tex) (./dimostrazioni.tex [16]
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+<img/diffusion_heatmap.pdf, id=366, 1364.66331pt x 422.05681pt>
+File: img/diffusion_heatmap.pdf Graphic file (type pdf)
+<use img/diffusion_heatmap.pdf>
+Package pdftex.def Info: img/diffusion_heatmap.pdf  used on input line 264.
+(pdftex.def)             Requested size: 386.95897pt x 119.67563pt.
+[17 <./img/diffusion_heatmap.pdf>]
+<img/decay_modes.pdf, id=434, 565.29694pt x 347.32825pt>
+File: img/decay_modes.pdf Graphic file (type pdf)
+<use img/decay_modes.pdf>
+Package pdftex.def Info: img/decay_modes.pdf  used on input line 303.
+(pdftex.def)             Requested size: 386.95897pt x 237.75941pt.
+ [18 <./img/decay_modes.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
+
+ []
+
+<img/diffusion_bottleneck_2x2.pdf, id=497, 855.67677pt x 709.69138pt>
+File: img/diffusion_bottleneck_2x2.pdf Graphic file (type pdf)
+<use img/diffusion_bottleneck_2x2.pdf>
+Package pdftex.def Info: img/diffusion_bottleneck_2x2.pdf  used on input line 336.
+(pdftex.def)             Requested size: 386.95897pt x 320.9392pt.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 9.0pt on input line 337.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 6.0pt on input line 337.
+[19 <./img/diffusion_bottleneck_2x2.pdf>]) (./sections/stochastic_processes.tex) (./algorithms.tex) (./dimostrazioni.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
-[17])
+[20])
 
 LaTeX Warning: Empty bibliography on input line 217.
 
-[18] (./main.aux)
+[21] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1548,24 +1591,24 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 825492561E350DD629F25FDDDBD6FD01;7498.
+(rerunfilecheck)             Checksum: 81CEE6738D3F286752D199EFB3405704;7264.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45556 strings out of 467538
- 976788 string characters out of 5419552
- 1886230 words of memory out of 5000000
- 73555 multiletter control sequences out of 15000+600000
- 649442 words of font info for 89 fonts, out of 8000000 for 9000
+ 45646 strings out of 467538
+ 978400 string characters out of 5419552
+ 1886862 words of memory out of 5000000
+ 73616 multiletter control sequences out of 15000+600000
+ 654965 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,107p,1205b,1374s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (18 pages, 4410395 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (21 pages, 4551740 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 118 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 491 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 330 words of extra memory for PDF output out of 10000 (max. 10000000)
 
