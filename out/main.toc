@@ -15,15 +15,18 @@
 \contentsline {section}{\numberline {3}Sistemi dinamici su grafi}{16}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Cammini stocastici e moto di una particella su un grafo non direzionato}{16}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Diffusione su grafi}{19}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{23}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Stochastic processes on graphs}{23}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{23}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{23}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{23}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{23}{subsection.4.4}%
-\contentsline {section}{\numberline {A}Algoritmi}{23}{appendix.A}%
-\contentsline {section}{\numberline {B}Dimostrazioni}{23}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{23}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Disuguaglianza dell' autovalore massimo della matrice laplaciana}{23}{subsection.B.2}%
-\contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{24}{appendix.C}%
-\contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{24}{appendix.D}%
+\contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{22}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Stochastic processes on graphs}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{22}{subsection.4.1}%
+\contentsline {paragraph}{Entropia di Shannon di un cammino stocastico su un grafo}{23}{section*.17}%
+\contentsline {paragraph}{Entropia topologica di un sistema dinamico}{23}{section*.18}%
+\contentsline {paragraph}{Entropia topologica di un grafo}{23}{section*.19}%
+\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{24}{subsection.4.4}%
+\contentsline {section}{\numberline {A}Algoritmi}{24}{appendix.A}%
+\contentsline {section}{\numberline {B}Dimostrazioni}{24}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{24}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Disuguaglianza dell' autovalore massimo della matrice laplaciana}{25}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{25}{appendix.C}%
+\contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{25}{appendix.D}%

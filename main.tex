@@ -123,6 +123,12 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{subcaption} % Fondamentale per le sotto-figure
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {0.5ex \@plus 0.2ex \@minus 0.1ex}%   spazio prima
+  {1ex}%                               spazio dopo (positivo => va a capo)
+  {\normalfont\large\bfseries}}     % stile: grassetto, dimensione normale
+\makeatother
 
 \title{Bozza della tesi}
 \author{Gabriele Cerioli}

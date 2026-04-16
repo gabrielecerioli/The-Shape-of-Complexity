@@ -1,4 +1,97 @@
 \subsection{Informazione ed entropia topologica}
+
+SCRIVERE INTRODUZIONE AL CAPITOLO
+
+\paragraph{Entropia di Shannon di un cammino stocastico su un grafo}
+
+\begin{boxb}{Entropia di Shannon}
+Sia $X$ una variabile aleatoria discreta con spazio campionario $\chi$ e distribuzione di probabilità $p(x)$. L'entropia di Shannon di $X$ è definita come:
+\begin{equation}
+    H(X)=-\sum_{x \in \chi}^{}p(x) \log_2p(x)
+\end{equation}
+\end{boxb}
+L'entropia di Shannon soddisfa le seguenti proprietà:
+\begin{itemize}
+    \item Non negatività: $H(X) \ge 0$, con uguaglianza se e solo se $X$ è deterministica
+    \item Massimalità: $H(X) \le \log_2\left\lvert \chi\right\rvert $
+    \item Concavità: $H$ è una funzione concava della distribuzione p
+    \item Additività: se $X$ e $Y$ sono indipendenti, $H(X,Y)=H(X)+H(Y)$
+\end{itemize}
+
+ Il collegamento più diretto tra la teoria dell'informazione e la struttura del grafo passa per i cammini stocastici.
+ Come già discusso nel capitolo 3, un cammino stocastico su grafo $G=(V,E)$ è una catena di Markov con matrice di transizione $M=D^{-1}A$.\\
+
+ Possiamo dunque calcolare l'entropia per passo di un cammino stocastico da un nodo $i$:
+ \begin{equation}
+    h_i=-\sum_{j}^{}\frac{A_{ij}}{k_i}\log_2\left(\frac{A_{ij}}{k_i}\right) 
+ \end{equation}
+Siccome per un grafo non pesato tutti i vicini sono equiprobabili, quindi:
+\begin{equation}
+    h_i=\log_2k_i
+\end{equation}
+
+L'entropia media per passo del cammino stocastico alla stazionarietà è:
+\begin{equation}
+    h_{\text{walk}}=\sum_{i \in V}^{} \tilde{p}_ih_i=\sum_{i \in V}^{}\frac{k_i}{2m}\log(k_i)
+\end{equation}
+con $\tilde{p}_i=\frac{k_i}{2m}$ la distribuzione stazionaria.\\
+
+\paragraph{Entropia topologica di un sistema dinamico}
+
+L'entropia topologica di un sistema dinamico si chiama così perchè è stata introdotta per la prima volta da Adler-Konheim-McAndrew facendo uso dell'entropia di Kolmogorov-Sinai calcolata su una partizione data da un ricoprimento aperto di uno spazio topologico compatto.\\
+
+Procediamo tuttavia a darne una definizione metrica equivalente, basata sugli insiemi $(n,\epsilon)$-separati:
+\begin{boxb}{Insiemi $(n,\epsilon)$-separati}
+    Sia (X,d) uno spazio metrico compatto, e $f : X \to X$ una mappa continua.\\
+    Allora due punti $x,y \in X$ si dicono $(n,\epsilon)$-separati se:
+    \begin{equation}
+        \max_{0\le k \le n-1}d(f^k(x),f^k(y)) > \epsilon
+    \end{equation}
+\end{boxb}
+Possiamo ora definire l'entropia topologica di Bowen-Dinaburg:
+\begin{boxb}{Entropia topologica di Bowen-Dinaburg }
+Sia $s(n,\epsilon)$ la cardinalità massima di un insieme $(n,\epsilon)$-separato. L'entropia topologica di Bowen-Dinaburg è:
+\begin{equation}
+    h_{\text{top}}(f)=\lim_{\epsilon \to 0}\limsup_{n \to \infty}\frac{1}{n}(s(n,\epsilon))
+\end{equation}
+\end{boxb}
+
+Si può dimostrare che per mappe continue su spazi metrici compatti la definizione di Adler-Konheim-mcAndrew e quella di Bowen-Dinaburg sono equivalenti.\\
+
+\paragraph{Entropia topologica di un grafo}
+
+Per poter estendere la definizione di entropia topologica di un grafo, è necessario definire un sistema dinamico su quest'ultimo.\\
+Un grafo orientato $G=(V,E)$ definisce naturalmente un sistema dinamico combinatoriale: lo shift sul grafo.Ad ogni arco $(i,j) \in E$ si associa un simbolo; le parole ammissibili di lunghezza $n$ sono le sequenze di $n$ archi consecutivi che formano un cammino nel grafo,e il loro numero vale:
+\begin{equation}
+    W_n= \# \{ \text{cammini di lunghezza n}\} =\sum_{i,j}^{}[A^n]_{ij}=\mathbf{1}^T\mathbf{A}^n\mathbf{1}
+\end{equation}
+
+Possiamo calcolare la complessità di questo sistema dinamico è misurata dall'entropia topologica:
+\begin{boxb}{Entropia topologica e raggio spettrale}
+   Per un grafo orientato $G$ fortemente connesso con matrice di adiacenza $A$, l'entropia topologica del grafo shift è:
+   \begin{equation}
+    h(G)=\log \rho(\mathbf{A})
+   \end{equation} 
+   con $\rho(\mathbf{A})$ il raggio spettrale di $A$
+\end{boxb}
+
+\begin{proof}
+Scriviamo $\mathbf{A}^n$ nella base degli autovettori di $\mathbf{A}$, per il teorema di Perron-Frobenius ha un autovalore massimo $\rho=\rho(\mathbf{A})$ reale e positivo con autovettore destro $\mathbf{v}>0$ e autovettore sinistro $\mathbf{u}>0$.\\
+Si ha allora, separando il termine col primo autovalore:
+\begin{equation}
+\mathbf{A}^n=\rho^n\mathbf{v}\mathbf{u}^T + \sum_{k \ge 2}^{}\lambda_k^n \mathbf{v}_k\mathbf{u}_k^T
+\end{equation}
+siccome $\left\lvert \lambda_k\right\rvert < \rho \ \forall k \ge 2$ per $n \to \infty$ il termine dominante è $\rho^n\mathbf{v}\mathbf{u}^T$, dunque:
+\begin{equation}
+    \lim_{n \to \infty}W_n=\lim_{n \to \infty }\mathbf{1}^T\mathbf{A}^n\mathbf{1} = C \rho^n
+\end{equation}
+con $C=(\mathbf{1}^T\mathbf{v})(\mathbf{u}^T\mathbf{1}) >0$
+Dunque calcolando l'entropia topologica, come il tasso di crescita esponenziale del numero di parole ammissibili:
+\begin{equation}
+    h(G)=\lim_{n \to \infty}\frac{1}{n}\log(W_n)=\lim_{n \to \infty} \frac{1}{n} \log(C \rho^n)=\lim_{n \to \infty} \left( \frac{\log C}{n}+\log \rho\right)=\log \rho(\mathbf{A})
+\end{equation}
+\end{proof}
+
 \begin{comment}
 
 . Definire l'entropia di Shannon applicata alle reti. --> misura di incertezza nel muoversi nella rete.
