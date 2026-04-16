@@ -427,17 +427,141 @@ Definire il coefficiente di clustering.
 Parlare di modulità, citare algoritmo di Louvain per trovare comunità in un grafo.
 \end{comment}
 \subsection{Grafi randomici, distribuzione dei gradi, grafi Small-world e scale-free}
+Iniziamo con un'analisi delle principali caratteristiche che è possibile ritrovare nei grafi reali.
+Un'informazione interessante è la distribuzione dei gradi dei nodi in un grafo.\\
+Nella maggior parte dei casi, i grafi reali presentano distribuzione a legge di potenza, con code alte:
+\begin{boxb}{Distribuzione a legge di potenza}
+Una distribuzione dei gradi segue una legge di potenza se:
+\begin{equation}
+  p(k) \sim k^{-\gamma} \ \ \ \ \ \ \  k \ge k_{\text{min}}
+\end{equation}
+con esponente $\gamma >0$. Nelle reti reali si ha tipicamente $ 2< \gamma < 3$
+\end{boxb}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.6\textwidth]{img/degree_distributions.pdf} 
+    \caption{Esempi}
+    \label{fig:degree_distributions}
+\end{figure}
 
-L'obiettivo dei grafi randomici è di creare dei modelli matematici per riprodurre le proprietà tipiche dei grafi reali. \\
+Un altro comportamento tipico delle reti reali è il fenomeno dello small-world: nodi anche apparentemente molto distanti nella rete possono essere connessi con un cammino di pochi passi.
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.6\textwidth]{img/small_world.pdf} 
+    \caption{Nel caso di una rete ego Facebook, ovvero di tutti i legami di una persona (quasi 4000): amici, conoscenti, ecc..., anche due persone apparentemente molto distanti socialmente sono connesse soltanto da 5 passi}
+    \label{fig:small_world}
+\end{figure}
+
+Un'altra proprietà tipica dei grafi reali è la presenza di una componente gigante, e un alto coefficiente di clustering.\\
+
+Se vogliamo dunque simulare le reti reali, dobbiamo sviluppare dei modelli che riproducano il maggior numero possibile delle caratteristiche che si ritrovano nei grafi reali. I modelli principalmente utilizzati sono i grafi randomici,\\
 I grafi randomici vengono creati mantenendo fissate alcune proprietà, e generando casualmente altre, ve ne sono diverse tipologie:
 
 \begin{boxb} {Modello $G(N,L$)}
-$G(N,L)$ è un grafo randomico generato tenendo fissati il numero di nodi $N$ e il numero di link $L$.\\
-Gli archi sono associati alle coppie di nodi casualmente con una distribuzione uniforme.
+$G(N,L)$ è la distribuzione uniforme sull'ensemble dei grafi semplici con $N$ nodi e $L$ archi. Ogni grafo di questo tipo ha una probabilità:
+\begin{equation}
+  P(G)=\binom{\binom{N}{2} }{L}^{-1}  
+\end{equation}
+siccome vi sono $\binom{N}{2}$ possibili archi e se ne scelgono uniformemente $L$.
 \end{boxb}
+Esiste una variante di questo modello:
+\begin{boxb}{Modello $G(N,p)$ o di Erdos-Renyi}
+  Il modello $G(N,p)$ è un grafo con $N$ nodi e ogni arco possibile è presente con una probabilità $p \in [0,1]$.
+\end{boxb}
+Il numero atteso di archi è:
+\begin{equation}
+  \mathbb{E}[m]=p\binom{N}{2}
+\end{equation}
+In un grafo $G(N,p)$, il grado del nodo segue una distribuzione binomiale:
+\begin{equation}
+  P(k_i=k)=\binom{N-1}{k}p^k(1-p)^{N-1-k}
+\end{equation}
+che nel limite $N \to \infty$ con $c=p(N-1)$ fissato, tende ad una poissoniana, che ha code basse, con gradi molto lontani dalla media esponenzialmente rari, in completo contrasto col comportamento reale.\\
 
+Tuttavia in alcune condizioni, possiede una componente gigante, come le reti reali:
+\begin{boxl}{Teorema di Erdos-Renyi: Transizione di fase in $G(N,p)$}
+Sia $c=p(N-1)$ il grado medio, nel limite $N \to \infty$ :
+\begin{itemize}
+  \item Se $c <1$ non esiste un'unica componente gigante, e tutte le componenti connesse hanno dimensione $O(\log(N))$
+  \item Se $c=1$, la componente più grande ha dimensione $O(N^{\frac{2}{3}})$
+  \item Se $c >1$ esiste un'unica componente gigante con $\sim S N$ nodi con $S$ soluzione dell'equazione autoconsistente:
+  \begin{equation}
+    S=1-e^{-cS}
+  \end{equation}
+\end{itemize}
+\end{boxl}
+Per una dimostrazione di questo risultato vedere in appendice (FARE RIFERIMENTO)
 
+Inoltre un grafo E-R possiede anche un discreto effetto small-world:
+\begin{boxl}{Small-world in E-R}
+Per $G(N,p)$ con $c=Np >1$ fissato, la distanza geodetica media vale:
+\begin{equation}
+  \langle d \rangle \sim \frac{\log(N)}{\log(c)} 
+\end{equation}
+\end{boxl}
+come è possibile verificare con un processo di branching a partire da un nodo, per il quale il numero di nodi raggiungibile in esattamente $l$ passi cresce come $c^l$. La distanza tipica è data da $c^l\sim N \implies l \sim \frac{\log(N)}{\log(c)} $
 
+Infine, siccome la probabilità che due vicini $j$ e $k$ del nodo $i$ siano connessi tra loro è sempre $p$, si ha che $C_i=p$ e dunque:
+\begin{boxl}{Clustering in E-R}
+In un grafo $G(N,p)$, il coefficiente di clustering medio è:
+\begin{equation}
+  \langle C \rangle=p=\frac{c}{n-1}
+\end{equation}
+\end{boxl}
+
+Esistono altri tipi di grafi randomici:
+\begin{boxb}{Modello di Watss-Strogatz $WS(N,k,\beta)$}
+  Il modello di Watss-Strogatz è definito dal seguente algoritmo:
+  \begin{itemize}
+    \item Si dispongono $N$ nodi su un anello e si connette ogni nodo ai suoi $k$ vicini più prossimi ($k$ deve essere reale), in modo da creare un reticolo $k$-regolare
+    \item Per ognuno degli archi $(i,j)$ del reticolo, con probabilità $\beta$ si sostituisce $j$ con un nodo scelto a caso uniformemente tra tutti gli altri ( evitando cappi e archi doppi)
+  \end{itemize}
+\end{boxb}
+La novità di questo modello è che esiste un ampio intervallo del parametro $\beta$ per cui la rete mantiente un alto clustering e un forte effetto small-world.\\
+
+Se invece si vuole modellizzare le reti che crescono nel tempo (come spesso accade nei casi reali, ad esempio con Internet o la rete di citazioni scientifiche), si devono introdurre ulteriori modelli:
+\begin{boxb}{Modello di Barabasi-Albert $BA(m)$}
+  Il modello B-A genera un grafo dinamico attraverso il seguente algoritmo:
+  \begin{itemize}
+    \item Si parte da un grafo connesso con $m_o$ nodi
+    \item ad ogni passo temporale si aggiunge un nuovo nodo con $m \le m_0$ archi, ognuno di questi nuovi archi si connette al nodo $i$ esistente con probabilità proporzionale al suo grado:
+    \begin{equation}
+      \Pi (i)=\frac{k_i}{\sum_{j}^{}k_j}=\frac{k_i}{2m_t}
+    \end{equation}
+    con $m_t$ numero di archi totale al passo $t$
+  \end{itemize}
+\end{boxb}
+Questo è un meccanismo di preferential attachement che è un processo di rinforzo, i nodi che hanno già alto grado hanno maggiore probabilità di ricevere ulteriori archi.\\
+
+Questo tipo di modello ha una proprietà tipica dei grafi reali che ancora non era stata riprodotta dai modelli precedenti, la distribuzione a legge di potenza:
+\begin{boxl}{Distribuzione dei gradi nel modello B-A}
+Nel limite $N \to \infty$ con $m$ fissato, la distribuzione dei gradi del modello B-A converge ad una legge di potenza: 
+\begin{equation}
+  p(k) \sim \frac{2m(m+1)}{k(k+1)(k+2)}
+\end{equation}
+l'esponente è sempre $\gamma=3$ indipendentemente da $m$
+\end{boxl}
+Per una dimostrazione di questo risultato guardare in appendice (FARE RIFERIMENTO).\\
+
+Inoltre ha un effetto di ultra small-world, con una distanza media $\left\langle d \right\rangle \sim \frac{\log(n)}{\log(\log(n))}$.\\
+
+Di seguito una tabella comparativa dei risultati dei principali modelli:
+\begin{table}[htbp]
+\centering
+\caption{Confronto delle proprietà principali dei modelli di grafi randomici. Le reti reali combinano proprietà presenti in modelli diversi, motivando l'uso di modelli ibridi.}
+\label{tab:confronto_modelli}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+\textbf{Modello} & $p(k)$ & $\langle d \rangle$ & $C$ & \textbf{Comp. gigante} & \textbf{Hub} \\
+\midrule
+Reticolo regolare          & $\delta(k - k_0)$               & $O(n)$ & alto & sempre & no \\
+ER $G(n,p)$                & Poisson                         & $O(\log n)$ & $p$ & se $c > 1$ & no \\
+Watts–Strogatz             & $\sim$ Poisson                  & $O(\log n)$ & alto & sempre & rari \\
+Barabási–Albert            & $k^{-3}$                       & $O(\log n / \log \log n)$ & $O(\log^2 n / n)$ & sempre & sì \\
+Reti reali                 & power-law                      & piccolo & alto & solitamente & sì \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{comment}
 Reti casuali (Erdos-Renyi)

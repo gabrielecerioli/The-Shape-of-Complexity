@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}"More is different"}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Complessità}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Reti}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Graph Theory}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definizioni di base: grafi, nodi, archi}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Grado di un nodo}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cammini sui grafi}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Componenti e connettività}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Matrice laplaciana e proprietà spettrali di un grafo}{8}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Misure di centralità}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Coefficiente di clustering e modularità}{11}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Grafi randomici, distribuzione dei gradi, grafi Small-world e scale-free}{13}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Case study: Analisi strutturale e centralità del connettoma di \textit {C. elegans}}{16}{subsection.2.9}%
+\contentsline {section}{\numberline {3}Sistemi dinamici su grafi}{16}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Cammini stocastici e moto di una particella su un grafo non direzionato}{16}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Diffusione su grafi}{19}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{23}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Stochastic processes on graphs}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{23}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{23}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{23}{subsection.4.4}%
+\contentsline {section}{\numberline {A}Algoritmi}{23}{appendix.A}%
+\contentsline {section}{\numberline {B}Dimostrazioni}{23}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{23}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Disuguaglianza dell' autovalore massimo della matrice laplaciana}{23}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{24}{appendix.C}%
+\contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{24}{appendix.D}%
