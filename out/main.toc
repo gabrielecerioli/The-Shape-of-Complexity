@@ -21,12 +21,14 @@
 \contentsline {paragraph}{Entropia di Shannon di un cammino stocastico su un grafo}{23}{section*.17}%
 \contentsline {paragraph}{Entropia topologica di un sistema dinamico}{23}{section*.18}%
 \contentsline {paragraph}{Entropia topologica di un grafo}{23}{section*.19}%
-\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{24}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{24}{subsection.4.4}%
-\contentsline {section}{\numberline {A}Algoritmi}{24}{appendix.A}%
-\contentsline {section}{\numberline {B}Dimostrazioni}{24}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{24}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Disuguaglianza dell' autovalore massimo della matrice laplaciana}{25}{subsection.B.2}%
-\contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{25}{appendix.C}%
-\contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{25}{appendix.D}%
+\contentsline {paragraph}{Legame tra l'entropia topologica e la struttura spettrale}{25}{section*.20}%
+\contentsline {paragraph}{Altre misure di entropia di un grafo}{25}{section*.21}%
+\contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{26}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{26}{subsection.4.4}%
+\contentsline {section}{\numberline {A}Algoritmi}{26}{appendix.A}%
+\contentsline {section}{\numberline {B}Dimostrazioni}{26}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Unicità della distribuzione stazionaria di un cammino stocastico}{26}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Disuguaglianza dell' autovalore massimo della matrice laplaciana}{26}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Esempi fisici: reti elettriche e flussi su reti}{27}{appendix.C}%
+\contentsline {section}{\numberline {D}Case study: Rete ferroviaria austriaca}{27}{appendix.D}%

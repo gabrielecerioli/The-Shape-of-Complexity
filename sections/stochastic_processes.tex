@@ -66,7 +66,7 @@ Un grafo orientato $G=(V,E)$ definisce naturalmente un sistema dinamico combinat
     W_n= \# \{ \text{cammini di lunghezza n}\} =\sum_{i,j}^{}[A^n]_{ij}=\mathbf{1}^T\mathbf{A}^n\mathbf{1}
 \end{equation}
 
-Possiamo calcolare la complessità di questo sistema dinamico è misurata dall'entropia topologica:
+Possiamo calcolare la complessità di questo sistema dinamico tramite l'entropia topologica:
 \begin{boxb}{Entropia topologica e raggio spettrale}
    Per un grafo orientato $G$ fortemente connesso con matrice di adiacenza $A$, l'entropia topologica del grafo shift è:
    \begin{equation}
@@ -76,7 +76,7 @@ Possiamo calcolare la complessità di questo sistema dinamico è misurata dall'e
 \end{boxb}
 
 \begin{proof}
-Scriviamo $\mathbf{A}^n$ nella base degli autovettori di $\mathbf{A}$, per il teorema di Perron-Frobenius ha un autovalore massimo $\rho=\rho(\mathbf{A})$ reale e positivo con autovettore destro $\mathbf{v}>0$ e autovettore sinistro $\mathbf{u}>0$.\\
+Scriviamo $\mathbf{A}^n$ nella base degli autovettori di $\mathbf{A}$, per il teorema di Perron-Frobenius, essendo il grafo fortemente connesso e quindi $\mathbf{A}$ irriducibile e non negativa, $\mathbf{A}$ ha un autovalore massimo $\rho=\rho(\mathbf{A})$ reale e positivo con autovettore destro $\mathbf{v}>0$ e autovettore sinistro $\mathbf{u}>0$.\\
 Si ha allora, separando il termine col primo autovalore:
 \begin{equation}
 \mathbf{A}^n=\rho^n\mathbf{v}\mathbf{u}^T + \sum_{k \ge 2}^{}\lambda_k^n \mathbf{v}_k\mathbf{u}_k^T
@@ -91,7 +91,75 @@ Dunque calcolando l'entropia topologica, come il tasso di crescita esponenziale 
     h(G)=\lim_{n \to \infty}\frac{1}{n}\log(W_n)=\lim_{n \to \infty} \frac{1}{n} \log(C \rho^n)=\lim_{n \to \infty} \left( \frac{\log C}{n}+\log \rho\right)=\log \rho(\mathbf{A})
 \end{equation}
 \end{proof}
+Lo stesso calcolo vale anche per i grafi non orientati, interpretandoli come grafi orientati simmetrici e definendo così una mappa di shift su di essi.\\
 
+E' possibile dimostrare alcune proprietà dell'entropia topologica:
+\begin{boxl}{Monotonia per sottografi}
+    Sia $H$ un sottografo di $G$ (stesso insieme di nodi, ma sottoinsieme di archi). Allora: 
+    \begin{equation}
+        h(H) \le h(G)
+    \end{equation}
+\end{boxl}
+\begin{proof}
+    Ogni cammino ammissibile in $H$ è anche ammissibile in $G$, quindi $W_n(H) \le W_n(G) \forall n$ e quindi il tasso di crescita esponenziale non può diminuire passando a $G$.
+\end{proof}
+Per i grafi non orientati è possibile stimare l'entropia topologica senza dover conoscere gli autovalori di $\mathbf{A}$:
+\begin{boxl} {Stima dell'entropia topologica tramite i gradi}
+    Per un grafo non orientato $G$ connesso e privo di cappi, con grado minimo $k_{\text{min}}$ e massimo $k_{\text{max}}$ vale:
+    \begin{equation}
+        \sqrt{k_{\text{max}}} \le \rho(\mathbf{A}) \le k_{\text{max}}
+    \end{equation}
+    e per l'entropia topologica:
+    \begin{equation}
+        \log(k_{\text{min}}) \le  h(G) \le \log(k_{\text{max}})
+    \end{equation}
+\end{boxl}
+Per la dimostrazione di questo risultato guardare in appendice (FARE RIFERIMENTO).
+
+\paragraph{Legame tra l'entropia topologica e la struttura spettrale}
+Esistono due formule per calcolare numericamente l'autovalore massimo $\lambda_{\text{max}}$ di una matrice simmetria $\mathbf{A}$:
+\begin{equation}
+    \left\lvert \lambda_{\text{max}} \right\rvert= \lim_{n \to \infty} (\Tr(\mathbf{A}^n))^{\frac{1}{n}}
+\end{equation}
+\begin{equation}
+    \lambda_{\text{max}}=\lim_{n \to \infty} \frac{\Tr(\mathbf{A}^{nabla+1})}{\Tr(\mathbf{A}^n)}
+\end{equation}
+La dimostrazione e il comportamento numerico di queste formule è stato analizzato dall'autore durante il corso di laboratorio di calcolo nel 2024 (FARE RIFERIMENTO).\\
+
+Possiamo intepretare la prima formula nel contesto dell'entropia topologica di un grafo considerando il numero $c_n$ di cicli di lunghezza $n$:
+\begin{equation}
+    c_n=\Tr(\mathbf{A}^n)=\sum_{k=1}^{N}\lambda_k^n 
+\end{equation} 
+Per grafi non orientati (con $\mathbf{A}$ simmetrica), tutti gli autovalori sono reali, e il numero di cicli di lunghezza n cresce come $\rho(\mathbf{A})^n$.
+\begin{boxl}{Entropia topologica tramite la traccia}
+Per un grafo non orientato fortemente connesso:
+\begin{equation}
+    h(G)=\lim_{n \to \infty}\frac{1}{n}\log(\Tr(\mathbf{A}^n))
+\end{equation}    
+\end{boxl}
+
+\paragraph{Altre misure di entropia di un grafo}
+Un altro approccio per quantiticare la complessità strutturale di un grafo consiste nel calcolare l'entropia di Shannon direttamente sulla distribuzione dei gradi:
+\begin{boxb}{Entropia strutturale di Rashevsky-Trucco}
+    Per un grafo $G$ con distribuzione dei gradi $p(k)=\frac{n_k}{n}$ (con $n_k$ il numero di nodi con grado $k$):
+    \begin{equation}
+        H_{\text{struct}}(G)=-\sum_{k}^{}\frac{n_k}{n}\log(\frac{n_k}{n})
+    \end{equation}
+\end{boxb}
+Questa misura è alta quando la distribuzione è uniforme su tutti i gradi mentre è nulla per grafi regolari (dove tutti i nodi hanno lo stesso grado).\\
+
+Se invece consideriamo la matrice laplaciana del grafo $\mathbf{L}=\mathbf{D}-\mathbf{A}$, allora possiamo definire la matrice densità normalizzata del grafo:
+\begin{equation}
+    \mathbf{\rho_G}=\frac{\mathbf{L}}{\Tr(\mathbf{L})}=\frac{\mathbf{L}}{2m}
+\end{equation}
+E possiamo calcolare l'entropia di Von-Neumann:
+\begin{boxb}{Entropia spettrale o di Von Neumann del grafo}
+    L'entropia spettrale (o entropia di Von Neumann) del grafo è:
+    \begin{equation}
+        S(G)=-\Tr(\rho_G\log(\rho_G))=-\sum_{k=1}^{N}\frac{\lambda_k}{2m}\log(\frac{\lambda_k}{2m})
+    \end{equation}
+\end{boxb}
+che è equivaente al calcolo dell'entropia di Von Neumann in meccanica quantistica; questa analogica ha ispirato l'applicazione di tecniche di informazione quantistica all'analisi delle reti (\cite{Passerini:2008:vonNeumann})
 \begin{comment}
 
 . Definire l'entropia di Shannon applicata alle reti. --> misura di incertezza nel muoversi nella rete.

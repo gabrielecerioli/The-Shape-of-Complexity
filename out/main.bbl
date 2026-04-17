@@ -16,5 +16,53 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Passerini:2008:vonNeumann}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=67365e1fe249df0977e8fe43691add8a}{%
+           family={Passerini},
+           familyi={P\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6161b084af755e9ff220edaf087b7ca1}{%
+           family={Severini},
+           familyi={S\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{fullhash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{fullhashraw}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{bibnamehash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{authorbibnamehash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{authornamehash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{authorfullhash}{060952b05118813b5c7bdcf67bb29e37}
+      \strng{authorfullhashraw}{060952b05118813b5c7bdcf67bb29e37}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.dis-nn}
+      \field{eprinttype}{arXiv}
+      \field{note}{arXiv:0812.2597 [cond-mat.dis-nn]}
+      \field{title}{The von Neumann entropy of networks}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.48550/arXiv.0812.2597
+      \endverb
+      \verb{eprint}
+      \verb 0812.2597
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0812.2597
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0812.2597
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
