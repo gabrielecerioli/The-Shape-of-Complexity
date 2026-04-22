@@ -1,27 +1,36 @@
 \documentclass[10pt]{article}
 
-\usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{setspace}
+\usepackage[a4paper,margin=1.5cm,top=1.6cm,bottom=1.6cm]{geometry} % da 2cm a 1.7
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{6pt}{3pt} % prima/dopo
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{3pt}{1pt}
+\titlespacing*{\paragraph}{0pt}{3pt}{0.5em}
+
+\usepackage{microtype} % migliora giustificazione, guadagni righe
+
+\usepackage{setspace}\setstretch{0.92} % era 0.95
 \usepackage{tikz}
+
 \usetikzlibrary{calc}
 \singlespacing
 \linespread{0.95}
 
-\usepackage{enumitem}
+\usepackage{enumitem}\setlist{nosep, topsep=2pt, itemsep=1pt, parsep=0pt}
 \setlist{nosep}
 \usepackage{biblatex}
 \addbibresource{bibliography.bib}
-\usepackage[font=small,skip=4pt]{caption}
+\usepackage[font=footnotesize,labelfont=bf,skip=3pt]{caption} % era small,4pt
 
 \setlength{\parskip}{0pt}
-\setlength{\parindent}{1em}
+\setlength{\parindent}{0.8em}
 
-\setlength{\textfloatsep}{8pt}
-\setlength{\floatsep}{6pt}
-\setlength{\intextsep}{6pt}
+\setlength{\textfloatsep}{5pt plus1pt minus1pt}
+\setlength{\floatsep}{4pt plus1pt minus1pt}
+\setlength{\intextsep}{4pt plus1pt minus1pt}
+\setlength{\abovedisplayskip}{4pt plus1pt minus1pt}
+\setlength{\belowdisplayskip}{4pt plus1pt minus1pt}
 
-\setlength{\abovedisplayskip}{6pt}
-\setlength{\belowdisplayskip}{6pt}
 \usepackage{tikz}
 \usepackage[pages=some]{background}
 \usepackage{lipsum}
@@ -44,6 +53,7 @@
 \definecolor{lblue}{HTML}{01686e}
 \definecolor{blue_back}{HTML}{d3e2e3}
 \newtcolorbox{boxe}[2][]{
+                boxsep=2pt,left=3mm,right=3mm,top=2mm,bottom=2mm,
                 lower separated=false,
                 colback=white,
                 colframe=eyellow,fonttitle=\bfseries,
@@ -55,6 +65,7 @@
                 title={#2},
                 #1}
 \newtcolorbox{boxo}[2][]{
+                boxsep=2pt,left=3mm,right=3mm,top=2mm,bottom=2mm,
                 lower separated=false,
                 colback=white,
                 colframe=oblue,fonttitle=\bfseries,
@@ -66,6 +77,7 @@
                 title={#2},
                 #1}
 \newtcolorbox{boxb}[2][]{
+                boxsep=2pt,left=2mm,right=2mm,top=2mm,bottom=1mm,
                 lower separated=false,
                 colback=bourd_back,
                 colframe=bourdeaux,fonttitle=\bfseries,
@@ -77,6 +89,7 @@
                 title={#2},
                 #1}
 \newtcolorbox{boxl}[2][]{
+                boxsep=2pt,left=2mm,right=2mm,top=2mm,bottom=1mm,
                 lower separated=false,
                 colback=blue_back,
                 colframe=lblue,fonttitle=\bfseries,

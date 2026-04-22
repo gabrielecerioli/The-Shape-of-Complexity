@@ -139,7 +139,7 @@ Per un grafo non orientato fortemente connesso:
 \end{boxl}
 
 \paragraph{Altre misure di entropia di un grafo}
-Un altro approccio per quantiticare la complessità strutturale di un grafo consiste nel calcolare l'entropia di Shannon direttamente sulla distribuzione dei gradi:
+Un altro approccio per quantificare la complessità strutturale di un grafo consiste nel calcolare l'entropia di Shannon direttamente sulla distribuzione dei gradi:
 \begin{boxb}{Entropia strutturale di Rashevsky-Trucco}
     Per un grafo $G$ con distribuzione dei gradi $p(k)=\frac{n_k}{n}$ (con $n_k$ il numero di nodi con grado $k$):
     \begin{equation}
@@ -176,10 +176,164 @@ che è equivaente al calcolo dell'entropia di Von Neumann in meccanica quantisti
 - Distinguere bene la percolazione sui nodi e la percolazione sugli archi (per il connettoma è più realistico considerare la percolazione sugli archi, ma è più semplice da simulare quella sui nodi)
 \end{comment}
 \subsection{Monte Carlo su grafi e modelli di Ising}
+Il modello di ising fu introdotto da Ernst Ising nel 1925 come modello minimale per il ferromagnetismo: variabili di spin binario su un reticolo regolare, con interazioni fra vicini.\\
+La transizione di fase che emerge, ovvero il passaggio da sistema ordinato a disordinato è un archetipo di proprietà emergente.\\
+
+La generalizzazione ai grafi del lavoro di Ising (FARE RIFERIMENTO) è naturale e di grande interesse: permette di studiare come la topologia della rete influenzi le proprietà critiche del sistema.
+
+\begin{boxb}{Modello di Ising su un grafo}
+Sia $G(V,E)$ un grafo semplice connesso con $N=\left\lvert V\right\rvert$ nodi. Si assegna ad ogni nodo $i \in V$ una variabile di spin $\sigma_i \in {-1,+1}$. Uno stato del sistema è una configurazione $\mathbf{\sigma}=(\sigma_1,...,\sigma_N) \in {-1,+1}^N$.\\
+L'Hamiltoniana del sistema è:
+\begin{equation}
+    \mathcal{H}(\mathbf{\sigma})=-J\sum_{(i,j) \in E}^{}\sigma_i\sigma_j-h\sum_{i \in V}^{}\sigma_i
+\end{equation}
+dove $J >0$ è la costante di accoppiamento ferromagnetico e $h$ è il campo magnetico esterno.
+\end{boxb}
+A temperatura $T >0$ il sistema all'equilibrio termodinamico è descritto dalla distribuzione di Boltzmann:
+\begin{equation}
+    P(\mathbf{\sigma})=\frac{1}{Z(\beta)}e^{-\beta\mathcal{H}(\mathbf{\sigma})}
+\end{equation}
+dove la funzione di partizione vale:
+\begin{equation}
+    Z(\beta)=\sum_{\mathbf{\sigma}\in {+1,-1}^N}^{}e^{-\beta \mathcal{H}(\mathbf{\sigma})}
+\end{equation}
+Siccome lo spazio degli stati ha cardinalità $2^N$, il calcolo diretto di $Z(\beta)$ è intrattabile per $N$ grandi, è necessario dunque introdurre un approccio di campionamento.
+\paragraph{Metodi di Monte Carlo e algoritmo di Metropolis-Hastings}
+L'idea centrale del metodo Monte Carlo è di sostituire la somma esatta su $2^N$ stati con una media temporale lungo una sequenza di configurazioni generate stocasticamente, in modo che la frequenza con cui ogni configurazione viene visitata converga alla distribuzione di Boltzmann.\\
+
+Considerando una catena di Markov:
+\begin{boxb}{Catena di Markov su ${+1,-1}^N$}
+Una catena di Markov sullo spazio degli stati $\Omega={+1,-1}^N$ è una sequenza di variabili aleatorie $(\mathbf{\sigma}^{(t)})_{t \ge 0}$ tale che:
+\begin{equation}
+    P(\mathbf{\sigma}^{(t+1)}| \mathbf{sigma}^{(0),..., \mathbf{\sigma}^{(t)}})=P(\mathbf{\sigma}^{(t+1)}| \mathbf{\sigma}^{(t)})\equiv T(\mathbf{\sigma}^{(t)}\to \mathbf{\sigma}^{(t+1)})
+\end{equation}
+con $T(\mathbf{\sigma}^{(t)}\to \mathbf{\sigma}^{(t+1)})$ il \textbf{kernel di transizione}
+\end{boxb}
+Vogliamo dunque costruire una catena di Markov la cui distribuzione stazionaria sia $P(\mathbf{\sigma}) \propto e^{-\beta \mathcal{H(\mathbf{\sigma})}}$. \\
+Si può dimostrare che una condizione sufficiente è che il kernel di transizione soddisfi il \textbf{bilancio dettagliato} rispetto a $P$:
+\begin{boxb}{Bilancio dettagliato}
+Si dice che il kernel di transizione $T$ soddisfa il \textbf{bilancio dettagliato} rispetto a $P$ se:
+\begin{equation}
+    P(\mathbf{\sigma})T(\mathbf{\sigma}\to \mathbf{\sigma}')=P(\mathbf{\sigma}')T(\mathbf{\sigma}'\to \mathbf{\sigma}) \ \ \ \forall \mathbf{\sigma},\mathbf{\sigma}' \in \Omega
+\end{equation}
+\end{boxb}
+Inoltre vale il seguente risultato:
+\begin{boxl}{Proposizione: Invarianza dalla distribuzione stazionaria}
+Se $T$ soffisfa il bilancio dettagliato rispetto a $P$, allora $P$ è invariante per la catena, ovvero $\sum_{\mathbf{\sigma}}^{}P(\mathbf{\sigma})T(\mathbf{\sigma}\to \mathbf{\sigma}')=P(\mathbf{\sigma}')$
+\end{boxl}
+\begin{proof}
+Sfruttando il bilancio dettagliato:
+\begin{equation}
+    \sum_{\mathbf{\sigma}}^{}P(\mathbf{\sigma})T(\mathbf{\sigma}\to \mathbf{\sigma}')=\sum_{\mathbf{\sigma}}^{}P(\mathbf{\sigma}')T(\mathbf{\sigma}'\to \mathbf{\sigma})=P(\mathbf{\sigma}')\sum_{\mathbf{\sigma}}^{}T(\mathbf{\sigma}' \to \mathbf{\sigma})=P(\mathbf{\sigma}')
+\end{equation}
+avendo usato nell'ultima uguaglianza la normalizzazione $\sum_{\mathbf{\sigma}}^{}T(\mathbf{\sigma}' \to \mathbf{\sigma})=1$
+\end{proof}
+Possiamo ora definire un algoritmo (Metropolis-Hastings) che ci permette di costruire esplicitamente un kernel che soddisfa il bilancio dettagliato per $P(\mathbf{\sigma}) \propto e^{-\beta \mathcal{H}(\mathbf{\sigma})} $
+\begin{boxb}{Algoritmo di Metropolis-Hastings}
+Dato uno stato corrente $\mathbf{\sigma}^(t)$:
+\begin{itemize}
+    \item \textbf{Proposta}: genera $\mathbf{\sigma}'$ da una regola simmetrice $q(\mathbf{\sigma} \to \mathbf{\sigma}')=q(\mathbf{\sigma}' \to \mathbf{\sigma})$
+    \item \textbf{Accettazione:} accetta la mossa con probabilità:
+\begin{equation}
+    A(\mathbf{\sigma} \to \mathbf{\sigma}')=\min\left(1, \frac{P(\mathbf{\sigma}')}{P(\mathbf{\sigma})}\right) =\min \left(1,e^{-\beta \Delta E}\right) 
+\end{equation}
+dove $\Delta E=\mathcal{H}(\mathbf{\sigma}')-\mathcal{\mathbf{\sigma}}$
+\end{itemize}
+\end{boxb}
+Questo algoritmo ci risolve il problema del calcolo della funzione di ripartizione, siccome nel rapporto $\frac{P(\mathbf{\sigma}')}{P(\mathbf{\sigma})}$ si cancella $Z(\beta)$.\\
+
+\begin{boxl}{Teorema: Bilancio dettagliato per Metropolis-Hastings}
+Il kerner di Metropolis-Hastings soddisfa il bilancio dettagliato rispetto a $P(\mathbf{\sigma}) \propto e^{\beta \mathcal{H}(\mathbf{\sigma})}$
+\end{boxl}
+\begin{proof}
+    Per ogni coppia di stati $\mathbf{\sigma} \not = \mathbf{\sigma}'$, il kernel è $T(\mathbf{\sigma} \to \mathbf{\sigma}')=q(\mathbf{\sigma} \to \mathbf{\sigma}') A(\mathbf{\sigma} \to \mathbf{\sigma}')$. Poichè $q$ è simmetrica per ipotesi, basta verificare:
+    \begin{equation}
+        P(\mathbf{\sigma})A(\mathbf{\sigma} \to \mathbf{\sigma}')=P(\mathbf{\sigma}')A(\mathbf{\sigma}' \to \mathbf{\sigma})
+    \end{equation}
+    Senza perdità di generalità supponiamo $P(\mathbf{\sigma}')\le P(\mathbf{\sigma})$ , ovvero $\Delta E \ge 0$. Allora:
+    \begin{equation}
+        A(\mathbf{\sigma}\to \mathbf{\sigma}')=e^{-\beta \Delta E}=\frac{\mathbf{\sigma}'}{\mathbf{\sigma}}
+    \end{equation}
+    \begin{equation}
+        A(\mathbf{\sigma}'\to \mathbf{\sigma})=1 
+    \end{equation}
+    e quindi:
+    \begin{equation}
+        P(\mathbf{\sigma})A(\mathbf{\sigma} \to \mathbf{\sigma}')=P(\mathbf{\sigma})\frac{P(\mathbf{\sigma}')}{P(\mathbf{\sigma})}=P(\mathbf{\sigma}') \cdot 1=P(\mathbf{\sigma}')A(\mathbf{\sigma}' \to \mathbf{\sigma})
+    \end{equation}
+e il bilancio dettagliato è soddisfatto.
+\end{proof}
+Per il modello di Ising su grafo la scelta naturale di regola è il \textbf{Single-spin flip}: si sceglie un nodo $i \in V$ con distribuzione uniforme e si propone il flip $\sigma_i \to -\sigma_i$, lasciando invariati tutti gli altri spin.\\
+La variazione di energia dovuta al flip del nodo $i$ vale:
+\begin{equation}
+    \Delta E_i=\mathcal{H}'_i-\mathcal{H}_i=2\sigma_i \left(J\sum_{j \in \partial(i)}^{}\sigma_j+h\right) 
+\end{equation}
+$\Delta E_i$ dipende dunque soltanto dagli spin nei vicinato $\partial(i)$ del nodo $i$, ovvero da $k_i$ nodi. Il costo computazionale per ogni passo Monte Carlo è quindi $O(k_i)$ e non $O(N)$.
+
+\paragraph{Ergodicità e unicità della distribuzione stazionaria}
+Siccome il kernel di Metropolis-Hastings soddisfa il bilancio dettagliato rispetto a $P(\mathbf{\sigma}) \propto e^{\beta \mathcal{H}(\mathbf{\sigma})}$, $P$ è invariante per la catena, ed è dunque un punto fisso della dinamica.\\
+Non abbiamo però ancora verificato che la catena di Markov dell'algoritmo riesca sempre a campionarla e che $P$ sia l'unica distribuzione stazionaria. Potrebbero infatti esserci i seguenti problemi:
+\begin{itemize}
+    \item \textbf{Mancanza di irriducibilità}: se dallo stato iniziale non si raggiungono certe configurazioni, il sistema rimane intrappolato in una parte dello spazio
+    \item \textbf{Periodicità}: Se la catena torna nello stesso stato soltanto con un certo periodo, la distribuzione non oscilla e non converge
+\end{itemize}
+E' dunque necessario verificare anche che la catena di Markov dell'algoritmo Metropolis-Hastings sia \textbf{ergodica}:
+\begin{boxb}{Catena di Markov ergodica}
+    Una catena di Markov su $\Omega$ è ergodica se è:
+    \begin{itemize}
+        \item \textbf{Irriducibile:} $\forall \mathbf{\sigma}, \mathbf{\sigma}' \in \Omega \exists t : T_t(\mathbf{\sigma} \to \mathbf{\sigma}') >0$
+        \item \textbf{Aperiodica}: Il massimo comun divisore dei tempi di ritorno è 1.
+    \end{itemize}
+\end{boxb}
+\begin{boxl}{Ergodicità di Metropolis-Hastings su grafo connesso}
+    Per il modello di Ising su un grafo connesso G, la catena di Metropolis con single-spin flip è ergodica.
+\end{boxl}
+\begin{proof}
+    Sia $k_{\text{max}}$ il grado massimo tra i nodi del grafo, per un flip del nodo $i$ si ha:
+    \begin{equation}
+        \Delta E_i=\mathcal{H}(\mathbf{\sigma}')-\mathcal{H}(\mathbf{\sigma})=2\sigma_i \left(J \sum_{j \in \partial(i)}^{}\sigma_j + h\right) 
+    \end{equation}
+    da cui si posso fare alcune stime:
+    \begin{equation}
+        \left\lvert \Delta E_i\right\rvert \le 2(Jk_{\text{max}}+ \left\lvert h\right\rvert ) < \infty
+    \end{equation}
+    La probabilità di accettazione è dunque:
+    \begin{equation}
+        A(\mathbf{\sigma} \to \mathbf{\sigma}')=\min(1, e^{-\beta \Delta E_i}) \ge e^{-\beta 2(Jk_{\text{max}}+\left\lvert h\right\rvert )} >0
+    \end{equation}
+    \textbf{\textit{Irriducibilità.}} Dati due stati qualsiasi $\mathbf{\sigma}$ e $\mathbf{\sigma}'$, essi differisco in al più $N$ spin. Ordinando gli indici degli spin per cui si differenziano ed eseguendo flip sequenziali di questi siti, siccome ogni flip ha probabilità di accettazione strettamente positiva ($A(\mathbf{\sigma} \to \mathbf{\sigma}')=\min(1, e^{-\beta \Delta E_i}) \ge e^{-\beta 2(Jk_{\text{max}}+\left\lvert h\right\rvert )} >0$), si raggiunge $\mathbf{\sigma}'$ da $\mathbf{\sigma}$ in un numero finito di passi con probabilità positiva.
+    Per simmetria vale ache il viceversa, dunque la catena è irriducibile.\\
+
+   \textbf{ \textit{Aperiodicità.}} Basta mostrare che esiste almeno uno stato per il quale è possibile un autoloop $T(\mathbf{\sigma} \to \mathbf{\sigma})>0$, e poi applicare l'irriducibilità per estenderlo a tutti gli stati.\\
+    Supponiamo $h >0$ (l'altro caso è simmetrico) e consideriamo lo stato fondamentale, ovvero con $\sigma_i =+1 \ \ \forall i$, allora $\forall i$ vale:
+    \begin{equation}
+        \Delta E_i=2(JK_i+h)>0
+    \end{equation}
+    quindi $A_i=e^{-\beta \Delta E_i}<1$. Dunque la probabilità di restare in $\mathbf{\sigma}$, avendo proposto il flip dello spin $i$, è $1-A_i >0$. Potendo proporre il flip su ognuno degli $N$ spin, vale:
+    \begin{equation}
+        T(\mathbf{\sigma} \to \mathbf{\sigma})=1-\frac{1}{N}\sum_{i}^{}A_i \ge 1-e^{-\beta \min_{i}\Delta E_i}>0
+    \end{equation}
+    Si può dimostrare che in una catena irriducibile tutti gli stati formano un'unica classe di comunicazione, ovvero hanno lo stesso periodo $d(\mathbf{\sigma})$ definito come: $d(\mathbf{\sigma})=\min\left\{n \ge 1 : T^{n}(\mathbf{\sigma} \to \mathbf{\sigma}) >0\right\}.$.
+    Siccome abbiamo dimostrato che il periodo dello stato fondamentale è 1 (l'autoloop è possibile) allora $d(\mathbf{\sigma})=1 \ \ \forall \mathbf{\sigma} \in \Omega$, e dunque la catena è aperiodica.
+\end{proof}
+
+Siccome il kernel di Metropolis-Hastings soddisfa il bilancio dettagliato rispetto a $P (\mathbf{\sigma}) \propto e^{-\beta \mathcal{H(\mathbf{\sigma})}}$ e la catena campionata è ergodica, allora la distribuzione di Boltzmann è l'unica distribuzione stazionaria e la distribuzione converge ad essa per $t \to \infty$ qualunque sia la distribuzione iniziale.\\
+
+Inoltre dobbiamo dare una giustificazione matematica al campionamento con metodo Monte Carlo, si può dimostrare che vale una legge dei grandi numeri per le catene di Markov:
+\begin{boxl}{Teorema ergodico per catene di Markov finite}
+Sia $(\sigma^{(t)})_{t\ge 0}$ una catena di Markov irriducibile e aperiodica
+su $\Omega$ finito, con unica distribuzione stazionaria $P$.
+Per ogni osservabile $O:\Omega\to\mathbb{R}$ vale, con probabilità 1,
+\begin{equation}
+\frac{1}{T}\sum_{t=1}^{T} O(\sigma^{(t)}) \xrightarrow[T\to\infty]{}
+\langle O\rangle_P := \sum_{\sigma\in\Omega} O(\sigma)P(\sigma).
+\end{equation}
+\end{boxl}
+Per una dimostrazione di questo teorema consultare (FARE RIFERIMENTO).
 \begin{comment}
 STARE ATTENTI A NON ENTRARE TROPPO NEL DETTAGLIO -> MANTENERLO NUMERICO --> obiettivo è mostrare come varia la temperatura critica con la topologia.
 - Modello di Ising su un grafo --> far vedere l'hamiltoniana --> le interazioni avvengono solo sui nodi connessi da edges
-- Metropolis --> Flip di un spin casuale --> Calcolo della variazione di energia --> accettazione basata sul peso di Boltzmann --> Far notare che metropolis è un random walk sullo spezio delle configurazioni di spin
+- Metropolis --> Flip di un spin casuale --> Calcolo della variazione di energia --> accettazione basata sul peso di Boltzmann --> Far notare che metropolis è un random walk sullo spazio delle configurazioni di spin
 \end{comment}
 \subsection{Case study: Percolazione e modello di Ising sul connettoma di \textit{C. elegans}}
 \begin{comment}
