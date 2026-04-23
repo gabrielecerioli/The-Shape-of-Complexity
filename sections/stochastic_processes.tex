@@ -330,6 +330,208 @@ Per ogni osservabile $O:\Omega\to\mathbb{R}$ vale, con probabilità 1,
 \end{equation}
 \end{boxl}
 Per una dimostrazione di questo teorema consultare (FARE RIFERIMENTO).
+
+
+\paragraph{Approssimazione di campo medio per grafi}
+Cerchiamo di estendere ai grafi con connettività eterogenea l'approccio di campo medio introdotto da Weiss (FARE RIFERIMENTO).\\
+
+Consideriamo un modello di Ising su un grafo $G=(V,E)$ con $N$ nodi e distribuzione dei gradi $p_k$. Assumiamo inoltre che il grafo sia \textbf{non correlato}, ovvero che la probabilità che un arco connetta nodi di grado $k$ e $k'$ è proporzionale a $kp_k \cdot k'p_{k'}$.\\
+L'hamiltoniana del sistema è ancora:
+\begin{equation}
+    \mathcal{H}(\mathbf{\sigma})=-J\sum_{(i,j) \in E}^{}\sigma_i \sigma_j -h \sum_{i \in V}^{}\sigma_i
+\end{equation}
+sempre con distribuzione di Boltzmann e funzione di ripartizione $Z=\sum_{\mathbf{\sigma}}^{}e^{-\beta \mathcal{H}(\mathbf{\sigma})}$.\\
+Con l'approssimazione di campo medio vogliamo sostituire le interazioni microscopiche tra spin con un \textbf{campo efficace} medio, rappresentante l'influenza collettiva di tutti gli altri spin.\\
+Nonostante trascuri le fluttuazioni spaziali, essa cattura qualitativamente l'esistenza di una transizione di fase del sistema.\\
+
+Sia $m_k=\left\langle \sigma_i\right\rangle $ per un nodo $i$ con grado $k_i=k$. Il campo efficace agente su un nodo di grado $k$ vale:
+\begin{equation} 
+    h_{\text{eff}}(k)=J\sum_{j \in \partial(i)}^{}\left\langle \sigma_j\right\rangle +h \approx Jk \Phi + h
+\end{equation}
+dove $\Phi$ è un \textbf{parametro d'ordine globale} che rappresenta la magnetizzazione media pesata sul grado:
+\begin{equation}
+    \Phi=\sum_{k'}^{}\frac{k'p_{k'}}{\left\langle k\right\rangle }m_{k'}
+    \label{eq:par_ordine}
+\end{equation}
+Possiamo intepretare questo parametro considerando un arco a caso e seguendo una delle sue estremità: la probabilità che arrivi su un nodo di grafo $k'$ vale $\frac{k' N p_{k'}}{N \left\langle k\right\rangle }=\frac{k' p_{k'}}{\left\langle k\right\rangle}$, spesso chiamata \textbf{distribuzione dei gradi in eccesso}.\\
+Dunque la magnetizzazione che un nodo vede guardando un vicino a caso è la media di $m_{k'}$ pesata con la distribuzione dei gradi in eccesso, ovvero proprio il parametro $\Phi=\sum_{k'}^{}\frac{k' p_{k'}}{\left\langle k\right\rangle}m_{k'}$.\\
+
+Il sistema è ora costituito da spin indipendenti sotto effetto di un campo medio $h_{\text{eff}}(k_i)$, dipendente solo dal grado $k_i$ del nodo, quindi con hamiltoniana di prova:
+\begin{equation}
+\mathcal{H}_0(\mathbf{\sigma})=\sum_{i}^{}-(jk_i\Phi+h)\sigma_i  
+\end{equation}
+Calcoliamo dunque il valore medio di un singolo spin di grado $k_i$:
+\begin{equation}
+    m_{k_i}=\left\langle \sigma_i\right\rangle_{\mathcal{H}_0}=\frac{\sum_{\sigma_i=\pm 1 }^{}\sigma_i e^{+\beta h_{\text{eff}}(k_i)\sigma_i}}{\sum_{\sigma_i=\pm 1 }^{}e^{+\beta h_{\text{eff}}(k_i)\sigma_i}} = \tanh(\beta h_{\text{eff}}(k_i))
+\end{equation}
+Sostituendo nella definizione di $\Phi$ \eqref{eq:par_ordine}, si ottiene un'equazione di autoconsistenza per $\Phi$:
+\begin{equation}
+    \Phi=\sum_{k}^{}\frac{kp_k}{\left\langle k\right\rangle }\tanh(\beta Jk \Phi + \beta h)
+\end{equation}
+
+$\Phi =0$ è una soluzione banale. Poniamo $h=0$ e cerchiamo la temperatura al di sotto della quale compare una soluzione $\Phi \not =0$.\\
+Espandendo la tangente iperbolica per piccoli $\Phi$, $\tanh(\beta Jk \Phi) \approx \beta Jk \Phi - \frac{(\beta Jk)^3}{3} \Phi^3$, trascurando i termini $O(\Phi^3)$ si ottiene:
+\begin{equation}
+    \Phi \approx \beta J \Phi \sum_{k}^{} \frac{k p_k}{\left\langle k\right\rangle }k = \beta J \Phi \frac{\left\langle k^2\right\rangle }{\left\langle k\right\rangle }
+\end{equation}
+Per $\Phi \not =0$, possiamo dividere per $\Phi$ ottenendo la condizione di transizione:
+\begin{equation}
+    1=\beta_c J \frac{\left\langle k^2\right\rangle }{\left\langle k\right\rangle } \implies \boxed{k_B T_c^{\text{MF}}=J \frac{\left\langle k^2\right\rangle }{\left\langle k\right\rangle }}
+\end{equation}
+\begin{boxl}{Teorema di Dorogovtsev-Goltsev-Mendes}
+Per il modello di ising di campo medio su una rete con distribuzione dei gradi $p(k)$, la temperatura critica è:
+\begin{equation}
+    k_B T_c= J \frac{\left\langle k^2\right\rangle }{\left\langle k\right\rangle }
+\end{equation}
+\end{boxl}
+Una rete scale-free, come si è visto, ha distribuzione dei gradi a legge di potenza $p_k \sim k^{-\gamma}$ per $k \ge k_{\text{min}}$, per queste reti il momento $\left\langle k\right\rangle$ è finito, mentre $\left\langle k^2\right\rangle $ diverge con $N \to \infty$ (se $\gamma \le 3$). Di conseguenza $T_c^{\text{MF}} \to \infty$ nel limite termodinamico, e i sistema rimane ferromagnetico a qualunque temperatura finita.\\
+
+FARE VEDERE CON SIMULAZIONI SU GRAFI COME MEAN-FIELD FALLISCA A PREDIRE CORRETTAMENTE LA TEMPERATURA CRITICA.\\
+Per un reticolo quadrato 2D ($k=4$) si ottiene $T_c^{\text{MF}}=4 J/k_B$, mentre il valore esatto calcolato da Onsager è $T_c \sim 2.269 J/k_B$.\\
+
+L'approssimazione di campo medio trascura completamente le fluttuazioni spaziali e le correlazioni, riesce a prevedere la presenza di una transizione di fase ma fallisce nello stimare correttamente la temperatura critica per dimensioni basse.
+\paragraph{Approssimazione di Bethe-Peierls per Ising sui reticoli regolari}
+La soluzione esatta del modello di ising è disponibile soltanto in pochi casi: catena 1D, reticolo quadrato 2D in campo nullo e su un albero di Cayley.\\
+
+\begin{boxb}{Albero di Cayley o reticolo di Bethe}
+Un \textbf{albero di Cayley} con coordinazione $k$ è un grafo connesso senza cicli (albero), in cui ogni nodo (tranne le fogli, ovvero i nodi terminali dell'albero, se questo è finito) hanno grado $k$.\\
+Nel limite termodinamico $N \to \infty$, il numero di foglie (i nodi al bordo) tende a zero, e il grafo può essere considerato infinito e regolare.
+\end{boxb}
+La proprietà fondamentale di un albero è l'assenza di cammini chiusi (cicli), ciò permette di scrivere relazioni di ricorrenza esatte per le funzioni di partizione parziali, siccome il taglio di un arco sconnette l'albero in due componenti indipendenti.\\
+
+L'approssimazione di Bethe-Peierls, introdotta nel 1935 da H. Bethe, utilizza la soluzione esatta per l'albero di Cayley come approssimazione per reticoli reali (che in genere contengono cicli).\\
+Chiaramente l'approssimazione è tanto valida quanto il grafo è localmente tree-like (privo di cicli corti).\\
+
+Consideriamo un reticolo regolare d-dimensionale con coordinazione $k$ (ovvero tutti i nodi con grado $k$). L'idea è isolare un cluster composto da un nodo centrale (con etichetta 0) e i suoi $k$ primi vicini, l'hamiltoniana del cluster è:
+\begin{equation}
+    \mathcal{H}_{\text{cluster}}=-J \sigma_0 \sum_{j=1}^{k} \sigma_j -h\sigma_0 -h \sum_{j=1}^{k}\sigma_j - \sum_{j=1}^{k}\mathcal{H}^{(j)}_{\text{resto}}
+\end{equation}
+dove $\mathcal{H}^{(j)}_{\text{resto}}$ rappresenta l'interazione del vicino $j$ con il resto del reticolo (escludendo il sito centrale), sostituendo questa interazione con un campo efficace $h'$ che agesice su ciascun vicino:
+\begin{equation}
+    \mathcal{H}_{\text{eff}}=-J \sigma_0 \sum_{j=1}^{k}\sigma_j - h \sigma_0 - (h+h')\sum_{j=1}^{k}\sigma_j
+\end{equation}
+Possiamo inoltre calcolare facilmente la funzione di partizione del cluster:
+\begin{align}
+Z_{\text{cluster}} 
+&= \sum_{\sigma_0=\pm1}\sum_{\sigma_1=\pm1}\cdots\sum_{\sigma_q=\pm1}
+   \exp\!\Bigl[\beta J\sigma_0\sum_{j=1}^{q}\sigma_j 
+   + \beta h\sigma_0 + \beta(h+h')\sum_{j=1}^{q}\sigma_j\Bigr] \\
+&= \sum_{\sigma_0=\pm1} e^{\beta h\sigma_0}
+   \Bigl[\sum_{\sigma=\pm1} e^{\beta(J\sigma_0+h+h')\sigma}\Bigr]^{q} \\
+&= \sum_{\sigma_0=\pm1} e^{\beta h\sigma_0}
+   \Bigl[2\cosh\bigl(\beta(J\sigma_0+h+h')\bigr)\Bigr]^{q}.
+\end{align}
+
+Definendo per comodità $A_{\pm}=2\cosh\bigl(\beta(\pm J+h+h')\bigr)$, si può calcolare la magnetizzazione del sito centrale:
+\begin{equation}
+m_{0} =\left\langle \sigma_0\right\rangle  =\frac{1}{Z_{\text{cluster}}}
+        \sum_{\sigma_{0}} \sigma_{0} e^{\beta h \sigma_{0}}
+        \Bigl[ 2\cosh\!\bigl(\beta(J\sigma_{0}+h+h')\bigr) \Bigr]^{q}=\frac{e^{\beta h} A^k_+ - e^{-\beta h}A^k_{-}}{e^{\beta h} A^k_+ + e^{-\beta h}A^k_{-}}
+\end{equation}
+Per calcolare invece la magnetizzazione $m_1$ di un particolare vicino $\sigma_1$, consideriamo dapprima la sua media condizionata. Fissato $\sigma_0$, la distribuzione di $\sigma_1$ è proporzionale a $e^{\beta (J\sigma_0 + h + h')\sigma_1}$:
+\begin{equation}
+    \left\langle \sigma_1 | \sigma_0\right\rangle= \tanh \bigl(\beta(J\sigma_0+h+h')\bigr)
+\end{equation}
+Siccome la distribuzione marginale di $\sigma_0$: $P(\sigma_0) \propto e^{\beta h \sigma_0} A_{\sigma_0}^k$, allora:
+\begin{align}
+m_{1} &= \sum_{\sigma_{0}=\pm1} P(\sigma_{0})\,
+        \tanh\!\bigl(\beta(J\sigma_{0}+h+h')\bigr) \\
+      &= \frac{ 
+          e^{\beta h} A_{+}^{k}\, \tanh\!\bigl(\beta(J+h+h')\bigr)
+          + e^{-\beta h} A_{-}^{k}\, \tanh\!\bigl(\beta(-J+h+h')\bigr)
+        }{
+          e^{\beta h} A_{+}^{k} + e^{-\beta h} A_{-}^{k}
+        }.
+\end{align}
+L'ipotesi di omogeneità del reticolo impone che la magnetizazzione del sito centrale e qualla di un sito sul bordo del cluster siano uguali, ovvero: $m_0=m_1$, da questa equazione è possibile determinare il campo efficace $h'$.\\
+Nel caso particolare con campo esterno nullo ($h=0$) e fase paramagnetica ($m=0$), la simmetria impone che $h'=0$. Per trovare la temperaratura critica, cerchiamo la condizione per cui una soluzione $m \not =0$ (e quindi $h' \not =0$) comincia a svilupparsi.\\
+Consideriamo il caso con $h=0$ e piccoli $h'$ $\implies A_{\pm} \approx 2 \cosh (\beta J)(1 \pm \frac{1}{2}\beta h' \tanh(\beta J))$, ottenendo
+\begin{align}
+m_{0} &\approx \beta h' k \tanh(\beta J), \\
+m_{1} &\approx \beta h' \bigl[ (k-1)\tanh(\beta J) + \beta J\,\operatorname{sech}^{2}(\beta J) \bigr].
+\end{align}
+Imponendo $m_0=m_1$ si ottiene:
+\begin{equation}
+    k \tanh(\beta_c J)=(k-1) \tanh (\beta_c J)+ \beta_c J\,\operatorname{sech}^{2} (\beta_c J) 
+\end{equation}
+Usando l'identità $\sinh(2x)=2 \sinh(x) \cosh(x)$, si ottiene:
+\begin{equation}
+\tanh(\beta_c J)=\frac{1}{k-1}
+\end{equation}
+Infine, utilizzando la definizione di $\tanh$, si ottiene:
+\begin{boxl}{Temperatura critica di un reticolo k-regolare}
+\begin{equation}
+    k_B T_c=\frac{2J}{\ln(\frac{k}{k-2})}
+\end{equation}
+\end{boxl}
+Per un reticolo quadrato ($k=2$) si ottiene $T_c \approx 2.885 J/K_B$ molto più vicino al valore esatto di Onsager ($2.269 J$), rispetto al campo medio ($4 J$).\\
+
+E' interessante notare anche che nel caso di una catena lineare ($k=2$), il denominatore diverge, implicando $T_c=0$, in accordo con l'assenza di transizione di fase in 1D.
+
+\paragraph{Bethe-Peierls e cavity method per le reti con distribuzioni di gradi eterogenee}
+Nel caso delle reti eterogenee non tutti i nodi hanno lo stesso numero di vicini, e dunque la condizione di autoconsistenza deve essere generalizzata.\\
+Consideriamo un grafo di $N$ nodi, connesso e localmente tree-like (ovvero privo di cicli corti).\\
+
+In questo caso è necessario utilizzare il \textbf{metodo della cavità}. Siccome il grafo è localmente tree-like, se si rimuove un nodo $i$, i suoi vicini diventano indipendenti. \\
+Definiamo il \textbf{campo di cavità} come il campo che il vicino $j$ esercita su $i$ in assenza di $i$: $u_{j \to i}$.\\
+Posiamo dunque scrivere l'hamiltoniana per lo spin $\sigma_i$ dati i campi provenienti dai vicini:
+\begin{equation}
+    \mathcal{H}_i=-\sigma_i (h+ \sum_{j \in \partial (i)}^{}u_{j \to i})
+\end{equation}
+Definiamo ora il \textbf{messaggio} $m_{j \to i}= \left\langle \sigma_j\right\rangle_{\text{senza } i}$, ovvero la magnetizzazione che $j$ avrebbe in assenza di $i$.\\
+
+E' possibile legare $m_{j \to i}$ e i campi che $j$ riceve dai suoi vicini (escluso $i$):
+\begin{equation}
+    m_{j \to i}=\tanh(\beta \sum_{k \in \partial (j)\setminus i}^{}u_{k \to j}+\beta h)
+\end{equation}
+Inoltre vale $u_{k \to j}=\frac{1}{\beta} \operatorname{arctanh}(m_{k \to j})$.\\
+
+Vicino alla transizione (quindi con campi piccoli) si può linearizzare $m_{j \to i} \approx \beta \sum_{k \in \partial (j) \setminus i}^{}u_{k \to j} + \beta h $ e $u_{k \to j} \approx J m_{k \to j}$ (nell'approssimazione di accoppiamento debole), si ottiene:
+\begin{equation}
+    m_{j\to i} = \tanh\!\left(\beta J \sum_{k\in\partial(j)\setminus i} m_{k\to j} + \beta h\right).
+\end{equation}
+chiamata equazione di \textbf{Belief Propagation} per il modello di Ising.\\
+
+Definiamo una matrice di branching $\mathbf{B}$ che conti i cammini che si diramano senza tornare indietro:
+\begin{boxb}{Matrice di Branching (Matrice di non-backtracking o di Hashimoto)}
+Consideriamo un grafo non orientato $G=(V,E)$ con $N$ nodi e $E$ archi.
+\begin{itemize}
+    \item Orientiamo ogni arco in entrambi i versi, ottenendo così $2E$ archi diretti
+    \item Costruiamo una matrice quadrata $\mathbf{B} \in M_{2E \crossproduct 2E}$, le cui righe e colonne sono indicizzate dagli archi diretti.
+    \end{itemize}
+La matrice $\mathbf{B}$ è definita come:
+\begin{equation}
+    B_{j\to i,\; m\to \ell} =
+\begin{cases}
+1 & \text{se } j = \ell \text{ e } i \neq m \\
+0 & \text{altrimenti}
+\end{cases}
+\end{equation}
+\end{boxb}
+Vicino alla transizione ($h=0$, $m_{i \to j \ll 1}$), linearizzando la $\tanh$ si ottiene:
+\begin{equation}
+    m_{j \to i} \approx \beta J \sum_{k \in \partial (j) \setminus i}^{}m_{k \to j}
+\end{equation}
+Per trovare $T_c$, cerchiamo una soluzione non banale, la cui esistenza corrisponde all'annullarsi del più grande autovalore di una matrice di trasferimento.\\
+Per reti infinitamente grandi e localmente tree-like, la transizione avviene quando:
+\begin{equation}
+    \beta_c J \rho (\mathbf{B})=1
+\end{equation}
+con $\mathbf{B}$ matrice di branching del grafo, e $\rho(\mathbf{B})$ il suo raggio spettrale.\\
+
+Vale inoltre il seguente teorema:
+\begin{boxl}{Raggio spettrale della matrice di branching}
+Per una rete \textbf{uncorrelated} (senza correlazioni grado-grado) e con distribuzione dei gradi $p_k$, vale:
+\begin{equation}
+    \rho(\mathbf{B})=\frac{\left\langle k(k-1)\right\rangle }{\left\langle k\right\rangle }=\frac{\left\langle k^2\right\rangle - \left\langle k\right\rangle }{\left\langle k\right\rangle }
+\end{equation}
+\end{boxl}
+da cui si ottiene infine il valore della temperatura critica:
+\begin{boxl}{Temperatura critica di Bethe-Peierls per un grafo con distribuzione eterogenea}
+    \begin{equation}
+        k_B T_c= J \rho(\mathbf{B})= J \frac{\left\langle k^2\right\rangle - \left\langle k\right\rangle }{\left\langle k\right\rangle }
+    \end{equation}
+\end{boxl}
 \begin{comment}
 STARE ATTENTI A NON ENTRARE TROPPO NEL DETTAGLIO -> MANTENERLO NUMERICO --> obiettivo è mostrare come varia la temperatura critica con la topologia.
 - Modello di Ising su un grafo --> far vedere l'hamiltoniana --> le interazioni avvengono solo sui nodi connessi da edges

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  22 APR 2026 02:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.12.2)  23 APR 2026 03:59
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1116,7 +1116,7 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 
 \@quotelevel=\count505
 \@quotereset=\count506
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 150.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 151.
 (out/main.aux
 
 LaTeX Warning: Label `fig:b' multiply defined.
@@ -1130,24 +1130,24 @@ LaTeX Warning: Label `fig:decay_modes' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 151.
+LaTeX Font Info:    ... okay on input line 151.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1157,15 +1157,15 @@ LaTeX Font Info:    ... okay on input line 150.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
-* v-part:(T,H,B)=(45.52458pt, 753.99768pt, 45.52458pt)
+* h-part:(L,W,R)=(48.36958pt, 500.7687pt, 48.36958pt)
+* v-part:(T,H,B)=(51.21504pt, 742.61676pt, 51.21504pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=512.14963pt
-* \textheight=753.99768pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-63.7454pt
+* \textwidth=500.7687pt
+* \textheight=742.61676pt
+* \oddsidemargin=-23.9004pt
+* \evensidemargin=-23.9004pt
+* \topmargin=-58.05495pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1183,13 +1183,13 @@ LaTeX Font Info:    ... okay on input line 150.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 150.
-Package microtype Info: Applying patch `item' on input line 150.
-Package microtype Info: Applying patch `toc' on input line 150.
-Package microtype Info: Applying patch `eqnum' on input line 150.
-Package microtype Info: Applying patch `footnote' on input line 150.
-Package microtype Info: Applying patch `verbatim' on input line 150.
-LaTeX Info: Redefining \microtypesetup on input line 150.
+LaTeX Info: Redefining \microtypecontext on input line 151.
+Package microtype Info: Applying patch `item' on input line 151.
+Package microtype Info: Applying patch `toc' on input line 151.
+Package microtype Info: Applying patch `eqnum' on input line 151.
+Package microtype Info: Applying patch `footnote' on input line 151.
+Package microtype Info: Applying patch `verbatim' on input line 151.
+LaTeX Info: Redefining \microtypesetup on input line 151.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1240,14 +1240,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (out/main.bbl)
-Package biblatex Info: Reference section=0 on input line 150.
-Package biblatex Info: Reference segment=0 on input line 150.
+Package biblatex Info: Reference section=0 on input line 151.
+Package biblatex Info: Reference segment=0 on input line 151.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 150.
+Package hyperref Info: Link coloring OFF on input line 151.
  (out/main.out) (out/main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1255,7 +1255,7 @@ Package hyperref Info: Link coloring OFF on input line 150.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 150.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 151.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1291,7 +1291,7 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 <img/Sigillo_Scritta_HR.png, id=123, 813.0375pt x 1053.9375pt>
 File: img/Sigillo_Scritta_HR.png Graphic file (type png)
 <use img/Sigillo_Scritta_HR.png>
-Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 162.
+Package pdftex.def Info: img/Sigillo_Scritta_HR.png  used on input line 163.
 (pdftex.def)             Requested size: 119.39473pt x 154.78305pt.
  [1
 
@@ -1361,44 +1361,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 File: img/500px-SurfaceTemperature.jpg Graphic file (type jpg)
 <use img/500px-SurfaceTemperature.jpg>
 Package pdftex.def Info: img/500px-SurfaceTemperature.jpg  used on input line 38.
-(pdftex.def)             Requested size: 245.82962pt x 122.91832pt.
+(pdftex.def)             Requested size: 240.36684pt x 120.18442pt.
 <img/connettoma.jpg, id=173, 803.0pt x 658.46pt>
 File: img/connettoma.jpg Graphic file (type jpg)
 <use img/connettoma.jpg>
 Package pdftex.def Info: img/connettoma.jpg  used on input line 45.
-(pdftex.def)             Requested size: 245.82962pt x 201.57852pt.
+(pdftex.def)             Requested size: 240.36684pt x 197.09744pt.
 <img/stormo.jpeg, id=174, 276.03125pt x 183.68625pt>
 File: img/stormo.jpeg Graphic file (type jpg)
 <use img/stormo.jpeg>
 Package pdftex.def Info: img/stormo.jpeg  used on input line 55.
-(pdftex.def)             Requested size: 245.82962pt x 163.59514pt.
+(pdftex.def)             Requested size: 240.36684pt x 159.95987pt.
 <img/internet.png, id=175, 1013.7875pt x 930.47626pt>
 File: img/internet.png Graphic file (type png)
 <use img/internet.png>
 Package pdftex.def Info: img/internet.png  used on input line 62.
-(pdftex.def)             Requested size: 245.82962pt x 225.61893pt.
+(pdftex.def)             Requested size: 240.36684pt x 220.60706pt.
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
  []
 
-) (./sections/graph_theory.tex
-<img/undirected_graph_cropped.pdf, id=185, 576.91132pt x 584.98549pt>
+) (./sections/graph_theory.tex [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
+<img/undirected_graph_cropped.pdf, id=194, 576.91132pt x 584.98549pt>
 File: img/undirected_graph_cropped.pdf Graphic file (type pdf)
 <use img/undirected_graph_cropped.pdf>
 Package pdftex.def Info: img/undirected_graph_cropped.pdf  used on input line 10.
-(pdftex.def)             Requested size: 179.2555pt x 181.76315pt.
-<img/directed_graph.pdf, id=186, 581.60886pt x 576.52388pt>
+(pdftex.def)             Requested size: 175.2721pt x 177.7196pt.
+<img/directed_graph.pdf, id=195, 581.60886pt x 576.52388pt>
 File: img/directed_graph.pdf Graphic file (type pdf)
 <use img/directed_graph.pdf>
 Package pdftex.def Info: img/directed_graph.pdf  used on input line 18.
-(pdftex.def)             Requested size: 179.2555pt x 177.6913pt.
-<img/Zachary_graph_formatted.pdf, id=187, 579.6516pt x 547.52553pt>
+(pdftex.def)             Requested size: 175.2721pt x 173.74142pt.
+<img/Zachary_graph_formatted.pdf, id=196, 579.6516pt x 547.52553pt>
 File: img/Zachary_graph_formatted.pdf Graphic file (type pdf)
 <use img/Zachary_graph_formatted.pdf>
 Package pdftex.def Info: img/Zachary_graph_formatted.pdf  used on input line 23.
-(pdftex.def)             Requested size: 179.2555pt x 169.32178pt.
- [4 <./img/500px-SurfaceTemperature.jpg> <./img/connettoma.jpg> <./img/stormo.jpeg> <./img/internet.png>]
+(pdftex.def)             Requested size: 175.2721pt x 165.55388pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
@@ -1407,7 +1407,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
 File: img/grafo_multistrato.png Graphic file (type png)
 <use img/grafo_multistrato.png>
 Package pdftex.def Info: img/grafo_multistrato.png  used on input line 85.
-(pdftex.def)             Requested size: 256.07481pt x 196.1902pt.
+(pdftex.def)             Requested size: 250.38435pt x 191.8295pt.
 [5 <./img/undirected_graph_cropped.pdf> <./img/directed_graph.pdf> <./img/Zachary_graph_formatted.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
@@ -1470,12 +1470,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--302
 
  []
 
-<img/grafo_centralità_autovalore.png, id=276, 1194.4625pt x 947.54pt>
+[9]
+<img/grafo_centralità_autovalore.png, id=287, 1194.4625pt x 947.54pt>
 File: img/grafo_centralità_autovalore.png Graphic file (type png)
 <use img/grafo_centralità_autovalore.png>
 Package pdftex.def Info: img/grafo_centralità_autovalore.png  used on input line 319.
-(pdftex.def)             Requested size: 153.64644pt x 121.88327pt.
-[9]
+(pdftex.def)             Requested size: 150.23213pt x 119.16512pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
@@ -1491,48 +1492,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
  []
 
 [10 <./img/grafo_centralità_autovalore.png>]
-<img/4-cricca.png, id=299, 963.6pt x 1107.13625pt>
+<img/4-cricca.png, id=297, 963.6pt x 1107.13625pt>
 File: img/4-cricca.png Graphic file (type png)
 <use img/4-cricca.png>
 Package pdftex.def Info: img/4-cricca.png  used on input line 385.
-(pdftex.def)             Requested size: 153.64644pt x 176.52036pt.
-<img/k_core.png, id=300, 1354.05875pt x 786.94pt>
+(pdftex.def)             Requested size: 150.23213pt x 172.60106pt.
+<img/k_core.png, id=298, 1354.05875pt x 786.94pt>
 File: img/k_core.png Graphic file (type png)
 <use img/k_core.png>
 Package pdftex.def Info: img/k_core.png  used on input line 395.
-(pdftex.def)             Requested size: 153.64644pt x 89.28941pt.
-<img/k_components.png, id=301, 1491.5725pt x 706.64pt>
+(pdftex.def)             Requested size: 150.23213pt x 87.30814pt.
+<img/k_components.png, id=299, 1491.5725pt x 706.64pt>
 File: img/k_components.png Graphic file (type png)
 <use img/k_components.png>
 Package pdftex.def Info: img/k_components.png  used on input line 406.
-(pdftex.def)             Requested size: 153.64644pt x 72.7815pt.
-<img/triplette.png, id=302, 1927.2pt x 970.62625pt>
+(pdftex.def)             Requested size: 150.23213pt x 71.16412pt.
+ [11 <./img/4-cricca.png> <./img/k_core.png>]
+<img/triplette.png, id=310, 1927.2pt x 970.62625pt>
 File: img/triplette.png Graphic file (type png)
 <use img/triplette.png>
 Package pdftex.def Info: img/triplette.png  used on input line 420.
-(pdftex.def)             Requested size: 153.64644pt x 77.37029pt.
- [11 <./img/4-cricca.png> <./img/k_core.png> <./img/k_components.png>]
-<img/degree_distributions.pdf, id=313, 861.20293pt x 498.86375pt>
+(pdftex.def)             Requested size: 150.23213pt x 75.65225pt.
+<img/degree_distributions.pdf, id=311, 861.20293pt x 498.86375pt>
 File: img/degree_distributions.pdf Graphic file (type pdf)
 <use img/degree_distributions.pdf>
 Package pdftex.def Info: img/degree_distributions.pdf  used on input line 442.
-(pdftex.def)             Requested size: 307.2929pt x 177.9999pt.
-<img/small_world.pdf, id=314, 476.98201pt x 361.35pt>
+(pdftex.def)             Requested size: 300.46428pt x 174.04924pt.
+<img/small_world.pdf, id=312, 476.98201pt x 361.35pt>
 File: img/small_world.pdf Graphic file (type pdf)
 <use img/small_world.pdf>
 Package pdftex.def Info: img/small_world.pdf  used on input line 450.
-(pdftex.def)             Requested size: 307.2929pt x 232.80154pt.
-
+(pdftex.def)             Requested size: 300.46428pt x 227.62965pt.
+ [12 <./img/k_components.png> <./img/triplette.png> <./img/degree_distributions.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
-[12 <./img/triplette.png> <./img/degree_distributions.pdf> <./img/small_world.pdf>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 478--480
 
  []
 
-[13]
+[13 <./img/small_world.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 520--521
 
  []
@@ -1542,7 +1543,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 534--535
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
@@ -1557,7 +1558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
@@ -1572,7 +1573,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
-
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
@@ -1592,7 +1593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
@@ -1602,7 +1603,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
@@ -1612,7 +1613,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--133
 
  []
 
-[16]
+
 Underfull \hbox (badness 10000) in paragraph at lines 137--140
 
  []
@@ -1642,37 +1643,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
-<img/diffusion_heatmap.pdf, id=481, 1364.66331pt x 422.05681pt>
+<img/diffusion_heatmap.pdf, id=487, 1364.66331pt x 422.05681pt>
 File: img/diffusion_heatmap.pdf Graphic file (type pdf)
 <use img/diffusion_heatmap.pdf>
 Package pdftex.def Info: img/diffusion_heatmap.pdf  used on input line 264.
-(pdftex.def)             Requested size: 409.72125pt x 126.71461pt.
-[18 <./img/diffusion_heatmap.pdf>]
-<img/decay_modes.pdf, id=550, 565.29694pt x 347.32825pt>
+(pdftex.def)             Requested size: 400.61649pt x 123.9003pt.
+[19 <./img/diffusion_heatmap.pdf>]
+<img/decay_modes.pdf, id=557, 565.29694pt x 347.32825pt>
 File: img/decay_modes.pdf Graphic file (type pdf)
 <use img/decay_modes.pdf>
 Package pdftex.def Info: img/decay_modes.pdf  used on input line 303.
-(pdftex.def)             Requested size: 409.72125pt x 251.74557pt.
- [19 <./img/decay_modes.pdf>]
+(pdftex.def)             Requested size: 400.61649pt x 246.14899pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-<img/diffusion_bottleneck_2x2.pdf, id=615, 855.67677pt x 709.69138pt>
+[20 <./img/decay_modes.pdf>]
+<img/diffusion_bottleneck_2x2.pdf, id=621, 855.67677pt x 709.69138pt>
 File: img/diffusion_bottleneck_2x2.pdf Graphic file (type pdf)
 <use img/diffusion_bottleneck_2x2.pdf>
 Package pdftex.def Info: img/diffusion_bottleneck_2x2.pdf  used on input line 336.
-(pdftex.def)             Requested size: 409.72125pt x 339.82498pt.
+(pdftex.def)             Requested size: 400.61649pt x 332.26634pt.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
 (Font)              scaled to size 8.0pt on input line 337.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
 (Font)              scaled to size 6.0pt on input line 337.
-[20 <./img/diffusion_bottleneck_2x2.pdf>]) (./sections/stochastic_processes.tex
+) (./sections/stochastic_processes.tex [21 <./img/diffusion_bottleneck_2x2.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
@@ -1687,17 +1689,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-[21]
+
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
@@ -1712,17 +1714,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--181
 
  []
 
-[23]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 303--306
 
  []
@@ -1732,7 +1734,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
-) (./algorithms.tex) (./dimostrazioni.tex [26]
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 355--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--474
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 492--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--521
+
+ []
+
+) (./algorithms.tex) (./dimostrazioni.tex [31]
 Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
@@ -1742,7 +1814,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [27] (out/main.aux)
+ [32] (out/main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1758,18 +1830,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48611 strings out of 467538
- 1028894 string characters out of 5419552
- 1970242 words of memory out of 5000000
- 76205 multiletter control sequences out of 15000+600000
- 664985 words of font info for 254 fonts, out of 8000000 for 9000
+ 48677 strings out of 467538
+ 1029733 string characters out of 5419552
+ 1967289 words of memory out of 5000000
+ 76220 multiletter control sequences out of 15000+600000
+ 665245 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,14n,107p,1205b,1402s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on out/main.pdf (27 pages, 4845089 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on out/main.pdf (32 pages, 4876680 bytes).
 PDF statistics:
- 965 PDF objects out of 1000 (max. 8388607)
- 612 compressed objects within 7 object streams
- 201 named destinations out of 1000 (max. 500000)
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 675 compressed objects within 7 object streams
+ 240 named destinations out of 1000 (max. 500000)
  66388 words of extra memory for PDF output out of 74296 (max. 10000000)
 

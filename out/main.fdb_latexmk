@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber out/main"] 1776808772.68105 "out/main.bcf" "out/main.bbl" "out/main" 1776817204.61114 0
+["biber out/main"] 1776808772.68105 "out/main.bcf" "out/main.bbl" "out/main" 1776909579.85862 0
   "bibliography.bib" 1776437259.38681 1016 e52fefa00e11c0a88e3b5b6a1b751671 ""
-  "out/main.bcf" 1776817204.42442 108633 624599de264f536e6111fb6946889cf4 "pdflatex"
+  "out/main.bcf" 1776909579.66185 108633 624599de264f536e6111fb6946889cf4 "pdflatex"
   (generated)
   "out/main.bbl"
   "out/main.blg"
   (rewritten before read)
-["pdflatex"] 1776817197.75955 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "out/main.pdf" "main" 1776817204.61143 0
-  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1776809867.90228 6720 776ea2cc4b072c701283584de437ca90 ""
+["pdflatex"] 1776909572.3706 "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" "out/main.pdf" "main" 1776909579.85894 0
+  "/home/gabriele/Desktop/Thesis/The-Shape-of-Complexity/main.tex" 1776817688.76215 6715 568d32ab6b4503167e0bb9073c8f3830 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -85,6 +85,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb" 1248133631 30068 eae4ba75635647d82fb0b7d7bccc4748 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1248133631 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb" 1215737283 193571 dce9a978093738902238b3e227edef6c ""
@@ -379,16 +380,16 @@
   "img/stormo.jpeg" 1773531655.26665 8193 6dca9f26708562502118ecabd8293cdf ""
   "img/triplette.png" 1775950848.5524 102404 cb44ded46a66880ffca5066fa2ec0248 ""
   "img/undirected_graph_cropped.pdf" 1773599903.09024 17904 570428ebd9976767d42f5e820f7f21bc ""
-  "main.tex" 1776809867.90228 6720 776ea2cc4b072c701283584de437ca90 ""
-  "out/main.aux" 1776817204.42042 12657 2a7ba4314d5a51d1156cd2c0deead23b "pdflatex"
+  "main.tex" 1776817688.76215 6715 568d32ab6b4503167e0bb9073c8f3830 ""
+  "out/main.aux" 1776909579.65685 13195 039f55996e1f79cbd83f0d187b731547 "pdflatex"
   "out/main.bbl" 1776808777.68204 2181 96201f969b6f07ad8d5f890ef195f43b "biber out/main"
-  "out/main.out" 1776817204.42142 7264 81cee6738d3f286752d199efb3405704 "pdflatex"
-  "out/main.run.xml" 1776817204.42591 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "out/main.toc" 1776817204.42591 3606 a5004c5b9618400422648532fc841113 "pdflatex"
+  "out/main.out" 1776909579.65785 7264 81cee6738d3f286752d199efb3405704 "pdflatex"
+  "out/main.run.xml" 1776909579.66379 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "out/main.toc" 1776909579.66379 3927 ea8e42366b74da57d062095758a86ed3 "pdflatex"
   "sections/graph_theory.tex" 1776297197.73805 30362 2adc4f75cfc5e189d41a8054d7b7885f ""
   "sections/introduction.tex" 1774305496.19859 7116 61a8cea187f46fd03a68aa0650051d10 ""
   "sections/random_walks.tex" 1776290017.35895 21680 092897fdadb018628d54ab4b706711da ""
-  "sections/stochastic_processes.tex" 1776817197.57465 24265 2b3b4600362d40f38e9bf83ebd4eaf6b ""
+  "sections/stochastic_processes.tex" 1776909572.19641 38793 0dad20c5c8b557553797c471c4b58975 ""
   (generated)
   "out/main.aux"
   "out/main.bcf"
