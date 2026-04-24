@@ -549,8 +549,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT out/main.toc
@@ -589,11 +588,11 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/esint/uesint.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/esint/esint10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/esint/esint10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
 OUTPUT out/main.toc
 INPUT ./sections/introduction.tex
 INPUT ./sections/introduction.tex
 INPUT sections/introduction.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT ./img/500px-SurfaceTemperature.jpg
 INPUT ./img/500px-SurfaceTemperature.jpg
@@ -738,6 +737,7 @@ INPUT sections/stochastic_processes.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/dutchcal/dutchcal-r.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/dutchcal/rdutchcalr.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1000.tfm
 INPUT ./algorithms.tex
 INPUT ./algorithms.tex
 INPUT algorithms.tex

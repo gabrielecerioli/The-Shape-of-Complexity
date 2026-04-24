@@ -18,18 +18,18 @@
 \contentsline {subsection}{\numberline {3.3}Case study: Diffusione di un segnale nel connettoma di \textit {C. elegans}}{21}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Stochastic processes on graphs}{21}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Informazione ed entropia topologica}{21}{subsection.4.1}%
-\contentsline {paragraph}{Entropia di Shannon di un cammino stocastico su un grafo}{22}{section*.16}%
-\contentsline {paragraph}{Entropia topologica di un sistema dinamico}{22}{section*.17}%
-\contentsline {paragraph}{Entropia topologica di un grafo}{22}{section*.18}%
-\contentsline {paragraph}{Legame tra l'entropia topologica e la struttura spettrale}{23}{section*.19}%
-\contentsline {paragraph}{Altre misure di entropia di un grafo}{24}{section*.20}%
+\contentsline {paragraph}{Entropia di Shannon di un cammino stocastico su un grafo}{22}{section*.15}%
+\contentsline {paragraph}{Entropia topologica di un sistema dinamico}{22}{section*.16}%
+\contentsline {paragraph}{Entropia topologica di un grafo}{22}{section*.17}%
+\contentsline {paragraph}{Legame tra l'entropia topologica e la struttura spettrale}{23}{section*.18}%
+\contentsline {paragraph}{Altre misure di entropia di un grafo}{24}{section*.19}%
 \contentsline {subsection}{\numberline {4.2}Percolazione, transizione di fase e robustezza delle reti}{24}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Monte Carlo su grafi e modelli di Ising}{24}{subsection.4.3}%
-\contentsline {paragraph}{Metodi di Monte Carlo e algoritmo di Metropolis-Hastings}{25}{section*.21}%
-\contentsline {paragraph}{Ergodicità e unicità della distribuzione stazionaria}{26}{section*.22}%
-\contentsline {paragraph}{Approssimazione di campo medio per grafi}{27}{section*.23}%
-\contentsline {paragraph}{Approssimazione di Bethe-Peierls per Ising sui reticoli regolari}{29}{section*.24}%
-\contentsline {paragraph}{Bethe-Peierls e cavity method per le reti con distribuzioni di gradi eterogenee}{30}{section*.25}%
+\contentsline {paragraph}{Metodi di Monte Carlo e algoritmo di Metropolis-Hastings}{25}{section*.20}%
+\contentsline {paragraph}{Ergodicità e unicità della distribuzione stazionaria}{26}{section*.21}%
+\contentsline {paragraph}{Approssimazione di campo medio per grafi}{27}{section*.22}%
+\contentsline {paragraph}{Approssimazione di Bethe-Peierls per Ising sui reticoli regolari}{29}{section*.23}%
+\contentsline {paragraph}{Bethe-Peierls e cavity method per le reti con distribuzioni di gradi eterogenee}{30}{section*.24}%
 \contentsline {subsection}{\numberline {4.4}Case study: Percolazione e modello di Ising sul connettoma di \textit {C. elegans}}{31}{subsection.4.4}%
 \contentsline {section}{\numberline {A}Algoritmi}{31}{appendix.A}%
 \contentsline {section}{\numberline {B}Dimostrazioni}{31}{appendix.B}%
